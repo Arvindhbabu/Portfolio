@@ -2,1729 +2,813 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Arvindh babu V Portfolio</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="" rel="icon">
-  <link href="" rel="apple-touch-icon">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arvindh Babu V — Portfolio (Glow Edition)</title>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Devicons for logos -->
+  <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" rel="stylesheet">
+  <!-- AOS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <!-- GLightbox -->
+  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet" />
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    :root {
+      --bg-1: #0b1020;
+      --bg-2: #0e1229;
+      --card: rgba(255, 255, 255, 0.06);
+      --card-2: rgba(255, 255, 255, 0.08);
+      --text: #e9ecf2;
+      --muted: #aab0c0;
+      --primary: #7c5cff; /* violet */
+      --secondary: #00d4ff; /* cyan */
+      --accent: #ff7a7a; /* coral */
+      --glow: 0 0 0.75rem rgba(124, 92, 255, .65), 0 0 2.25rem rgba(0, 212, 255, .35);
+      --radius: 1.25rem;
+    }
 
-  <!-- =======================================================
-  * Template Name: MyResume
-  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    * { box-sizing: border-box; }
+
+    html, body {
+      height: 100%;
+      background: radial-gradient(1200px 800px at 10% 10%, rgba(124, 92, 255, .12), transparent 60%),
+                  radial-gradient(900px 700px at 90% 20%, rgba(0, 212, 255, .12), transparent 60%),
+                  radial-gradient(1000px 900px at 40% 90%, rgba(255, 122, 122, .10), transparent 65%),
+                  linear-gradient(180deg, var(--bg-1), var(--bg-2));
+      color: var(--text);
+      font-family: 'Space Grotesk', system-ui, -apple-system, Segoe UI, Roboto, 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    a { color: var(--secondary); text-decoration: none; }
+    a:hover { color: #7ee7ff; }
+
+    /* Layout */
+    .container-xl { max-width: 1200px; }
+
+    /* Navbar */
+    .glass-nav {
+      position: sticky; top: 0; z-index: 1030;
+      backdrop-filter: blur(10px);
+      background: linear-gradient(180deg, rgba(20, 24, 50, .65), rgba(20, 24, 50, .35));
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .brand-badge {
+      display: inline-flex; align-items: center; gap: .6rem;
+      padding: .5rem .9rem; border-radius: 999px; color: var(--text);
+      background: linear-gradient(90deg, rgba(124,92,255,.25), rgba(0,212,255,.25));
+      border: 1px solid rgba(255,255,255,.15);
+      box-shadow: var(--glow);
+      font-weight: 700; letter-spacing: .3px;
+    }
+
+    /* Hero */
+    .hero {
+      position: relative; isolation: isolate;
+      padding: 8rem 0 5rem;
+    }
+    .hero::after{
+      content: ""; position: absolute; inset: 0; z-index: -1;
+      background:
+        radial-gradient(600px 400px at 70% 30%, rgba(124,92,255,.25), transparent 70%),
+        radial-gradient(700px 450px at 25% 60%, rgba(0,212,255,.22), transparent 70%);
+      filter: blur(10px);
+    }
+    .avatar {
+      width: 160px; height: 160px; border-radius: 20px; overflow: hidden; border: 2px solid rgba(255,255,255,.15);
+      box-shadow: var(--glow);
+    }
+    .chip {
+      display: inline-flex; align-items: center; gap: .5rem; padding: .5rem .75rem; border-radius: 999px;
+      background: linear-gradient(90deg, rgba(255,255,255,.08), rgba(255,255,255,.05));
+      border: 1px solid rgba(255,255,255,.12);
+      color: var(--text); font-weight: 600;
+    }
+
+    /* Sections */
+    section.section { padding: 80px 0; }
+    .section-title { margin-bottom: 1.25rem; }
+    .section-subtitle { color: var(--muted); }
+
+    /* Cards */
+    .glass-card {
+      background: linear-gradient(180deg, var(--card), var(--card-2));
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: var(--radius);
+      box-shadow: var(--glow);
+    }
+    .glass-card:hover { transform: translateY(-4px); transition: .3s ease; box-shadow: 0 10px 40px rgba(124,92,255,.25), 0 6px 18px rgba(0,212,255,.18); }
+
+    /* Stats */
+    .stat { text-align: center; padding: 1.5rem; }
+    .stat .num { font-size: 2.25rem; font-weight: 800; background: linear-gradient(90deg, #ffd4d4, #b9a2ff, #91f0ff);
+      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+
+    /* Skill pills */
+    .skill-pill { display:inline-flex; align-items:center; gap:.5rem; padding:.55rem .8rem; margin:.35rem; border-radius:999px; border:1px solid rgba(255,255,255,.12); background: rgba(255,255,255,.05); font-weight:600; }
+    .skill-pill i { font-size:1.2rem; }
+
+    /* Timeline */
+    .timeline { position: relative; padding-left: 1rem; }
+    .timeline::before { content: ""; position:absolute; left: 10px; top: 0; bottom:0; width: 2px; background: linear-gradient(180deg, var(--secondary), var(--primary)); filter: drop-shadow(0 0 6px rgba(0,212,255,.35)); }
+    .t-item { position: relative; padding-left: 2.5rem; margin-bottom: 1.5rem; }
+    .t-item::before { content: ""; position:absolute; left:0; top:.35rem; width: 20px; height: 20px; border-radius:50%; background: linear-gradient(135deg, var(--primary), var(--secondary)); box-shadow: var(--glow); border:2px solid rgba(255,255,255,.35); }
+
+    /* Project cards */
+    .project-card { position: relative; }
+    .project-card .badge { position: absolute; top: 16px; right: 16px; backdrop-filter: blur(6px); }
+
+    /* Cert grid */
+    .cert-img { border-radius: 12px; border:1px solid rgba(255,255,255,.15); box-shadow: var(--glow); }
+
+    /* Footer */
+    footer { border-top: 1px solid rgba(255,255,255,.1); }
+
+    /* Buttons */
+    .btn-glow {
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      border: none; color: #101426; font-weight: 800; letter-spacing: .3px;
+      box-shadow: 0 0 0.75rem rgba(124, 92, 255, .55), 0 0 1.25rem rgba(0, 212, 255, .35);
+    }
+    .btn-outline-glow{
+      border:1px solid rgba(255,255,255,.25); color: var(--text);
+      background: linear-gradient(90deg, rgba(124,92,255,.15), rgba(0,212,255,.15));
+    }
+
+    /* Utility */
+    .text-gradient{ background: linear-gradient(90deg, #fff, #bfe9ff, #dbc8ff); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+
+    @media (max-width: 575.98px){ .hero { padding-top: 6rem; } }
+  </style>
 </head>
 
-<body class="index-page">
+<body>
+  <!-- NAVBAR -->
+  <nav class="glass-nav navbar navbar-expand-lg">
+    <div class="container-xl py-2">
+      <a class="navbar-brand brand-badge" href="#hero">
+        <i class="bi bi-stars"></i>
+        <span>Arvindh Babu V</span>
+      </a>
+      <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-lg-2">
+          <li class="nav-item"><a class="nav-link text-white-50" href="#hero"><i class="bi bi-house me-1"></i>Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white-50" href="#about"><i class="bi bi-person me-1"></i>About</a></li>
+          <li class="nav-item"><a class="nav-link text-white-50" href="#skills"><i class="bi bi-lightning me-1"></i>Skills</a></li>
+          <li class="nav-item"><a class="nav-link text-white-50" href="#experience"><i class="bi bi-briefcase me-1"></i>Experience</a></li>
+          <li class="nav-item"><a class="nav-link text-white-50" href="#projects"><i class="bi bi-grid me-1"></i>Projects</a></li>
+          <li class="nav-item"><a class="nav-link text-white-50" href="#certs"><i class="bi bi-award me-1"></i>Certificates</a></li>
+          <li class="nav-item"><a class="nav-link text-white-50" href="#contact"><i class="bi bi-telephone me-1"></i>Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-  <header id="header" class="header d-flex flex-column justify-content-center">
-
-    <i class="header-toggle d-xl-none bi bi-list"></i>
-
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i><span>About </span></a></li>
-        <li><a href="#skills"><i class="bi bi-laptop navicon"></i><span>Skills</span></a></li>
-        <li><a href="#experience"><i class="bi bi-briefcase navicon"></i><span>Experience</span></a></li>
-        <li><a href="#projects"><i class="bi bi-folder"></i><span>Projects</span></a></li>
-        <li><a href="#services"><i class="bi bi-journal-richtext"></i><span>Certificates</span></a></li>
-        <li><a href="#contact"><i class="bi bi-telephone navicon"></i><span>Contact</span></a></li>
-      </ul>
-    </nav>
-
+  <!-- HERO -->
+  <header id="hero" class="hero">
+    <div class="container-xl">
+      <div class="row align-items-center g-4">
+        <div class="col-md-7" data-aos="fade-right">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+            <span class="chip"><i class="bi bi-cpu"></i> Aspiring Data Scientist</span>
+            <span class="chip"><i class="bi bi-robot"></i> AI Enthusiast</span>
+            <span class="chip"><i class="bi bi-lightning-charge"></i> Tech Enthusiast</span>
+          </div>
+          <h1 class="display-4 fw-bold lh-1 mb-3 text-gradient">Arvindh Babu V</h1>
+          <p class="lead text-white-50 mb-4">I build intelligent, delightful systems that turn data into decisions and ideas into impact.</p>
+          <div class="d-flex gap-3 flex-wrap">
+            <a class="btn btn-glow btn-lg" href="https://drive.google.com/file/d/17xf1cUBWjFeljSAcJaelCmnA7zCd41Ro/view?usp=drive_link" target="_blank" rel="noopener">
+              <i class="bi bi-file-earmark-person me-1"></i> View Resume
+            </a>
+            <a class="btn btn-outline-glow btn-lg" href="#contact"><i class="bi bi-envelope-paper-heart me-1"></i> Contact</a>
+          </div>
+          <div class="mt-4 d-flex align-items-center gap-3">
+            <a class="text-white-50 fs-4" href="mailto:arvindhbabu23@gmail.com" target="_blank" aria-label="Email"><i class="bi bi-envelope"></i></a>
+            <a class="text-white-50 fs-4" href="https://www.instagram.com/Arvindh.official" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a class="text-white-50 fs-4" href="https://github.com/Arvindhbabu" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            <a class="text-white-50 fs-4" href="https://www.linkedin.com/in/arvindhbabuv23" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="col-md-5 text-center" data-aos="fade-left">
+          <div class="avatar mx-auto">
+            <!-- Keep your existing hero image path -->
+            <img src="assets/img/Photo.jpg" alt="Arvindh headshot" class="w-100 h-100 object-fit-cover">
+          </div>
+          <p class="text-white-50 mt-3 small">“It's not who I am underneath, but what I do that defines me.”</p>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <main class="main">
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero section light-background">
-
-      <img src="assets\img\Doc2.jpg" alt="">
-
-      <div class="container" data-aos="zoom-out">
-        <div class="row justify-content-center">
-          <div class="col-lg-9">
-            <h2>Arvindh Babu V</h2>
-            <p> <span class="typed" data-typed-items="Aspiring Data Scientist,AI Enthusiast, Tech Enthusiast"></span><span
-                class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
-            <div class="social-links">
-              <!-- Social Links -->
-              <a href="mailto:arvindhbabu23@gmail.com" target="_blank"><i class="bi bi-envelope flex-shrink-0"></i></a>
-              <a href="https://www.instagram.com/Arvindh.official" target="_blank"><i class="bi bi-instagram"></i></a>
-              <a href="https://github.com/Arvindhbabu" target="_blank"><i class="bi bi-github"></i></a>
-              <a href="https://www.linkedin.com/in/arvindhbabuv23" target="_blank"><i class="bi bi-linkedin"></i></a>
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container-xl">
+      <div class="row g-4 align-items-stretch">
+        <div class="col-lg-5" data-aos="zoom-in">
+          <div class="glass-card p-4 h-100">
+            <h2 class="h3 mb-3"><i class="bi bi-person-bounding-box me-2"></i> About Me</h2>
+            <p class="text-white-50 mb-3">Hello! I am <strong>Arvindh Babu</strong>, a dedicated Artificial Intelligence student at SRM TRP Engineering College, passionate about building intelligent systems that solve real problems. I love stretching the limits of data science, machine learning, and web to deliver useful, beautiful outcomes.</p>
+            <div class="row g-2">
+              <div class="col-6"><div class="skill-pill w-100"><i class="bi bi-calendar-event"></i> 23 Aug 2006</div></div>
+              <div class="col-6"><div class="skill-pill w-100"><i class="bi bi-geo-alt"></i> Tiruchirappalli</div></div>
+              <div class="col-6"><div class="skill-pill w-100"><i class="bi bi-translate"></i> Tamil / Eng / Telugu</div></div>
+              <div class="col-6"><div class="skill-pill w-100"><i class="bi bi-mortarboard"></i> CGPA: 8.0</div></div>
+              <div class="col-12"><div class="skill-pill w-100"><i class="bi bi-book"></i> Hamlet · War and Peace</div></div>
+              <div class="col-12"><div class="skill-pill w-100"><i class="bi bi-film"></i> Interstellar · Fight Club</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7" data-aos="fade-up">
+          <div class="glass-card p-4 h-100">
+            <h3 class="h5 text-uppercase text-white-50 mb-3">Mission</h3>
+            <p class="mb-4">Passionate about innovation and driven by curiosity, I push the boundaries of AI and Data Science to create impactful, real-world solutions. I thrive on transforming ambitious ideas into cutting‑edge advancements that inspire change and unlock new possibilities.</p>
+            <div class="row text-center g-3">
+              <div class="col-6 col-md-3"><div class="glass-card p-3 stat"><i class="bi bi-emoji-smile fs-3"></i><div class="num">18</div><div class="small text-white-50">Age</div></div></div>
+              <div class="col-6 col-md-3"><a class="d-block" href="https://leetcode.com/u/arvindhbabu23/" target="_blank"><div class="glass-card p-3 stat"><i class="bi bi-trophy fs-3"></i><div class="num">100</div><div class="small text-white-50">LeetCode</div></div></a></div>
+              <div class="col-6 col-md-3"><a class="d-block" href="https://www.hackerrank.com/profile/arvindhbabu23" target="_blank"><div class="glass-card p-3 stat"><i class="bi bi-trophy fs-3"></i><div class="num">100</div><div class="small text-white-50">HackerRank</div></div></a></div>
+              <div class="col-6 col-md-3"><div class="glass-card p-3 stat"><i class="bi bi-mortarboard fs-3"></i><div class="num">2027</div><div class="small text-white-50">Graduation</div></div></div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-    </section><!-- /Hero Section -->
-
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>About Me</h2>
-        <p>Hello! I am Arvindh Babu, a dedicated Artificial Intelligence student at SRM TRP Engineering College,
-          passionate
-          about leveraging technology to solve real-world problems. With a strong foundation in data science, machine
-          learning,
-          and web development, I am continuously expanding my expertise to build intelligent systems that drive
-          innovation.
-
-          My journey in AI began with a deep curiosity about how data-driven insights can shape industries. Over time,
-          this curiosity evolved into hands-on experience, earning me an IBM Professional Certificate in Data Science
-          and the Machine Learning Foundation in AWS Educate. These experiences have strengthened my ability to analyze data, 
-          build predictive models, and develop interactive
-          web applications.
-
-          Currently, I am working on a mini-project—an AI-powered educational chatbot—to enhance learning experiences.
-          Additionally, I am preparing to write a research paper, aiming to contribute valuable insights to the AI
-          community.
-          My goal is to secure a high-paying role in data science or AI, where I can make a significant impact through
-          innovation
-          and automation.
-
-          Beyond academics, I enjoy playing chess, a game that sharpens my strategic thinking, and curating music
-          playlists
-          that reflect my moods and inspirations. Whether it’s developing AI models, optimizing web applications, or
-          exploring
-          emerging technologies, I am always eager to learn, collaborate, and push the boundaries of what’s possible
-          with AI.
-
-        </p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4">
-            <img src="assets/img/Photo.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-8 content">
-            <h2>AI-DS STUDENT</h2>
-            <p class="fst-italic py-3">
-              "It's not who I am underneath, but what I do that defines me."
-            </p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i>&#9824;</i> <strong>Birthday:</strong> <span>23 August 2006</span></li>
-                  <li><i>&#9824;</i> <strong>City:</strong> <span>Tiruchirappalli, Tamil Nadu, India</span></li>
-                  <li><i>&#9824;</i> <strong>Languages Known:</strong> <span>Tamil, English, Telugu</span>
-                  </li>
-                  <li><i>&#9824;</i> <strong>Hobbies:</strong> <span>Reading Books, Watching Movies</span></li>
-                  <li><i>&#9824;</i> <strong>Favourite Books:</strong> <span>Hamlet, War and Peace</span></li>
-                  <li><i>&#9824;</i> <strong>Favourite Movies:</strong> <span>Interstellar, Fight Club</span></li>
-
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i>&#9824;</i> <strong>College:</strong> <span>SRM TRP Engineering College</span>
-                  </li>
-                  <li><i>&#9824;</i> <strong>Degree:</strong> <span>Bachelor of Technology</span></li>
-                  <li><i>&#9824;</i> <strong>Branch:</strong> <span>Artificial Intelligence and Data Science</span></li>
-                  <li><i>&#9824;</i> <strong>CGPA:</strong> <span>8.0</span></li>
-                  <li><i>&#9824;</i> <strong>Strengths:</strong> <span>Leadership, Patience, Team work</span></li>
-                  <li><i>&#9824;</i> <strong>Favourite Sport/Game:</strong> <span>Cricket, Chess</span></li>
-                </ul>
-              </div>
-            </div>
-            <p class="py-3"> 
-              Passionate about innovation and driven by curiosity, I aim to push the boundaries of AI and Data Science
-              to create impactful, real-world solutions. I thrive on transforming ambitious ideas into
-              cutting-edge advancements that inspire change and unlock new possibilities. Committed to collaboration and
-              learning from diverse perspectives, I believe in technology's power to drive progress, enhance lives, and
-              build a sustainable future. Let’s harness AI as a force for good and shape a legacy of innovation for
-              generations to come.
-            </p>
-          </div>
-        </div>
-
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <div class="container-xl">
+      <div class="mb-4" data-aos="fade-up">
+        <h2 class="h3 mb-1">Skills</h2>
+        <p class="section-subtitle">Same data — elevated presentation. Logos + colorful skill chips for instant scanning.</p>
       </div>
 
-    </section><!-- /About Section -->
-
-    <!-- Stats Section -->
-    <section id="stats" class="stats section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-            <i class="bi bi-emoji-smile"></i>
-            <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="18" data-purecounter-duration="1"
-                class="purecounter"></span>
-              <p>Age</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-
-          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-            <a href="https://leetcode.com/u/arvindhbabu23/" target="_blank"
-              style="text-decoration: none; color: inherit;">
-              <i class="bi bi-trophy"></i> <!-- Badge icon with link -->
-            </a>
-            <div class="stats-item">
-              <a href="https://leetcode.com/u/arvindhbabu23/" target="_blank"
-                style="text-decoration: none; color: inherit;">
-                <span data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="1"
-                  class="purecounter"></span>
-                <p>Leetcode Problems Solved</p>
-              </a>
+      <div class="row g-4">
+        <!-- Programming Languages -->
+        <div class="col-lg-6" data-aos="fade-up">
+          <div class="glass-card p-4 h-100">
+            <h3 class="h5 mb-3"><i class="bi bi-code-slash me-2"></i>Programming Languages</h3>
+            <div>
+              <span class="skill-pill"><i class="devicon-python-plain"></i> Python</span>
+              <span class="skill-pill"><i class="devicon-r-plain"></i> R</span>
+              <span class="skill-pill"><i class="devicon-c-plain"></i> C</span>
+              <span class="skill-pill"><i class="devicon-java-plain"></i> Java</span>
+              <span class="skill-pill"><i class="devicon-php-plain"></i> PHP</span>
+              <span class="skill-pill"><i class="devicon-bash-plain"></i> Bash</span>
             </div>
           </div>
-
-          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-            <a href="https://www.hackerrank.com/profile/arvindhbabu23" target="_blank"
-              style="text-decoration: none; color: inherit;">
-              <i class="bi bi-trophy"></i> <!-- Badge icon with link -->
-            </a>
-            <div class="stats-item">
-              <a href="https://www.hackerrank.com/profile/arvindhbabu23" target="_blank"
-                style="text-decoration: none; color: inherit;">
-                <span data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="1"
-                  class="purecounter"></span>
-                <p>HackerRank Problems Solved</p>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-            <i class="fas fa-graduation-cap"></i>
-            <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="2027" data-purecounter-duration="1"
-                class="purecounter"></span>
-              <p>Year of Graduation</p>
-            </div>
-          </div><!-- End Stats Item -->
-
         </div>
+        <!-- CS Fundamentals -->
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="50">
+          <div class="glass-card p-4 h-100">
+            <h3 class="h5 mb-3"><i class="bi bi-diagram-3 me-2"></i>Computer Science Fundamentals</h3>
+            <div>
+              <span class="skill-pill"><i class="bi bi-diagram-3"></i> DSA</span>
+              <span class="skill-pill"><i class="bi bi-braces"></i> OOP</span>
+              <span class="skill-pill"><i class="bi bi-chat-text"></i> NLP</span>
+              <span class="skill-pill"><i class="bi bi-database"></i> DBMS</span>
+              <span class="skill-pill"><i class="bi bi-window"></i> OS</span>
+              <span class="skill-pill"><i class="bi bi-diagram-2"></i> DAA</span>
+            </div>
+          </div>
+        </div>
+        <!-- Data Science & AI -->
+        <div class="col-lg-6" data-aos="fade-up">
+          <div class="glass-card p-4 h-100">
+            <h3 class="h5 mb-3"><i class="bi bi-graph-up-arrow me-2"></i>Data Science & AI</h3>
+            <div>
+              <span class="skill-pill"><i class="bi bi-clipboard-data"></i> Data Analysis</span>
+              <span class="skill-pill"><i class="bi bi-cpu"></i> Machine Learning</span>
+              <span class="skill-pill"><i class="bi bi-cpu-fill"></i> Deep Learning</span>
+              <span class="skill-pill"><i class="bi bi-stars"></i> Generative AI</span>
+              <span class="skill-pill"><i class="bi bi-bar-chart"></i> Data Viz</span>
+              <span class="skill-pill"><i class="bi bi-cloud"></i> Big Data Analysis</span>
+            </div>
+          </div>
+        </div>
+        <!-- Software Tools -->
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="50">
+          <div class="glass-card p-4 h-100">
+            <h3 class="h5 mb-3"><i class="bi bi-tools me-2"></i>Software Tools</h3>
+            <div>
+              <span class="skill-pill"><i class="devicon-jupyter-plain"></i> Jupyter</span>
+              <span class="skill-pill"><i class="devicon-visualstudio-plain"></i> VS Code</span>
+              <span class="skill-pill"><i class="devicon-matplotlib-plain"></i> Matplotlib</span>
+              <span class="skill-pill"><i class="devicon-git-plain"></i> Git</span>
+              <span class="skill-pill"><i class="devicon-nltk-original"></i> NLTK</span>
+              <span class="skill-pill"><i class="devicon-mysql-plain"></i> MySQL</span>
+            </div>
+          </div>
+        </div>
+        <!-- Libraries -->
+        <div class="col-lg-6" data-aos="fade-up">
+          <div class="glass-card p-4 h-100">
+            <h3 class="h5 mb-3"><i class="bi bi-boxes me-2"></i>Libraries & Frameworks</h3>
+            <div>
+              <span class="skill-pill"><i class="devicon-pandas-original"></i> Pandas</span>
+              <span class="skill-pill"><i class="devicon-numpy-original"></i> NumPy</span>
+              <span class="skill-pill"><i class="devicon-matplotlib-plain"></i> Matplotlib & Seaborn</span>
+              <span class="skill-pill"><i class="devicon-powerbi-plain"></i> Power BI</span>
+              <span class="skill-pill"><i class="devicon-tensorflow-original"></i> TensorFlow</span>
+              <span class="skill-pill"><i class="devicon-scikitlearn-plain"></i> Scikit‑learn</span>
+            </div>
+          </div>
+        </div>
+        <!-- Cloud & Big Data -->
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="50">
+          <div class="glass-card p-4 h-100">
+            <h3 class="h5 mb-3"><i class="bi bi-cloud-rain-heavy me-2"></i>Cloud Computing & Big Data</h3>
+            <div>
+              <span class="skill-pill"><i class="devicon-azure-plain"></i> MS Azure</span>
+              <span class="skill-pill"><i class="devicon-googlecloud-plain"></i> Google Cloud</span>
+              <span class="skill-pill"><i class="devicon-amazonwebservices-plain-wordmark"></i> AWS</span>
+              <span class="skill-pill"><i class="devicon-ibm-plain"></i> IBM Cloud</span>
+              <span class="skill-pill"><i class="devicon-apacheplain"></i> Hadoop</span>
+              <span class="skill-pill"><i class="devicon-apachespark-original"></i> Spark</span>
+            </div>
+          </div>
+        </div>
+        <!-- Python Dev -->
+        <div class="col-lg-6" data-aos="fade-up">
+          <div class="glass-card p-4 h-100">
+            <h3 class="h5 mb-3"><i class="bi bi-filetype-py me-2"></i>Python Development</h3>
+            <div>
+              <span class="skill-pill"><i class="devicon-python-plain"></i> Core Python</span>
+              <span class="skill-pill"><i class="devicon-django-plain"></i> Django</span>
+              <span class="skill-pill"><i class="devicon-flask-original"></i> Flask</span>
+              <span class="skill-pill"><i class="bi bi-ui-checks-grid"></i> Web Scraping (BS4)</span>
+              <span class="skill-pill"><i class="bi bi-graph-up"></i> Python for DS</span>
+              <span class="skill-pill"><i class="bi bi-gear"></i> Automation & Scripting</span>
+            </div>
+          </div>
+        </div>
+        <!-- Web Dev -->
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="50">
+          <div class="glass-card p-4 h-100">
+            <h3 class="h5 mb-3"><i class="bi bi-browser-chrome me-2"></i>Web Development</h3>
+            <div>
+              <span class="skill-pill"><i class="devicon-html5-plain"></i> HTML</span>
+              <span class="skill-pill"><i class="devicon-css3-plain"></i> CSS</span>
+              <span class="skill-pill"><i class="devicon-javascript-plain"></i> JavaScript</span>
+              <span class="skill-pill"><i class="devicon-flask-original"></i> Flask</span>
+              <span class="skill-pill"><i class="devicon-react-original"></i> React.js</span>
+              <span class="skill-pill"><i class="devicon-nodejs-plain"></i> Node.js</span>
+            </div>
+          </div>
+        </div>
+        <!-- Maths & Analytics -->
+        <div class="col-lg-6" data-aos="fade-up">
+          <div class="glass-card p-4 h-100">
+            <h3 class="h5 mb-3"><i class="bi bi-calculator me-2"></i>Mathematics & Analytics</h3>
+            <div>
+              <span class="skill-pill"><i class="bi bi-sliders2"></i> Linear Algebra</span>
+              <span class="skill-pill"><i class="bi bi-diagram-2"></i> Discrete Math</span>
+              <span class="skill-pill"><i class="bi bi-graph-up"></i> Statistics</span>
+              <span class="skill-pill"><i class="bi bi-percent"></i> Probability</span>
+              <span class="skill-pill"><i class="bi bi-bezier2"></i> Calculus</span>
+              <span class="skill-pill"><i class="bi bi-grid-3x3-gap"></i> Partial Differentials</span>
+            </div>
+          </div>
+        </div>
+        <!-- Soft skills -->
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="50">
+          <div class="glass-card p-4 h-100">
+            <h3 class="h5 mb-3"><i class="bi bi-people me-2"></i>Soft Skills</h3>
+            <div>
+              <span class="skill-pill"><i class="bi bi-chat"></i> Communication</span>
+              <span class="skill-pill"><i class="bi bi-lightbulb"></i> Problem‑Solving</span>
+              <span class="skill-pill"><i class="bi bi-search"></i> Critical Thinking</span>
+              <span class="skill-pill"><i class="bi bi-people"></i> Team Collaboration</span>
+              <span class="skill-pill"><i class="bi bi-compass"></i> Adaptability & Curiosity</span>
+              <span class="skill-pill"><i class="bi bi-hourglass"></i> Time Management</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+<!-- EXPERIENCE -->
+<section id="experience" class="section">
+    <div class="container-xl">
+        <div class="mb-4" data-aos="fade-up">
+            <h2 class="h3 mb-1">Experience</h2>
+            <p class="section-subtitle">Hands-on internships & simulations across data science, web, cloud, and GenAI.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-12" data-aos="fade-right">
+                <div class="glass-card p-4 h-100 timeline">
+                    <!-- Items preserved from your data -->
+                    <div class="t-item">
+                        <h3 class="h5 mb-1 fw-semibold">Data Science Virtual Intern — CodSoft</h3>
+                        <div class="text-white-50 small mb-2">February 2025 – March 2025</div>
+                        <ul class="mb-3 text-white-50">
+                            <li>Developed predictive models with 85%+ accuracy for business decision‑making.</li>
+                            <li>Data preprocessing, feature engineering, and statistical analysis on real datasets.</li>
+                            <li>Interactive visualizations via Matplotlib & Seaborn for actionable insights.</li>
+                        </ul>
+                    </div>
+                    <div class="t-item">
+                        <h3 class="h5 mb-1 fw-semibold">Web Development Virtual Intern — InternPe</h3>
+                        <div class="text-white-50 small mb-2">February 2025 – March 2025</div>
+                        <ul class="mb-3 text-white-50">
+                            <li>Responsive web apps; reduced load time by 30% via optimized front‑end.</li>
+                            <li>RESTful API integration, enhanced functionality & UX.</li>
+                            <li>Debugging and UI enhancements driving engagement.</li>
+                        </ul>
+                    </div>
+                    <div class="t-item">
+                        <h3 class="h5 mb-1 fw-semibold">AWS APAC Solutions Architecture Virtual Experience — Forage</h3>
+                        <div class="text-white-50 small mb-2">February 2025</div>
+                        <ul class="mb-3 text-white-50">
+                            <li>Designed scalable hosting with AWS Elastic Beanstalk; improved response times.</li>
+                            <li>Cost estimates & optimization strategies.</li>
+                        </ul>
+                    </div>
+                    <div class="t-item">
+                        <h3 class="h5 mb-1 fw-semibold">Foundation of AI Virtual Intern — Edunet Foundation</h3>
+                        <div class="text-white-50 small mb-2">May 2025 – June 2025</div>
+                        <ul class="mb-3 text-white-50">
+                            <li>CNN model (TensorFlow/Keras) for fire‑image classification.</li>
+                            <li>Evaluated with accuracy, confusion matrix, classification report.</li>
+                            <li>Documented ML pipeline; presented to peers & mentors.</li>
+                        </ul>
+                    </div>
+                    <div class="t-item">
+                        <h3 class="h5 mb-1 fw-semibold">Data Analytics Virtual Intern — Edunet Foundation</h3>
+                        <div class="text-white-50 small mb-2">May 2025 – June 2025</div>
+                        <ul class="mb-3 text-white-50">
+                            <li>Power BI dashboard for utilities consumption.</li>
+                            <li>Cleaned & transformed CSVs; ensured accuracy & consistency.</li>
+                            <li>Custom visuals, KPIs, slicers for trends & insights.</li>
+                        </ul>
+                    </div>
+                    <div class="t-item">
+                        <h3 class="h5 mb-1 fw-semibold">Generative AI Virtual Intern — Prodigy Infotech</h3>
+                        <div class="text-white-50 small mb-2">July 2025 – August 2025</div>
+                        <ul class="mb-0 text-white-50">
+                            <li>5 projects: Text Gen, Image Gen, Captioning, Pix2Pix, Style Transfer.</li>
+                            <li>Stack: Python, TF, PyTorch, HF, Matplotlib, Colab, PIL.</li>
+                            <li>Models: GPT‑2, Diffusion, VGG19.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container-xl">
+      <div class="mb-4" data-aos="fade-up">
+        <h2 class="h3 mb-1">Projects</h2>
+        <p class="section-subtitle">A colorful grid with badges for tech stack, keeping your exact descriptions.</p>
       </div>
 
-    </section><!-- /Stats Section -->
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Skills</h2>
-        <h3><strong>Programming Languages</strong></h3>
-
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row skills-content skills-animation">
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>Python</span> <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>R</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>C</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div><!-- End Skills Item -->
-
+      <div class="row g-4">
+        <!-- Project: Stock Price Prediction -->
+        <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+          <div class="glass-card p-4 project-card h-100">
+            <img src="https://imgs.search.brave.com/SlMOALamDPec-wTv1LDNMJuXr9DtLSY6lUrEr5SNtas/rs:fit:0:180:1:0/g:ce/aHR0cHM6Ly93d3cu/ZnV0dXJlLXByb2Nl/c3NpbmcuY29tL2Js/b2cvd3AtY29udGVu/dC91cGxvYWRzLzIw/MjMvMDMvUHJlZGlj/dGluZy1TdG9jay1Q/cmljZXMtYW5kLU1h/cmtldC1TaGlmdHMt/VXNpbmctQUkuanBn" alt="Stock Price Prediction" class="img-fluid w-100 rounded mb-2" style="max-height:120px;object-fit:cover;">
+            <h3 class="h5 mt-2">Stock Price Prediction</h3>
+            <p class="text-white-50">Deep learning (LSTM) forecasts from historical price data with preprocessing & visualization.</p>
+            <div class="d-flex flex-wrap gap-2 mt-2">
+              <span class="skill-pill">Pandas</span>
+              <span class="skill-pill">NumPy</span>
+              <span class="skill-pill">Matplotlib</span>
+              <span class="skill-pill">Scikit‑learn</span>
+              <span class="skill-pill">TensorFlow/Keras</span>
+            </div>
           </div>
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>Java</span> <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>PHP</span> <i class="val">70%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Bash</span> <i class="val">60%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div><!-- End Skills Item -->
-
-          </div>
-
         </div>
-
+        <!-- Heart Disease Prediction -->
+        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="50">
+          <div class="glass-card p-4 project-card h-100">
+            <img src="https://imgs.search.brave.com/ti0riDZl1r82loCZdVY7epsT56nRQmO3fVyva2mDcvQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9haW11/bHRpcGh5c2ljcy5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MjQvMDUvbWFjaGlu/ZS1sZWFybmluZy5q/cGc" alt="Heart Disease Prediction" class="img-fluid w-100 rounded mb-2" style="max-height:120px;object-fit:cover;">
+            <h3 class="h5 mt-2">Heart Disease Prediction</h3>
+            <p class="text-white-50">Classifier with explainability (SHAP) and crisp visuals for risk insights.</p>
+            <div class="d-flex flex-wrap gap-2 mt-2">
+              <span class="skill-pill">Pandas</span>
+              <span class="skill-pill">NumPy</span>
+              <span class="skill-pill">Scikit‑learn</span>
+              <span class="skill-pill">SHAP</span>
+            </div>
+          </div>
+        </div>
+        <!-- Movie Recs -->
+        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="glass-card p-4 project-card h-100">
+            <img src="https://imgs.search.brave.com/8duiyzS4sBM5KG3BPd2QQlHwpZ1AZOW5cq_bbo9413I/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9lZGl0/b3IuYW5hbHl0aWNz/dmlkaHlhLmNvbS91/cGxvYWRzLzc2ODg5/cmVjb21tZW5kZXIt/c3lzdGVtLWZvci1t/b3ZpZS1yZWNvbW1l/bmRhdGlvbi5qcGc" alt="Movie Recommendation System" class="img-fluid w-100 rounded mb-2" style="max-height:120px;object-fit:cover;">
+            <h3 class="h5 mt-2">Movie Recommendation System</h3>
+            <p class="text-white-50">Hybrid recommendations from ratings, metadata, and user profiles.</p>
+            <div class="d-flex flex-wrap gap-2 mt-2">
+              <span class="skill-pill">Pandas</span>
+              <span class="skill-pill">NumPy</span>
+              <span class="skill-pill">Scikit‑learn</span>
+            </div>
+          </div>
+        </div>
+        <!-- Fake News -->
+        <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+          <div class="glass-card p-4 project-card h-100">
+            <img src="https://imgs.search.brave.com/jNyGo8C4843WWZJUCT4HwJ2pZeN8LQahtsM4wyUUicI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZWVrc2Zvcmdl/ZWtzLm9yZy93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyMjA5MDYx/NzQzMjcvNC5QTkc" alt="Fake News Detection" class="img-fluid w-100 rounded mb-2" style="max-height:120px;object-fit:cover;">
+            <h3 class="h5 mt-2">Fake News Detection</h3>
+            <p class="text-white-50">Text preprocessing + TF‑IDF + supervised classification to flag misinformation.</p>
+            <div class="d-flex flex-wrap gap-2 mt-2">
+              <span class="skill-pill">Pandas</span>
+              <span class="skill-pill">NumPy</span>
+              <span class="skill-pill">Scikit‑learn</span>
+              <span class="skill-pill">NLTK</span>
+            </div>
+          </div>
+        </div>
+        <!-- Predictive Analytics group -->
+        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="50">
+          <div class="glass-card p-4 project-card h-100">
+            <img src="https://imgs.search.brave.com/INjvDnGLeKWlv3jg-t8-lU3I896__gQ9Xmeu0tpaKGY/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTUw/ODc4MDY3MS9waG90/by90b3VjaGluZy1t/ZXRhdmVyc2UuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPTgw/YnA0NE1jM1VBNFFw/NVlrYmxBZUpmalhC/cWJ6clRUa2hQbjYt/b3JPLWM9" alt="ML Models" class="img-fluid w-100 rounded mb-2" style="max-height:120px;object-fit:cover;">
+            <h3 class="h5 mt-2">Predictive Analytics & ML Models</h3>
+            <p class="text-white-50">Titanic, movie ratings, sales forecasting, fraud detection (RF+SMOTE), Iris (SVM/KNN).</p>
+            <div class="d-flex flex-wrap gap-2 mt-2">
+              <span class="skill-pill">Python</span>
+              <span class="skill-pill">Scikit‑learn</span>
+              <span class="skill-pill">SMOTE</span>
+            </div>
+          </div>
+        </div>
+        <!-- GenAI -->
+        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="glass-card p-4 project-card h-100">
+            <img src="https://imgs.search.brave.com/DYOIV66vFCNZSCSxeqHztex445AxeuithEONGOjiJ-c/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/Y29uc3VsdGFuY3ku/ZXUvaWxsdXN0cmF0/aW9ucy9uZXdzL2Rl/dGFpbC8yMDI1LTA0/LTE3LTAzNDIzMzUz/Mi1HZW5lcmF0aXZl/X0FJX2luX1Byb2pl/Y3RfTWFuYWdlbWVu/dF9BX0d1aWRlX2Zv/cl9Qcm9qZWN0X1Rl/YW1zLmpwZw" alt="Gen AI" class="img-fluid w-100 rounded mb-2" style="max-height:120px;object-fit:cover;">
+            <h3 class="h5 mt-2">Generative AI Projects</h3>
+            <p class="text-white-50">GPT‑2 text gen, diffusion image gen, captioning, pix2pix, neural style transfer.</p>
+            <div class="d-flex flex-wrap gap-2 mt-2">
+              <span class="skill-pill">TensorFlow</span>
+              <span class="skill-pill">PyTorch</span>
+              <span class="skill-pill">HuggingFace</span>
+            </div>
+          </div>
+        </div>
+        <!-- Web Dev -->
+        <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+          <div class="glass-card p-4 project-card h-100">
+            <img src="https://imgs.search.brave.com/lS1ZhNm4dN0MUH4hkz_b_DKdS51sliwTwKhaeI2Xac8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9lbGVt/ZW50cy1yZXNpemVk/LmVudmF0b3VzZXJj/b250ZW50LmNvbS9l/bGVtZW50cy1jb3Zl/ci1pbWFnZXMvNWM1/NDkwYTctMjI5Mi00/N2RlLTlmMjUtMDc5/MzgzYWM1YjBjP3c9/MzE2JmNmX2ZpdD1z/Y2FsZS1kb3duJnE9/OTQmZm9ybWF0PWpw/ZWcmcz01Nzc2ODVj/MTgyMjAwNjZjMzli/Yzk0OTI1YTUzMTgy/OGM4YmI5N2M5OTcw/NTUyZmE1YWM2MmM3/MDhkZjFkYzE3" alt="Web Development Projects" class="img-fluid w-100 rounded mb-2" style="max-height:120px;object-fit:cover;">
+            <span class="badge text-dark fw-semibold rounded-pill">Front‑End</span>
+            <h3 class="h5 mt-2">Web Development Projects</h3>
+            <p class="text-white-50">Calculator, e‑commerce site, to‑do app, Connect Four — responsive & clean.</p>
+            <div class="d-flex flex-wrap gap-2 mt-2">
+              <span class="skill-pill">HTML</span>
+              <span class="skill-pill">CSS</span>
+              <span class="skill-pill">JavaScript</span>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <section id="skills" class="skills section">
-
-        <div class="container section-title" data-aos="fade-up">
-          <h2></h2>
-          <h3><strong>Computer Science Fundamentals</strong></h3>
-        </div><!-- End Section Title -->
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="row skills-content skills-animation">
-
-            <div class="col-lg-6">
-
-              <div class="progress">
-                <span class="skill"><span>Data Structures and Algorithms (DSA)</span> <i class="val">100%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
-                    aria-valuemax="100"></div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>Object-Oriented Programming (OOP)</span> <i class="val">90%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>Natural Language Processing (NLP)</span> <i class="val">85%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-            </div>
-
-            <div class="col-lg-6">
-
-              <div class="progress">
-                <span class="skill"><span>Database Management System (DBMS)</span> <i class="val">80%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>Operating Systems (OS)</span> <i class="val">75%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>Design And Analysis Of Algorithms (DAA)</span> <i class="val">70%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="container section-title" data-aos="fade-up">
-          <h2></h2>
-          <h3><strong> Data Science & AI</strong></h3>
-        </div><!-- End Section Title -->
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="row skills-content skills-animation">
-
-            <div class="col-lg-6">
-
-              <div class="progress">
-                <span class="skill"><span>Data Analysis</span> <i class="val">100%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
-                    aria-valuemax="100"></div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>Machine Learning</span> <i class="val">90%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>Deep Learning</span> <i class="val">80%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-            </div>
-
-            <div class="col-lg-6">
-
-              <div class="progress">
-                <span class="skill"><span>Generative AI</span> <i class="val">75%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>Data visualization</span> <i class="val">90%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>Big Data Analysis</span> <i class="val">70%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <div class="container section-title" data-aos="fade-up">
-          <h2></h2>
-          <h3><strong> Software Tools</strong></h3>
-        </div><!-- End Section Title -->
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="row skills-content skills-animation">
-
-            <div class="col-lg-6">
-
-              <div class="progress">
-                <span class="skill"><span>Jupyter</span> <i class="val">100%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
-                    aria-valuemax="100"></div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>VS Code</span> <i class="val">90%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>Matplotlib</span> <i class="val">75%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-            </div>
-
-            <div class="col-lg-6">
-
-              <div class="progress">
-                <span class="skill"><span>Git</span> <i class="val">80%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>NLTK</span> <i class="val">90%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>MYSQL</span> <i class="val">70%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="container section-title" data-aos="fade-up">
-          <h2></h2>
-          <h3><strong>Libraries and Frameworks</strong></h3>
-        </div><!-- End Section Title -->
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="row skills-content skills-animation">
-
-            <div class="col-lg-6">
-
-              <div class="progress">
-                <span class="skill"><span>Pandas</span> <i class="val">100%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
-                    aria-valuemax="100"></div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>Numpy</span> <i class="val">90%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>Matplotlib & Seaborn</span> <i class="val">75%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-            </div>
-
-            <div class="col-lg-6">
-
-              <div class="progress">
-                <span class="skill"><span>Power BI</span> <i class="val">80%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>Tensorflow</span> <i class="val">90%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>Scikit-learn</span> <i class="val">70%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="container section-title" data-aos="fade-up">
-          <h2></h2>
-          <h3><strong>Cloud Computing & Big Data</strong></h3>
-        </div><!-- End Section Title -->
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="row skills-content skills-animation">
-
-            <div class="col-lg-6">
-
-              <div class="progress">
-                <span class="skill"><span>MS Azure</span> <i class="val">100%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
-                    aria-valuemax="100"></div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>Google Cloud</span> <i class="val">95%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>AWS</span> <i class="val">85%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-            </div>
-
-            <div class="col-lg-6">
-
-              <div class="progress">
-                <span class="skill"><span>IBM Cloud</span> <i class="val">90%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>Hadoop</span> <i class="val">75%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>Spark</span> <i class="val">70%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="container section-title" data-aos="fade-up">
-          <h2></h2>
-          <h3><strong> Python Development</strong></h3>
-        </div><!-- End Section Title -->
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="row skills-content skills-animation">
-
-            <div class="col-lg-6">
-
-              <div class="progress">
-                <span class="skill"><span>Core Python</span> <i class="val">100%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
-                    aria-valuemax="100"></div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>Django</span> <i class="val">85%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>Flask</span> <i class="val">85%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-            </div>
-
-            <div class="col-lg-6">
-
-              <div class="progress">
-                <span class="skill"><span>Web Scraping (BeautifulSoup)</span> <i class="val">75%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>Python for Data Science</span> <i class="val">95%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>Automation & Scripting</span> <i class="val">70%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="container section-title" data-aos="fade-up">
-          <h2></h2>
-          <h3><strong>Web Development</strong></h3>
-        </div><!-- End Section Title -->
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="row skills-content skills-animation">
-
-            <div class="col-lg-6">
-
-              <div class="progress">
-                <span class="skill"><span>HTML</span> <i class="val">100%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
-                    aria-valuemax="100"></div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>CSS</span> <i class="val">90%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>JavaScript</span> <i class="val">75%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-            </div>
-
-            <div class="col-lg-6">
-
-              <div class="progress">
-                <span class="skill"><span>Flask (Python)</span> <i class="val">80%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>React.js</span> <i class="val">90%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>Node.js</span> <i class="val">55%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="container section-title" data-aos="fade-up">
-          <h2></h2>
-          <h3><strong>Mathematics & Analytics</strong></h3>
-        </div><!-- End Section Title -->
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="row skills-content skills-animation">
-
-            <div class="col-lg-6">
-
-              <div class="progress">
-                <span class="skill"><span>Linear Algebra</span> <i class="val">100%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
-                    aria-valuemax="100"></div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>Discrete Mathematics</span> <i class="val">90%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>Statistics</span> <i class="val">85%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-            </div>
-
-            <div class="col-lg-6">
-
-              <div class="progress">
-                <span class="skill"><span>Probability</span> <i class="val">80%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>Calculus</span> <i class="val">75%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>Partial Differentials</span> <i class="val">70%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <div class="container section-title" data-aos="fade-up">
-          <h2></h2>
-          <h3><strong>Soft Skills</strong></h3>
-        </div><!-- End Section Title -->
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="row skills-content skills-animation">
-
-            <div class="col-lg-6">
-
-              <div class="progress">
-                <span class="skill"><span>Communication Skills</span> <i class="val">100%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
-                    aria-valuemax="100"></div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>Problem-Solving</span> <i class="val">90%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>Critical Thinking</span> <i class="val">85%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-            </div>
-
-            <div class="col-lg-6">
-
-              <div class="progress">
-                <span class="skill"><span>Team Collaboration</span> <i class="val">80%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>Adaptability & Curiosity</span> <i class="val">75%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>Time Management</span> <i class="val">75%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div><!-- End Skills Item -->
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section><!-- /Skills Section -->
-
-      <!-- Experience Section -->
-      <section id="experience" class="experience section">
-
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Experience</h2>
-          <p>Hands-on internships and virtual experiences in data science, web development, and cloud architecture, showcasing my ability to apply technical skills to real-world challenges and deliver impactful results.</p>
-        </div><!-- End Section Title -->
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="experience-container">
-
-            <!-- Experience 1 -->
-            <div class="experience-card">
-              <h3 class="experience-title"><strong>Data Science Virtual Intern - CodSoft</strong></h3>
-              <p class="experience-duration">February 2025 – March 2025</p>
-              <ul class="experience-highlights">
-                <li>Developed predictive models with 85%+ accuracy for business decision-making.</li>
-                <li>Conducted data preprocessing, feature engineering, and statistical analysis on real-world datasets.</li>
-                <li>Created interactive data visualizations using Matplotlib & Seaborn, providing actionable insights.</li>
-              </ul>
-            </div>
-
-            <!-- Experience 2 -->
-            <div class="experience-card">
-              <h3 class="experience-title"><strong>Web Development Virtual Intern - InternPe</strong></h3>
-              <p class="experience-duration">February 2025 – March 2025</p>
-              <ul class="experience-highlights">
-                <li>Built responsive web applications, reducing load time by 30% through optimized front-end development.</li>
-                <li>Developed and integrated RESTful APIs, enhancing website functionality and user experience.</li>
-                <li>Improved website performance and user engagement through debugging and UI enhancements.</li>
-              </ul>
-            </div>
-
-            <!-- Experience 3 -->
-            <div class="experience-card">
-              <h3 class="experience-title"><strong>AWS APAC Solutions Architecture Virtual Experience – Forage</strong></h3>
-              <p class="experience-duration">February 2025</p>
-              <ul class="experience-highlights">
-                <li>Designed a scalable hosting architecture using AWS Elastic Beanstalk, improving response times.</li>
-                <li>Provided cost estimation strategies to optimize cloud resource utilization.</li>
-              </ul>
-            </div>
-
-            <!-- Experience 4 -->
-            <div class="experience-card">
-              <h3 class="experience-title"><strong>Foundation of AI Virtual Intern - Edunet Foundation</strong></h3>
-              <p class="experience-duration">May 2025 – June 2025</p>
-              <ul class="experience-highlights">
-                <li>Built and trained a CNN model using TensorFlow/Keras to classify fire-based image data.</li>
-                <li>Evaluated model performance using accuracy, confusion matrix, and classification reports.</li>
-                <li>Documented the entire ML pipeline and presented the project to peers and mentors.</li>
-              </ul>
-            </div>
-
-            <!-- Experience 5 -->
-            <div class="experience-card">
-              <h3 class="experience-title"><strong>Data Analytics Virtual Intern – Edunet Foundation</strong></h3>
-              <p class="experience-duration">May 2025 - June 2025</p>
-              <ul class="experience-highlights">
-                <li>Built an interactive Power BI dashboard to analyze energy consumption across electricity, gas, and water utilities.</li>
-                <li>Cleaned and transformed raw CSV datasets using Excel to ensure accuracy and consistency.</li>
-                <li>Designed custom visualizations, KPIs, and slicers to highlight cost trends, usage patterns, and category-wise insights.</li>
-              </ul>
-            </div>
-
-            <!-- Experience 6 -->
-            <div class="experience-card">
-              <h3 class="experience-title"><strong>Generative AI  Virtual Intern – Prodigy Infotech</strong></h3>
-              <p class="experience-duration">July 2025 - August 2025</p>
-              <ul class="experience-highlights">
-                <li>Completed 5 end-to-end projects on Generative AI using cutting-edge models and tools (GPT-2, Diffusion, pix2pix, VGG19).</li>
-                <li>Worked extensively with Python, TensorFlow, PyTorch, HuggingFace, Matplotlib, Colab, and PIL.</li>
-                <li>Developed a Text Generation system,  Image Generation, Image Captioning System,  Image-to-Image Translation, Neural Style Transfer.</li>
-              </ul>
-            </div>
-
-          </div>
-
-        </div>
-
-      </section><!-- /Experience Section -->
-
-      <style>
-        .experience.section {
-          padding: 60px 0;
-        }
-
-        .experience-container {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 20px;
-          justify-content: center;
-        }
-
-        .experience-card {
-          background: #ffffff;
-          border-radius: 10px;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-          padding: 20px;
-          width: 100%;
-          max-width: 400px;
-          text-align: left;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .experience-card:hover {
-          transform: translateY(-10px);
-          box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .experience-title {
-          font-size: 1.5rem;
-          margin-bottom: 10px;
-          color: #000000;
-        }
-
-        .experience-duration {
-          font-size: 1rem;
-          color: #6c757d;
-          margin-bottom: 15px;
-        }
-
-        .experience-highlights {
-          list-style: none;
-          padding: 0;
-          font-size: 0.9rem;
-          color: #555555;
-        }
-
-        .experience-highlights li {
-          margin-bottom: 10px;
-          position: relative;
-          padding-left: 20px;
-        }
-
-        .experience-highlights li::before {
-          content: "✔";
-          color: #007bff;
-          position: absolute;
-          left: 0;
-          font-size: 1rem;
-        }
-      </style>
-
-      <!-- Portfolio Section -->
-      <section id="projects" class="portfolio section">
-
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2 class="">Projects</h2>
-          <p class="subtitle">
-            "Explore my collection of projects that demonstrate my proficiency across various fields, such as robotics,
-            IoT, machine learning, and web development, showcasing my ability to craft innovative solutions to
-            real-world challenges."
-          </p>
-        </div><!-- End Section Title -->
-
-        <!-- Portfolio Container -->
-        <div class="container portfolio-container">
-
-          <!-- Project 1 -->
-          <div class="project-card" data-aos="fade-up">
-            <h3 class="project-title text-black"><strong>Stock Price Prediction</strong></h3>
-            <p class="project-description">
-              A deep learning-based system that predicts future stock prices using Long Short-Term Memory (LSTM) networks. 
-              The model leverages historical stock market data to capture temporal dependencies and generate accurate forecasts. 
-              Implemented in Python, it combines data preprocessing, time series modeling, and visualization to aid in investment decision-making.
+    </div>
+  </section>
+
+<!-- CERTIFICATIONS -->
+<section id="certs" class="section">
+    <div class="container-xl">
+        <div class="mb-4" data-aos="fade-up">
+            <h2 class="h3 mb-1">Certifications</h2>
+            <p class="section-subtitle">
+                A testament to my commitment to continuous learning and professional growth. These certifications showcase my expertise in AI, data science, cloud, and software development.
             </p>
-            <ul class="project-highlights">
-              <li>Libraries: Pandas, NumPy, Matplotlib, Scikit-learn, TensorFlow/Keras</li>
-              <li>Features: LSTM-based time series prediction, data normalization, trend visualization</li>
-              <li>Impact: Provides a robust forecasting tool for investors and analysts to anticipate market trends and make data-driven decisions</li>
-            </ul>
-          </div>
-
-          <!-- Project 2 -->
-          <div class="project-card" data-aos="fade-up">
-            <h3 class="project-title text-black"><strong>Heart Disease Prediction</strong></h3>
-            <p class="project-description">
-              A robust system that predicts heart disease using diagnostic medical data through advanced classification techniques. The model employs a Random Forest 
-              classifier to identify at-risk patients and integrates SHAP for explainable AI, providing insights into feature importance. Implemented in Python, it encompasses 
-              data preprocessing, model evaluation, and visualization to support healthcare decision-making.
-            </p>
-            <ul class="project-highlights">
-              <li>Libraries: Pandas, NumPy, Matplotlib, Scikit-learn, SHAP</li>
-              <li>Features: Random Forest classification, SHAP-based explainability, data preprocessing, performance visualization</li>
-              <li>Impact: Empowers healthcare professionals with a reliable diagnostic tool to identify heart disease risks and make informed decisions</li>
-            </ul>
-          </div>
-
-
-          <!-- Project 3 -->
-          <div class="project-card" data-aos="fade-up">
-            <h3 class="project-title text-black"><strong>Movie Recommendation System</strong></h3>
-            <p class="project-description">
-              An AI-powered system that recommends movies based on user preferences using collaborative and content-based filtering techniques. 
-              Built with Python and machine learning algorithms, it analyzes user ratings, movie metadata, and behavioral patterns to deliver 
-              personalized recommendations.
-            </p>
-            <ul class="project-highlights">
-              <li>Libraries: Pandas, NumPy, Scikit-learn</li>
-              <li>Features: Content-based and collaborative filtering, user profiling, similarity score computation</li>
-              <li>Impact: Enhances user experience by providing accurate and scalable movie recommendations across diverse genres</li>
-            </ul>
-          </div>
-
-          <!-- Project 4 -->
-          <div class="project-card" data-aos="fade-up">
-            <h3 class="project-title text-black"><strong>Fake News Detection</strong></h3>
-            <p class="project-description">
-              A machine learning-based system that identifies and classifies fake news articles using natural language processing (NLP) techniques. 
-              The model analyzes textual data to distinguish between reliable and deceptive content by leveraging supervised learning algorithms and 
-              vectorization methods.
-            </p>
-            <ul class="project-highlights">
-              <li>Libraries: Pandas, NumPy, Scikit-learn, NLTK/TfidfVectorizer</li>
-              <li>Features: Text preprocessing, TF-IDF vectorization, logistic regression/classification model</li>
-              <li>Impact: Enhances information credibility by providing an automated tool to combat misinformation across digital platforms</li>
-            </ul>
-          </div>
-          
-          <!-- Project 5 -->
-          <div class="project-card" data-aos="fade-up">
-            <h3 class="project-title text-black"><strong>Predictive Analytics & Machine Learning Models</strong></h3>
-            <p class="project-description">
-               Developed ML models for Titanic survival prediction, movie rating prediction, and sales forecasting, achieving an accuracy of 90%+.
-               Built a fraud detection system using Random Forest & SMOTE, improving fraud detection rate by 20%.
-               Implemented Iris flower classification using SVM & KNN, reaching 97% accuracy.
-            </p>
-            <ul class="project-highlights">
-              <li>Technologies Used: Python, Scikit-learn, Random Forest, SMOTE, SVM, KNN</li>
-              <li>Projects Completed: Titanic Survival Prediction, Movie Rating Prediction, Sales Forecasting, Fraud Detection System, Iris Flower Classification</li>
-              <li>Skills Gained: Predictive analytics, Machine learning model development, Feature engineering, Classification techniques, Accuracy optimization</li>
-            </ul>
-          </div>
-
-          <!-- Project 6 -->
-          <div class="project-card" data-aos="fade-up">
-            <h3 class="project-title text-black"><strong>Generative AI Projects</strong></h3>
-            <p class="project-description">
-                Completed 5 end-to-end projects on Generative AI using cutting-edge models and tools (GPT-2, Diffusion, pix2pix, VGG19).
-                Developed a Text Generation system,  Image Generation, Image Captioning System,  Image-to-Image Translation, Neural Style Transfer.
-            </p>
-            <ul class="project-highlights">
-              <li>Technologies Used: Python, TensorFlow, PyTorch, HuggingFace, Matplotlib, Colab, and PIL.</li>
-              <li>Projects Completed: Text Generation system,  Image Generation, Image Captioning System,  Image-to-Image Translation, Neural Style Transfer.</li>
-              <li>Skills Gained: Generative Adversarial Networks (GANs), Diffusion Models (DDPMs), Transformers (GPT-2 architecture), CNN–RNN Encoder–Decoder architecture</li>
-            </ul>
-          </div>
-
-          <!-- Project 7 -->
-          <div class="project-card" data-aos="fade-up">
-            <h3 class="project-title text-black"><strong>Web Development Projects</strong></h3>
-            <p class="project-description">
-               Developed a Simple Calculator using HTML, CSS, and JavaScript, implementing basic arithmetic operations.Built a 
-               fully functional E-Commerce Website, featuring product listings, a shopping cart, and responsive design.
-               Created a To-Do List App, enabling task management with add, delete, and update functionalities.
-            </p>
-            <ul class="project-highlights">
-              <li>Technologies Used: HTML, CSS, JavaScript</li>
-              <li>Projects Completed: Simple Calculator, ECommerce Website, ToDo List App, Connect Four Game</li>
-              <li>Skills Gained: Front-end development, DOM manipulation, Responsive design</li>
-            </ul>
-          </div>
-
-        </div><!-- End Portfolio Container -->
-
-      </section><!-- /Portfolio Section -->
-
-      <style>
-        .portfolio.section {
-          padding: 60px 0;
-        }
-
-        .section-title {
-          text-align: center;
-          margin-bottom: 40px;
-        }
-
-        .text-primary {
-          color: #007bff;
-        }
-
-        .subtitle {
-          font-size: 1.1rem;
-          color: #6c757d;
-        }
-
-        .portfolio-container {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 20px;
-          justify-content: center;
-        }
-
-        .project-card {
-          background: #ffffff;
-          border-radius: 10px;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-          padding: 20px;
-          width: 100%;
-          max-width: 400px;
-          text-align: left;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .project-card:hover {
-          transform: translateY(-10px);
-          box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .project-title {
-          font-size: 1.5rem;
-          margin-bottom: 15px;
-          color: #000000;
-          /* Black color for headings */
-        }
-
-        .project-description {
-          font-size: 1rem;
-          color: #555555;
-          margin-bottom: 15px;
-        }
-
-        .project-highlights {
-          list-style: none;
-          padding: 0;
-          font-size: 0.9rem;
-          color: #555555;
-        }
-
-        .project-highlights li {
-          margin-bottom: 10px;
-          position: relative;
-          padding-left: 20px;
-        }
-
-        .project-highlights li::before {
-          content: "✔";
-          color: #007bff;
-          position: absolute;
-          left: 0;
-          font-size: 1rem;
-        }
-      </style>
-
-      <!-- Services Section -->
-      <section id="services" class="portfolio section">
-
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Certifications</h2>
-          <p>"A testament to my commitment to continuous learning and professional growth, these certifications showcase
-            my expertise and dedication to excelling in the fields of AI, machine learning, and software development."
-          </p>
-        </div><!-- End Section Title -->
-
-        <div class="container">
-
-          <div class="row gy-4">
-
-            <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200"></div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/IBM DATA SCIENCE CERTIFICATE-1.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>IBM Data Science</h4>
-                <p>Provided By Coursera</p>
-                <a href="assets/img/masonry-portfolio/IBM DATA SCIENCE CERTIFICATE-1.png"
-                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="https://drive.google.com/file/d/1IClyDpMfc_h4I0VcOm8m8P73X4-9AjXv/view?usp=sharing"
-                  title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/Machine Learning Foundation.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>AWS Machine Learning</h4>
-                <p>Provided By AWS Educate</p>
-                <a href="assets/img/masonry-portfolio/Machine Learning Foundation.png"
-                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="https://drive.google.com/file/d/1q05VQqlUhTlGKV23JwcjejUMKxLqWEZm/view"
-                  title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/Data Mining-1.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Data Mining</h4>
-                <p>Provided By NPTEL</p>
-                <a href="assets/img/masonry-portfolio/Data Mining-1.png"
-                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="https://drive.google.com/file/d/1R0ph9MkjSwfdOC8J2H4yT-3LEAvwPhpk/view?usp=drive_link"
-                  title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/Edunet 1 certifiate-1.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Foundations of AI</h4>
-                <p>Provided By Edunet Foundation (Microsoft)</p>
-                <a href="assets/img/masonry-portfolio/Edunet 1 certifiate-1.png"
-                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="https://drive.google.com/file/d/1vMzUofRb3mt4bwTM8eylaO7g5V19SiHN/view?usp=drive_link"
-                  title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/Edunet 2 Certificate-1.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Artificial Intelligence and Data Analytics</h4>
-                <p>Provided By Edunet Foundation (AICTE) </p>
-                <a href="assets/img/masonry-portfolio/Edunet 2 Certificate-1.png"
-                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="https://drive.google.com/file/d/1q05VQqlUhTlGKV23JwcjejUMKxLqWEZm/view"
-                  title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/NLP with Python for Machine Learning Essential Training-1.png"
-                class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>NLP with Python</h4>
-                <p>Provided By Linkedin Learning</p>
-                <a href="assets/img/masonry-portfolio/NLP with Python for Machine Learning Essential Training-1.png"
-                  data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
-                <a href="https://drive.google.com/file/d/1fBeXQubR7a1FE_7udCt84jIT5ZNg8cTX/view?usp=sharing"
-                  title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/Computer Vision Certificate.png"
-                class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Computer Vision</h4>
-                <p>Provided By Kaggle</p>
-                <a href="assets/img/masonry-portfolio/Computer Vision Certificate.png"
-                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
-                <a href="https://drive.google.com/file/d/1vpD0yLR8OCNF_5f5ACxfeqJD8L1KCnje/view?usp=sharing"
-                  title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/Microsoft Azure AI Essentials.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Microsoft Azure AI Essentials</h4>
-                <p>Provided By Linkedin Learning</p>
-                <a href="assets/img/masonry-portfolio/Microsoft Azure AI Essentials.png"
-                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="https://drive.google.com/file/d/1DDlFrbii6yJ_ZY0Xtj45T5o2jgAK2dmP/view?usp=sharing"
-                  title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/Solution Architect Certificate - AWS,Forage-1.png"
-                class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Solutions Architecture Job Simulation</h4>
-                <p>Provided By Forage/AWS</p>
-                <a href="assets/img/masonry-portfolio/Solution Architect Certificate - AWS,Forage-1.png"
-                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
-                <a href="https://drive.google.com/file/d/1SuE9U4Jhs_f-tyQ4fS77Hdkm5DUXSmy-/view?usp=sharing"
-                  title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/Codsoft Certificate-1.png" class="img-fluid"
-                alt="">
-              <div class="portfolio-info">
-                <h4>Data Science Intern</h4>
-                <p>Provided By Codsoft</p>
-                <a href="assets/img/masonry-portfolio/Codsoft Certificate-1.png"
-                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
-                <a href="https://drive.google.com/file/d/1kQhXrabPyCjO0ZjQ4s7xG0Lt0aBcGkUg/view?usp=sharing"
-                  title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/Introduction to cloud computing-1.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Introduction to cloud computing</h4>
-                <p>Provided By Infosys Springboard</p>
-                <a href="assets/img/masonry-portfolio/Introduction to cloud computing-1.png"
-                  data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
-                <a href="https://drive.google.com/file/d/18ZhWGEOsvAxDcEGQXT4EWJUtRFndmw67/view?usp=sharing"
-                  title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/Fundamentals of digital marketing _ Google-1.png" class="img-fluid"
-                alt="">
-              <div class="portfolio-info">
-                <h4>Fundamentals of digital marketing</h4>
-                <p>Provided By Google</p>
-                <a href="assets/img/masonry-portfolio/Fundamentals of digital marketing _ Google-1.png"
-                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
-                <a href="https://drive.google.com/file/d/1MPR73mvVX5T51_xoqecq7CYl1R9WqHlU/view?usp=sharing"
-                  title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/Understanding Market Risk_page-0001.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Understanding Market Risk</h4>
-                <p>Provided By TCSion</p>
-                <a href="assets/img/masonry-portfolio/Understanding Market Risk_page-0001.jpg"
-                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
-                <a href="https://drive.google.com/file/d/1kTW8JGbIh9v4wFRHM6xD65UlKfubEP4b/view"
-                  title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/Intro to cyber security-1.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Intro to Cybersecurity</h4>
-                <p>Provided By Open Learn</p>
-                <a href="assets/img/masonry-portfolio/Intro to cyber security-1.png"
-                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
-                <a href="https://drive.google.com/file/d/1EOHg11k82VnGXyllkRvaSWXSkV98dsmU/view?usp=sharing"
-                  title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/Introduction to C.jpg" class="img-fluid" altAccess Denied
-You don't have permission to access "http://localhost/Portfolio%20Arvindh%20babu%20V/index.html" on this server.
-
-Reference #18.9d9d3b17.1745652460.1e1e0f8d
-
-https://errors.edgesuite.net/18.9d9d3b17.1745652460.1e1e0f8d="">">
-              <div class="portfolio-info">
-                <h4>Introduction to C</h4>
-                <p>Provided By Sololearn</p>
-                <a href="assets/img/masonry-portfolio/Introduction to C.jpg"
-                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
-                <a href="https://drive.google.com/file/d/1g6drEfENzRaWEttlIkn-YPN0tFMOzOh6/view"
-                  title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/SkilQuest - Data Science Foundation-1.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>SkilQuest - Data Science Foundation</h4>
-                <p>Provided By Simplilearn</p>
-                <a href="assets/img/masonry-portfolio/SkilQuest - Data Science Foundation-1.png" data-gallery="portfolio-gallery-app"
-                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="https://drive.google.com/file/d/14ekICl4TjPmkg6TdO29H5nlQuij4q8V6/view"
-                  title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/Digital productivity.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Digital productivity</h4>
-                <p>Provided By NIIT Foundation</p>
-                <a href="assets/img/masonry-portfolio/Digital productivity.png" data-gallery="portfolio-gallery-app"
-                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="https://drive.google.com/file/d/15nvzolOc24yJpWXX7WUykZ2FHV8jG0nk/view?usp=sharing"
-                  title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/Excel Macros and VBA_page-0001.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Excel Macro and VBA</h4>
-                <p>Provided By Simplilearn</p>
-                <a href="assets/img/masonry-portfolio/Excel Macros and VBA_page-0001.jpg" data-gallery="portfolio-gallery-app"
-                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="https://drive.google.com/file/d/1jSi13LnIiXEl7b9J4mjq5l33vkXgL8vk/view"
-                  title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/THE AGNIRVA SPACE INTERNSHIP.png" class="img-fluid"
-                alt="">
-              <div class="portfolio-info">
-                <h4>Agnirva Space Intern</h4>
-                <p>Provided By Agnirva</p>
-                <a href="assets/img/masonry-portfolio/THE AGNIRVA SPACE INTERNSHIP.png"
-                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
-                <a href="https://drive.google.com/file/d/1U5jahVB7qyaNb8Al2dsvEj0h23di1hg5/view?usp=sharing"
-                  title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-          </div>
-
         </div>
-
-        </section><!-- /Services Section -->
-
-      
-
-      <!-- Contact Section -->
-      <section id="contact" class="contact section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Contact</h2>
-        </div>
-        <!-- End Section Title -->
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="info-wrap p-4">
-            <div class="row gy-4">
-              <!-- Single Column -->
-              <div class="col-lg-12">
-
-                <!-- Address -->
-                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                  <a href="https://maps.app.goo.gl/aVRw1HVWUznYgdqA8" target="_blank"
-                    style="text-decoration: none; color: inherit;">
-                    <i class="bi bi-house-door flex-shrink-0"></i>
-                  </a>
-                  <div>
-                    <h3>Address</h3>
-                    <a href="https://maps.app.goo.gl/aVRw1HVWUznYgdqA8" target="_blank"
-                      style="text-decoration: none; color: inherit;">
-                      Tiruchirappalli
+        <div class="row g-4">
+            <!-- Certificate Card -->
+            <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+                <div class="glass-card p-3 h-100 text-center">
+                    <a href="assets/img/masonry-portfolio/IBM DATA SCIENCE CERTIFICATE-1.png" class="glightbox d-block mb-2">
+                        <img src="assets/img/masonry-portfolio/IBM DATA SCIENCE CERTIFICATE-1.png" alt="IBM Data Science" class="cert-img img-fluid mb-2" style="max-height:180px;">
                     </a>
-                  </div>
+                    <h5 class="mb-1">IBM Data Science</h5>
+                    <div class="small text-white-50 mb-2">Coursera</div>
+                    <a href="https://drive.google.com/file/d/1IClyDpMfc_h4I0VcOm8m8P73X4-9AjXv/view?usp=sharing" target="_blank" class="btn btn-outline-glow btn-sm">View Certificate</a>
                 </div>
-
-                <!-- Phone -->
-                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                  <a href="tel:+918122558030" target="_blank" style="text-decoration: none; color: inherit;">
-                    <i class="bi bi-telephone flex-shrink-0"></i>
-                  </a>
-                  <div>
-                    <h3>Call</h3>
-                    <a href="tel:+919384751199" style="text-decoration: none; color: inherit;">+91-9384751199</a>
-                  </div>
-                </div>
-
-                <!-- Email -->
-                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                  <a href="mailto:arvindhbabu23@gmail.com" target="_blank"
-                    style="text-decoration: none; color: inherit;">
-                    <i class="bi bi-envelope flex-shrink-0"></i>
-                  </a>
-                  <div>
-                    <h3>Email</h3>
-                    <a href="mailto:arvindhbabu23@gmail.com"
-                      style="text-decoration: none; color: inherit;">arvindhbabu23@gmail.com</a>
-                  </div>
-                </div>
-
-                <!-- LinkedIn -->
-                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
-                  <a href="https://www.linkedin.com/in/arvindhbabuv23" target="_blank"
-                    style="text-decoration: none; color: inherit;">
-                    <i class="bi bi-linkedin flex-shrink-0"></i>
-                  </a>
-                  <div>
-                    <h3>LinkedIn</h3>
-                    <a href="https://www.linkedin.com/in/arvindhbabuv23" target="_blank"
-                      style="text-decoration: none; color: inherit;">
-                      Arvindhbabuv
-                    </a>
-                  </div>
-                </div>
-
-                <!-- GitHub -->
-                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="600">
-                  <a href="https://github.com/Arvindhbabu" target="_blank"
-                    style="text-decoration: none; color: inherit;">
-                    <i class="bi bi-github flex-shrink-0"></i>
-                  </a>
-                  <div>
-                    <h3>GitHub</h3>
-                    <a href="https://github.com/Arvindhbabu" target="_blank"
-                      style="text-decoration: none; color: inherit;">Arvindhbabu</a>
-                  </div>
-                </div>
-
-                <!-- Instagram -->
-                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="700">
-                  <a href="https://www.instagram.com/Arvindh.official" target="_blank"
-                    style="text-decoration: none; color: inherit;">
-                    <i class="bi bi-instagram flex-shrink-0"></i>
-                  </a>
-                  <div>
-                    <h3>Instagram</h3>
-                    <a href="https://www.instagram.com/Arvindh.official" target="_blank"
-                      style="text-decoration: none; color: inherit;">Arvindh.official</a>
-                  </div>
-                </div>
-
-                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="700">
-                  <a href="https://www.facebook.com/profile.php?id=61554568063173" target="_blank"
-                    style="text-decoration: none; color: inherit;">
-                    <i class="bi bi-facebook flex-shrink-0"></i>
-                  </a>
-                  <div>
-                    <h3>Facebook</h3>
-                    <a href="https://www.facebook.com/profile.php?id=61554568063173" target="_blank"
-                      style="text-decoration: none; color: inherit;">Arvindh babu</a>
-                  </div>
-                </div>
-              </div>
-              <!-- End Single Column -->
             </div>
-          </div>
+            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="50">
+                <div class="glass-card p-3 h-100 text-center">
+                    <a href="assets/img/masonry-portfolio/Machine Learning Foundation.png" class="glightbox d-block mb-2">
+                        <img src="assets/img/masonry-portfolio/Machine Learning Foundation.png" alt="AWS Machine Learning" class="cert-img img-fluid mb-2" style="max-height:180px;">
+                    </a>
+                    <h5 class="mb-1">AWS Machine Learning</h5>
+                    <div class="small text-white-50 mb-2">AWS Educate</div>
+                    <a href="https://drive.google.com/file/d/1q05VQqlUhTlGKV23JwcjejUMKxLqWEZm/view" target="_blank" class="btn btn-outline-glow btn-sm">View Certificate</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="glass-card p-3 h-100 text-center">
+                    <a href="assets/img/masonry-portfolio/Data Mining-1.png" class="glightbox d-block mb-2">
+                        <img src="assets/img/masonry-portfolio/Data Mining-1.png" alt="Data Mining" class="cert-img img-fluid mb-2" style="max-height:180px;">
+                    </a>
+                    <h5 class="mb-1">Data Mining</h5>
+                    <div class="small text-white-50 mb-2">NPTEL</div>
+                    <a href="https://drive.google.com/file/d/1R0ph9MkjSwfdOC8J2H4yT-3LEAvwPhpk/view?usp=drive_link" target="_blank" class="btn btn-outline-glow btn-sm">View Certificate</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+                <div class="glass-card p-3 h-100 text-center">
+                    <a href="assets/img/masonry-portfolio/Edunet 1 certifiate-1.png" class="glightbox d-block mb-2">
+                        <img src="assets/img/masonry-portfolio/Edunet 1 certifiate-1.png" alt="Foundations of AI" class="cert-img img-fluid mb-2" style="max-height:180px;">
+                    </a>
+                    <h5 class="mb-1">Foundations of AI</h5>
+                    <div class="small text-white-50 mb-2">Edunet Foundation (Microsoft)</div>
+                    <a href="https://drive.google.com/file/d/1vMzUofRb3mt4bwTM8eylaO7g5V19SiHN/view?usp=drive_link" target="_blank" class="btn btn-outline-glow btn-sm">View Certificate</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="50">
+                <div class="glass-card p-3 h-100 text-center">
+                    <a href="assets/img/masonry-portfolio/Edunet 2 Certificate-1.png" class="glightbox d-block mb-2">
+                        <img src="assets/img/masonry-portfolio/Edunet 2 Certificate-1.png" alt="AI and Data Analytics" class="cert-img img-fluid mb-2" style="max-height:180px;">
+                    </a>
+                    <h5 class="mb-1">AI & Data Analytics</h5>
+                    <div class="small text-white-50 mb-2">Edunet Foundation (AICTE)</div>
+                    <a href="https://drive.google.com/file/d/1q05VQqlUhTlGKV23JwcjejUMKxLqWEZm/view" target="_blank" class="btn btn-outline-glow btn-sm">View Certificate</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="glass-card p-3 h-100 text-center">
+                    <a href="assets/img/masonry-portfolio/NLP with Python for Machine Learning Essential Training-1.png" class="glightbox d-block mb-2"></a>
+                        <img src="assets/img/masonry-portfolio/NLP with Python for Machine Learning Essential Training-1.png" alt="NLP with Python" class="cert-img img-fluid mb-2" style="max-height:180px;">
+                    </a>
+                    <h5 class="mb-1">NLP with Python</h5>
+                    <div class="small text-white-50 mb-2">LinkedIn Learning</div>
+                    <a href="https://drive.google.com/file/d/1fBeXQubR7a1FE_7udCt84jIT5ZNg8cTX/view?usp=sharing" target="_blank" class="btn btn-outline-glow btn-sm">View Certificate</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+                <div class="glass-card p-3 h-100 text-center">
+                    <a href="assets/img/masonry-portfolio/Computer Vision Certificate.png" class="glightbox d-block mb-2">
+                        <img src="assets/img/masonry-portfolio/Computer Vision Certificate.png" alt="Computer Vision" class="cert-img img-fluid mb-2" style="max-height:180px;">
+                    </a>
+                    <h5 class="mb-1">Computer Vision</h5>
+                    <div class="small text-white-50 mb-2">Kaggle</div>
+                    <a href="https://drive.google.com/file/d/1vpD0yLR8OCNF_5f5ACxfeqJD8L1KCnje/view?usp=sharing" target="_blank" class="btn btn-outline-glow btn-sm">View Certificate</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="50">
+                <div class="glass-card p-3 h-100 text-center">
+                    <a href="assets/img/masonry-portfolio/Microsoft Azure AI Essentials.png" class="glightbox d-block mb-2">
+                        <img src="assets/img/masonry-portfolio/Microsoft Azure AI Essentials.png" alt="Azure AI Essentials" class="cert-img img-fluid mb-2" style="max-height:180px;">
+                    </a>
+                    <h5 class="mb-1">Azure AI Essentials</h5>
+                    <div class="small text-white-50 mb-2">LinkedIn Learning</div>
+                    <a href="https://drive.google.com/file/d/1DDlFrbii6yJ_ZY0Xtj45T5o2jgAK2dmP/view?usp=sharing" target="_blank" class="btn btn-outline-glow btn-sm">View Certificate</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="glass-card p-3 h-100 text-center">
+                    <a href="assets/img/masonry-portfolio/Solution Architect Certificate - AWS,Forage-1.png" class="glightbox d-block mb-2">
+                        <img src="assets/img/masonry-portfolio/Solution Architect Certificate - AWS,Forage-1.png" alt="Solutions Architecture" class="cert-img img-fluid mb-2" style="max-height:180px;">
+                    </a>
+                    <h5 class="mb-1">Solutions Architecture</h5>
+                    <div class="small text-white-50 mb-2">Forage / AWS</div>
+                    <a href="https://drive.google.com/file/d/1SuE9U4Jhs_f-tyQ4fS77Hdkm5DUXSmy-/view?usp=sharing" target="_blank" class="btn btn-outline-glow btn-sm">View Certificate</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+                <div class="glass-card p-3 h-100 text-center">
+                    <a href="assets/img/masonry-portfolio/Codsoft Certificate-1.png" class="glightbox d-block mb-2">
+                        <img src="assets/img/masonry-portfolio/Codsoft Certificate-1.png" alt="Data Science Intern" class="cert-img img-fluid mb-2" style="max-height:180px;">
+                    </a>
+                    <h5 class="mb-1">Data Science Intern</h5>
+                    <div class="small text-white-50 mb-2">CodSoft</div>
+                    <a href="https://drive.google.com/file/d/1kQhXrabPyCjO0ZjQ4s7xG0Lt0aBcGkUg/view?usp=sharing" target="_blank" class="btn btn-outline-glow btn-sm">View Certificate</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="50">
+                <div class="glass-card p-3 h-100 text-center">
+                    <a href="assets/img/masonry-portfolio/Introduction to cloud computing-1.png" class="glightbox d-block mb-2">
+                        <img src="assets/img/masonry-portfolio/Introduction to cloud computing-1.png" alt="Cloud Computing" class="cert-img img-fluid mb-2" style="max-height:180px;">
+                    </a>
+                    <h5 class="mb-1">Cloud Computing</h5>
+                    <div class="small text-white-50 mb-2">Infosys Springboard</div>
+                    <a href="https://drive.google.com/file/d/18ZhWGEOsvAxDcEGQXT4EWJUtRFndmw67/view?usp=sharing" target="_blank" class="btn btn-outline-glow btn-sm">View Certificate</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="glass-card p-3 h-100 text-center">
+                    <a href="assets/img/masonry-portfolio/Fundamentals of digital marketing _ Google-1.png" class="glightbox d-block mb-2">
+                        <img src="assets/img/masonry-portfolio/Fundamentals of digital marketing _ Google-1.png" alt="Digital Marketing" class="cert-img img-fluid mb-2" style="max-height:180px;">
+                    </a>
+                    <h5 class="mb-1">Digital Marketing</h5>
+                    <div class="small text-white-50 mb-2">Google</div>
+                    <a href="https://drive.google.com/file/d/1MPR73mvVX5T51_xoqecq7CYl1R9WqHlU/view?usp=sharing" target="_blank" class="btn btn-outline-glow btn-sm">View Certificate</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="glass-card p-3 h-100 text-center">
+                    <a href="assets/img/masonry-portfolio/Understanding Market Risk_page-0001.jpg" class="glightbox d-block mb-2">
+                        <img src="assets/img/masonry-portfolio/Understanding Market Risk_page-0001.jpg" alt="Market Risk" class="cert-img img-fluid mb-2" style="max-height:180px;">
+                    </a>
+                    <h5 class="mb-1">Understanding Market Risk</h5>
+                    <div class="small text-white-50 mb-2">TCSion</div>
+                    <a href="https://drive.google.com/file/d/1kTW8JGbIh9v4wFRHM6xD65UlKfubEP4b/view" target="_blank" class="btn btn-outline-glow btn-sm">View Certificate</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="50">
+                <div class="glass-card p-3 h-100 text-center">
+                    <a href="assets/img/masonry-portfolio/Intro to cyber security-1.png" class="glightbox d-block mb-2">
+                        <img src="assets/img/masonry-portfolio/Intro to cyber security-1.png" alt="Cybersecurity" class="cert-img img-fluid mb-2" style="max-height:180px;">
+                    </a>
+                    <h5 class="mb-1">Intro to Cybersecurity</h5>
+                    <div class="small text-white-50 mb-2">Open Learn</div>
+                    <a href="https://drive.google.com/file/d/1EOHg11k82VnGXyllkRvaSWXSkV98dsmU/view?usp=sharing" target="_blank" class="btn btn-outline-glow btn-sm">View Certificate</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="glass-card p-3 h-100 text-center">
+                    <a href="assets/img/masonry-portfolio/Introduction to C.jpg" class="glightbox d-block mb-2">
+                        <img src="assets/img/masonry-portfolio/Introduction to C.jpg" alt="Introduction to C" class="cert-img img-fluid mb-2" style="max-height:180px;">
+                    </a>
+                    <h5 class="mb-1">Introduction to C</h5>
+                    <div class="small text-white-50 mb-2">Sololearn</div>
+                    <a href="https://drive.google.com/file/d/1g6drEfENzRaWEttlIkn-YPN0tFMOzOh6/view" target="_blank" class="btn btn-outline-glow btn-sm">View Certificate</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+                <div class="glass-card p-3 h-100 text-center">
+                    <a href="assets/img/masonry-portfolio/SkilQuest - Data Science Foundation-1.png" class="glightbox d-block mb-2">
+                        <img src="assets/img/masonry-portfolio/SkilQuest - Data Science Foundation-1.png" alt="Data Science Foundation" class="cert-img img-fluid mb-2" style="max-height:180px;">
+                    </a>
+                    <h5 class="mb-1">Data Science Foundation</h5>
+                    <div class="small text-white-50 mb-2">Simplilearn</div>
+                    <a href="https://drive.google.com/file/d/14ekICl4TjPmkg6TdO29H5nlQuij4q8V6/view" target="_blank" class="btn btn-outline-glow btn-sm">View Certificate</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="50">
+                <div class="glass-card p-3 h-100 text-center">
+                    <a href="assets/img/masonry-portfolio/Digital productivity.png" class="glightbox d-block mb-2">
+                        <img src="assets/img/masonry-portfolio/Digital productivity.png" alt="Digital Productivity" class="cert-img img-fluid mb-2" style="max-height:180px;">
+                    </a>
+                    <h5 class="mb-1">Digital Productivity</h5>
+                    <div class="small text-white-50 mb-2">NIIT Foundation</div>
+                    <a href="https://drive.google.com/file/d/15nvzolOc24yJpWXX7WUykZ2FHV8jG0nk/view?usp=sharing" target="_blank" class="btn btn-outline-glow btn-sm">View Certificate</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="glass-card p-3 h-100 text-center">
+                    <a href="assets/img/masonry-portfolio/Excel Macros and VBA_page-0001.jpg" class="glightbox d-block mb-2">
+                        <img src="assets/img/masonry-portfolio/Excel Macros and VBA_page-0001.jpg" alt="Excel Macro and VBA" class="cert-img img-fluid mb-2" style="max-height:180px;">
+                    </a>
+                    <h5 class="mb-1">Excel Macro and VBA</h5>
+                    <div class="small text-white-50 mb-2">Simplilearn</div>
+                    <a href="https://drive.google.com/file/d/1jSi13LnIiXEl7b9J4mjq5l33vkXgL8vk/view" target="_blank" class="btn btn-outline-glow btn-sm">View Certificate</a>
+                </div>
+            
         </div>
-      </section>
+    </div>
+</section>
 
-      <footer id="footer" class="footer position">
-        <div class="container">
-          <h3 class="sitename"></h3>
-          <p></p>
-          <div class="social-links d-flex justify-content-center">
-          </div>
-        </div>
-      </footer>
-
-    </main>
-
-    <footer id="footer" class="footer position-relative light-background">
-      <div class="container">
-        <h3 class="sitename"></h3>
-        <p></p>
-        <div class="social-links d-flex justify-content-center">
-        </div>
-        <div class="container">
-          <div class="copyright">
-            <span>Copyright © <strong>Arvindh babu</strong> All Rights Reserved</span>
-          </div>
-          <div class="credits">
-            <!-- You can add other credits here -->
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="container-fluid"></div>
+    <div class="row g-4 align-items-stretch">
+      <div class="col-lg-6 mx-auto" data-aos="fade-right">
+        <div class="glass-card p-4 h-100">
+          <h2 class="h4 mb-2">Let’s Build Something</h2>
+          <p class="text-white-50">Open to internships, research collaborations, and real‑world projects in DS/AI, Python, and web.</p>
+          <div class="d-flex flex-column gap-2 mt-3">
+            <a class="skill-pill" target="_blank" href="mailto:arvindhbabu23@gmail.com"><i class="bi bi-envelope"></i> arvindhbabu23@gmail.com</a>
+            <a class="skill-pill" target="_blank" href="https://www.linkedin.com/in/arvindhbabuv23"><i class="bi bi-linkedin"></i> linkedin.com/in/arvindhbabuv23</a>
+            <a class="skill-pill" target="_blank" href="https://github.com/Arvindhbabu"><i class="bi bi-github"></i> github.com/Arvindhbabu</a>
+            <a class="skill-pill" target="_blank" href="https://www.instagram.com/Arvindh.official"><i class="bi bi-instagram"></i> instagram.com/Arvindh.official</a>
+            <a class="skill-pill" target="_blank" href="https://www.facebook.com/profile.php?id=61554568063173"><i class="bi bi-facebook"></i> facebook.com/profile.php?id=61554568063173</a>
           </div>
         </div>
       </div>
-    </footer>
+    </div>
+  </div>
+</section>
 
-    <!-- Scroll Top -->
-    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-        class="bi bi-arrow-up-short"></i></a>
+  <footer class="py-4 text-center text-white-50">
+    <div class="container-xl">
+      <div>© <span id="year"></span> • Arvindh Babu V •</div>
+    </div>
+  </footer>
 
-    <!-- Preloader -->
-    <div id="preloader"></div>
-
-    <!-- Vendor JS Files -->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/typed.js/typed.umd.js"></script>
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Main JS File -->
-    <script src="assets/js/main.js"></script>
-
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script>
+    AOS.init({ duration: 700, once: true });
+    const lightbox = GLightbox({ selector: '.glightbox' });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 
 </html>
