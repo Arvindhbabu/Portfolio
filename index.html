@@ -48,6 +48,7 @@
       <ul>
         <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
         <li><a href="#about"><i class="bi bi-person navicon"></i><span>About </span></a></li>
+        <li><a href="#coding-profiles"><i class="bi bi-code-square navicon"></i><span>Coding</span></a></li>
         <li><a href="#skills"><i class="bi bi-laptop navicon"></i><span>Skills</span></a></li>
         <li><a href="#experience"><i class="bi bi-briefcase navicon"></i><span>Experience</span></a></li>
         <li><a href="#projects"><i class="bi bi-folder"></i><span>Projects</span></a></li>
@@ -69,7 +70,8 @@
         <div class="row justify-content-center">
           <div class="col-lg-9">
             <h2>Arvindh Babu V</h2>
-            <p> <span class="typed" data-typed-items="Aspiring Data Scientist,AI Enthusiast, Tech Enthusiast"></span><span
+            <p> <span class="typed"
+                data-typed-items="Aspiring Data Scientist,AI Enthusiast, Tech Enthusiast"></span><span
                 class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
             <div class="social-links">
               <!-- Social Links -->
@@ -77,18 +79,116 @@
               <a href="https://www.instagram.com/Arvindh.official" target="_blank"><i class="bi bi-instagram"></i></a>
               <a href="https://github.com/Arvindhbabu" target="_blank"><i class="bi bi-github"></i></a>
               <a href="https://www.linkedin.com/in/arvindhbabuv23" target="_blank"><i class="bi bi-linkedin"></i></a>
-                </div>
-                <div class="d-flex justify-content-start align-items-center mt-4" style="min-height: 80px;"></div>
-                  <a href="https://drive.google.com/file/d/17isUTJ1IP2JdMadyMwnJ7D7LMBVw62iw/view?usp=sharing" class="btn" target="_blank" id="view-resume-btn" style="font-size: 1.1rem; padding: 12px 32px; background: #f8f9fa; color: #333; border: 1px solid #e0e0e0;">
-                    <i class="bi bi-file-earmark-person me-2"></i> View Resume
-                  </a>
-                </div>
+            </div>
+            <div class="d-flex justify-content-start align-items-center mt-4" style="min-height: 80px;">
+              <a href="https://drive.google.com/file/d/17isUTJ1IP2JdMadyMwnJ7D7LMBVw62iw/view?usp=sharing"
+                class="btn btn-resume" target="_blank" rel="noopener noreferrer" id="view-resume-btn">
+                <svg class="resume-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+                <span class="resume-text">View Resume</span>
+                <i class="bi bi-arrow-right resume-arrow"></i>
+              </a>
             </div>
           </div>
         </div>
       </div>
+      </div>
 
     </section><!-- /Hero Section -->
+
+    <!-- Enhanced Resume Button Styles -->
+    <style>
+      .btn-resume {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        padding: 14px 36px;
+        background: linear-gradient(135deg, #0563bb 0%, #004a9f 100%);
+        color: #ffffff;
+        border: none;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(5, 99, 187, 0.3);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .btn-resume::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        transition: left 0.5s ease;
+      }
+
+      .btn-resume:hover::before {
+        left: 100%;
+      }
+
+      .btn-resume:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(5, 99, 187, 0.4);
+        background: linear-gradient(135deg, #0674d4 0%, #0055b8 100%);
+        color: #ffffff;
+      }
+
+      .btn-resume:active {
+        transform: translateY(0);
+        box-shadow: 0 3px 10px rgba(5, 99, 187, 0.3);
+      }
+
+      .resume-icon {
+        width: 24px;
+        height: 24px;
+        stroke-width: 2.5;
+        transition: transform 0.3s ease;
+        flex-shrink: 0;
+      }
+
+      .btn-resume:hover .resume-icon {
+        transform: scale(1.1) rotate(5deg);
+      }
+
+      .resume-text {
+        letter-spacing: 0.5px;
+        font-family: var(--heading-font, 'Raleway', sans-serif);
+      }
+
+      .resume-arrow {
+        font-size: 1rem;
+        transition: transform 0.3s ease;
+        margin-left: 4px;
+      }
+
+      .btn-resume:hover .resume-arrow {
+        transform: translateX(4px);
+      }
+
+      @media (max-width: 768px) {
+        .btn-resume {
+          font-size: 1rem;
+          padding: 12px 28px;
+          gap: 10px;
+        }
+
+        .resume-icon {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    </style>
 
     <!-- About Section -->
     <section id="about" class="about section">
@@ -96,31 +196,25 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>About Me</h2>
-        <p>Hello! I am Arvindh Babu, a dedicated Artificial Intelligence student at SRM TRP Engineering College,
-          passionate
-          about leveraging technology to solve real-world problems. With a strong foundation in data science, machine
-          learning,
+        <p>Hello! I am Arvindh Babu V, a dedicated Artificial Intelligence and Data Science student at SRM TRP
+          Engineering College,
+          passionate about leveraging technology to solve real-world problems. With a strong foundation in data science,
+          machinelearning,
           and web development, I am continuously expanding my expertise to build intelligent systems that drive
           innovation.
 
           My journey in AI began with a deep curiosity about how data-driven insights can shape industries. Over time,
           this curiosity evolved into hands-on experience, earning me an IBM Professional Certificate in Data Science
-          and the Machine Learning Foundation in AWS Educate. These experiences have strengthened my ability to analyze data, 
+          and the Machine Learning Foundation in AWS Educate. These experiences have strengthened my ability to analyze
+          data,
           build predictive models, and develop interactive
           web applications.
 
-          Currently, I am working on a mini-project—an AI-powered educational chatbot—to enhance learning experiences.
-          Additionally, I am preparing to write a research paper, aiming to contribute valuable insights to the AI
-          community.
-          My goal is to secure a high-paying role in data science or AI, where I can make a significant impact through
-          innovation
-          and automation.
-
           Beyond academics, I enjoy playing chess, a game that sharpens my strategic thinking, and curating music
-          playlists
-          that reflect my moods and inspirations. Whether it’s developing AI models, optimizing web applications, or
-          exploring
-          emerging technologies, I am always eager to learn, collaborate, and push the boundaries of what’s possible
+          playlists that reflect my moods and inspirations. Whether it’s developing AI models, optimizing web
+          applications, or
+          exploring emerging technologies, I am always eager to learn, collaborate, and push the boundaries of what’s
+          possible
           with AI.
 
         </p>
@@ -156,20 +250,12 @@
                   </li>
                   <li><i>&#9824;</i> <strong>Degree:</strong> <span>Bachelor of Technology</span></li>
                   <li><i>&#9824;</i> <strong>Branch:</strong> <span>Artificial Intelligence and Data Science</span></li>
-                  <li><i>&#9824;</i> <strong>CGPA:</strong> <span>8.0</span></li>
+                  <li><i>&#9824;</i> <strong>CGPA:</strong> <span>8.3</span></li>
                   <li><i>&#9824;</i> <strong>Strengths:</strong> <span>Leadership, Patience, Team work</span></li>
                   <li><i>&#9824;</i> <strong>Favourite Sport/Game:</strong> <span>Cricket, Chess</span></li>
                 </ul>
               </div>
             </div>
-            <p class="py-3"> 
-              Passionate about innovation and driven by curiosity, I aim to push the boundaries of AI and Data Science
-              to create impactful, real-world solutions. I thrive on transforming ambitious ideas into
-              cutting-edge advancements that inspire change and unlock new possibilities. Committed to collaboration and
-              learning from diverse perspectives, I believe in technology's power to drive progress, enhance lives, and
-              build a sustainable future. Let’s harness AI as a force for good and shape a legacy of innovation for
-              generations to come.
-            </p>
           </div>
         </div>
 
@@ -177,62 +263,63 @@
 
     </section><!-- /About Section -->
 
-    <!-- Stats Section -->
-    <section id="stats" class="stats section">
+    <!-- Coding Profiles Section -->
+    <section id="coding-profiles" class="coding-profiles section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Coding Profiles</h2>
+        <p>Track my problem-solving journey on competitive programming platforms</p>
+      </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-            <i class="bi bi-emoji-smile"></i>
-            <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="18" data-purecounter-duration="1"
-                class="purecounter"></span>
-              <p>Age</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-
-          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-            <a href="https://leetcode.com/u/arvindhbabu23/" target="_blank"
-              style="text-decoration: none; color: inherit;">
-              <i class="bi bi-trophy"></i> <!-- Badge icon with link -->
-            </a>
-            <div class="stats-item">
-              <a href="https://leetcode.com/u/arvindhbabu23/" target="_blank"
-                style="text-decoration: none; color: inherit;">
-                <span data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="1"
-                  class="purecounter"></span>
-                <p>Leetcode Problems Solved</p>
-              </a>
+        <div class="row gy-4 justify-content-center">
+          
+          <!-- LeetCode Card -->
+          <div class="col-lg-6 col-md-6">
+            <div style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-radius: 16px; padding: 25px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); border: 2px solid transparent; background-clip: padding-box; position: relative;">
+              <div style="position: absolute; inset: 0; border-radius: 16px; padding: 2px; background: linear-gradient(135deg, #ffa116, #ff6b00); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); mask-composite: exclude; pointer-events: none;"></div>
+              <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode" style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
+                <h3 style="color: #ffa116; margin: 0; font-size: 1.5rem; font-weight: 700;">LeetCode</h3>
+              </div>
+              <div style="text-align: center;">
+                <img src="https://leetcard.jacoblin.cool/arvindhbabu23?theme=dark&font=Karma&ext=heatmap" alt="LeetCode Stats" style="width: 100%; max-width: 450px; border-radius: 8px;">
+              </div>
+              <div style="text-align: center; margin-top: 15px;">
+                <a href="https://leetcode.com/u/arvindhbabu23/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #ffa116, #ff6b00); color: #1a1a2e; padding: 10px 24px; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.3s ease;">
+                  <i class="bi bi-box-arrow-up-right"></i> View Profile
+                </a>
+              </div>
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-            <a href="https://www.hackerrank.com/profile/arvindhbabu23" target="_blank"
-              style="text-decoration: none; color: inherit;">
-              <i class="bi bi-trophy"></i> <!-- Badge icon with link -->
-            </a>
-            <div class="stats-item">
-              <a href="https://www.hackerrank.com/profile/arvindhbabu23" target="_blank"
-                style="text-decoration: none; color: inherit;">
-                <span data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="1"
-                  class="purecounter"></span>
-                <p>HackerRank Problems Solved</p>
-              </a>
+          <!-- HackerRank Card -->
+          <div class="col-lg-6 col-md-6">
+            <div style="background: linear-gradient(135deg, #1a1a2e 0%, #0d1f2d 100%); border-radius: 16px; padding: 25px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); border: 2px solid transparent; background-clip: padding-box; position: relative; height: 100%;">
+              <div style="position: absolute; inset: 0; border-radius: 16px; padding: 2px; background: linear-gradient(135deg, #00ea64, #00c853); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); mask-composite: exclude; pointer-events: none;"></div>
+              <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/HackerRank_Icon-1000px.png" alt="HackerRank" style="width: 40px; height: 40px;">
+                <h3 style="color: #00ea64; margin: 0; font-size: 1.5rem; font-weight: 700;">HackerRank</h3>
+              </div>
+              <div style="text-align: center; padding: 30px 20px;">
+                <div style="background: rgba(0, 234, 100, 0.1); border-radius: 12px; padding: 25px; border: 1px solid rgba(0, 234, 100, 0.3);">
+                  <i class="bi bi-code-slash" style="font-size: 3rem; color: #00ea64; margin-bottom: 15px; display: block;"></i>
+                  <h4 style="color: #fff; margin-bottom: 10px;">@arvindhbabu23</h4>
+                  <p style="color: #a0aec0; font-size: 0.9rem; margin-bottom: 0;">Problem Solving • Python • SQL • Java</p>
+                </div>
+              </div>
+              <div style="text-align: center; margin-top: 15px;">
+                <a href="https://www.hackerrank.com/profile/arvindhbabu23" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #00ea64, #00c853); color: #1a1a2e; padding: 10px 24px; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.3s ease;">
+                  <i class="bi bi-box-arrow-up-right"></i> View Profile
+                </a>
+              </div>
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-            <i class="fas fa-graduation-cap"></i>
-            <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="2027" data-purecounter-duration="1"
-                class="purecounter"></span>
-              <p>Year of Graduation</p>
-            </div>
-          </div><!-- End Stats Item -->
+        </div>
+      </div>
+    </section><!-- /Coding Profiles Section -->
+
+    
 
         </div>
 
@@ -265,7 +352,7 @@
             </div><!-- End Skills Item -->
 
             <div class="progress">
-              <span class="skill"><span>R</span> <i class="val">90%</i></span>
+              <span class="skill"><span>Java</span> <i class="val">90%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
                 </div>
@@ -273,7 +360,7 @@
             </div><!-- End Skills Item -->
 
             <div class="progress">
-              <span class="skill"><span>C</span> <i class="val">80%</i></span>
+              <span class="skill"><span>C++</span> <i class="val">80%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
                 </div>
@@ -285,7 +372,7 @@
           <div class="col-lg-6">
 
             <div class="progress">
-              <span class="skill"><span>Java</span> <i class="val">75%</i></span>
+              <span class="skill"><span>C</span> <i class="val">75%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
                 </div>
@@ -293,15 +380,15 @@
             </div><!-- End Skills Item -->
 
             <div class="progress">
-              <span class="skill"><span>PHP</span> <i class="val">70%</i></span>
+              <span class="skill"><span>SQL</span> <i class="val">95%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
                 </div>
               </div>
             </div><!-- End Skills Item -->
 
             <div class="progress">
-              <span class="skill"><span>Bash</span> <i class="val">60%</i></span>
+              <span class="skill"><span>R</span> <i class="val">60%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
                 </div>
@@ -467,7 +554,7 @@
             <div class="col-lg-6">
 
               <div class="progress">
-                <span class="skill"><span>Jupyter</span> <i class="val">100%</i></span>
+                <span class="skill"><span>VS Code / JetBrains IDEs</span> <i class="val">100%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
                     aria-valuemax="100"></div>
@@ -475,7 +562,7 @@
               </div><!-- End Skills Item -->
 
               <div class="progress">
-                <span class="skill"><span>VS Code</span> <i class="val">90%</i></span>
+                <span class="skill"><span>Jupyter Notebook / Google Colab</span> <i class="val">90%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
                   </div>
@@ -483,7 +570,7 @@
               </div><!-- End Skills Item -->
 
               <div class="progress">
-                <span class="skill"><span>Matplotlib</span> <i class="val">75%</i></span>
+                <span class="skill"><span>Power BI / Tableau</span> <i class="val">75%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
                   </div>
@@ -495,7 +582,7 @@
             <div class="col-lg-6">
 
               <div class="progress">
-                <span class="skill"><span>Git</span> <i class="val">80%</i></span>
+                <span class="skill"><span>Git & Github</span> <i class="val">80%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
                   </div>
@@ -503,7 +590,7 @@
               </div><!-- End Skills Item -->
 
               <div class="progress">
-                <span class="skill"><span>NLTK</span> <i class="val">90%</i></span>
+                <span class="skill"><span>MYSQL</span> <i class="val">90%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
                   </div>
@@ -511,7 +598,7 @@
               </div><!-- End Skills Item -->
 
               <div class="progress">
-                <span class="skill"><span>MYSQL</span> <i class="val">70%</i></span>
+                <span class="skill"><span>NLTK</span> <i class="val">70%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
                   </div>
@@ -564,7 +651,7 @@
             <div class="col-lg-6">
 
               <div class="progress">
-                <span class="skill"><span>Power BI</span> <i class="val">80%</i></span>
+                <span class="skill"><span>PyTorch</span> <i class="val">80%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
                   </div>
@@ -947,76 +1034,97 @@
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>Experience</h2>
-          <p>Hands-on internships and virtual experiences in data science, web development, and cloud architecture, showcasing my ability to apply technical skills to real-world challenges and deliver impactful results.</p>
+          <p>Hands-on internships and virtual experiences in data science, web development, and cloud architecture,
+            showcasing my ability to apply technical skills to real-world challenges and deliver impactful results.</p>
         </div><!-- End Section Title -->
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
 
           <div class="experience-container">
 
-            <!-- Experience 1 -->
-            <div class="experience-card">
-              <h3 class="experience-title"><strong>Data Science Virtual Intern - CodSoft</strong></h3>
-              <p class="experience-duration">February 2025 – March 2025</p>
-              <ul class="experience-highlights">
+            <!-- Experience 1: AI and Cloud Intern - IBM SkillBuild -->
+            <div class="experience-card" style="border: 2px solid transparent; background: linear-gradient(#fff,#fff) padding-box, linear-gradient(135deg,#0062ff,#00d4ff) border-box;">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                <h3 class="experience-title" style="margin: 0;"><i class="bi bi-cloud-fill" style="color: #0062ff; margin-right: 8px;"></i><strong>AI and Cloud Intern</strong></h3>
+                <span style="background: linear-gradient(135deg,#0062ff,#00d4ff); color: #fff; padding: 3px 10px; border-radius: 12px; font-size: 0.7rem; font-weight: 500;">Latest</span>
+              </div>
+              <p style="color: #6366f1; font-weight: 600; font-size: 0.9rem; margin-bottom: 4px;">Edunet Foundation | IBM SkillBuild</p>
+              <p class="experience-duration" style="color: #6b7280; font-size: 0.85rem;">Jul 2025 – Aug 2025</p>
+              <ul class="experience-highlights" style="font-size: 0.85rem;">
+                <li>Completed industry-oriented projects under IBM SkillBuild, focusing on AI and Cloud Computing.</li>
+                <li>Gained hands-on experience with IBM Cloud Lite, watsonx.ai, and deployment tools.</li>
+              </ul>
+
+            </div>
+
+            <!-- Experience 2: Generative AI Intern - Prodigy Infotech -->
+            <div class="experience-card" style="border: 2px solid transparent; background: linear-gradient(#fff,#fff) padding-box, linear-gradient(135deg,#a855f7,#ec4899) border-box;">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                <h3 class="experience-title" style="margin: 0;"><i class="bi bi-stars" style="color: #a855f7; margin-right: 8px;"></i><strong>Generative AI Intern</strong></h3>
+              </div>
+              <p style="color: #a855f7; font-weight: 600; font-size: 0.9rem; margin-bottom: 4px;">Prodigy Infotech</p>
+              <p class="experience-duration" style="color: #6b7280; font-size: 0.85rem;">Jul 2025 – Aug 2025</p>
+              <ul class="experience-highlights" style="font-size: 0.85rem;">
+                <li>Completed 5 task-based projects focused on Generative AI applications.</li>
+                <li>Gained hands-on experience in prompt engineering, text-to-image generation, and LLM-based tasks.</li>
+              </ul>
+
+            </div>
+
+            <!-- Experience 3: AI and Data Analytics Virtual Intern -->
+            <div class="experience-card" style="border: 2px solid transparent; background: linear-gradient(#fff,#fff) padding-box, linear-gradient(135deg,#10b981,#06b6d4) border-box;">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                <h3 class="experience-title" style="margin: 0;"><i class="bi bi-bar-chart-fill" style="color: #10b981; margin-right: 8px;"></i><strong>AI & Data Analytics Intern</strong></h3>
+              </div>
+              <p style="color: #10b981; font-weight: 600; font-size: 0.9rem; margin-bottom: 4px;">Edunet Foundation | AICTE Internship</p>
+              <p class="experience-duration" style="color: #6b7280; font-size: 0.85rem;">Apr 2025 – May 2025</p>
+              <ul class="experience-highlights" style="font-size: 0.85rem;">
+                <li>Built an interactive Power BI dashboard to analyze energy consumption across utilities.</li>
+                <li>Cleaned and transformed raw CSV datasets using Excel for accuracy and consistency.</li>
+              </ul>
+
+            </div>
+
+            <!-- Experience 4: Foundations of AI Virtual Intern -->
+            <div class="experience-card" style="border: 2px solid transparent; background: linear-gradient(#fff,#fff) padding-box, linear-gradient(135deg,#6366f1,#8b5cf6) border-box;">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                <h3 class="experience-title" style="margin: 0;"><i class="bi bi-cpu-fill" style="color: #6366f1; margin-right: 8px;"></i><strong>Foundations of AI Intern</strong></h3>
+              </div>
+              <p style="color: #6366f1; font-weight: 600; font-size: 0.9rem; margin-bottom: 4px;">Edunet Foundation | Microsoft</p>
+              <p class="experience-duration" style="color: #6b7280; font-size: 0.85rem;">Apr 2025 – May 2025</p>
+              <ul class="experience-highlights" style="font-size: 0.85rem;">
+                <li>Gained hands-on experience in AI, ML, Deep Learning, and Generative AI concepts.</li>
+                <li>Completed projects involving supervised/unsupervised learning and image classification.</li>
+              </ul>
+
+            </div>
+
+            <!-- Experience 5: Data Science Virtual Intern - CodSoft -->
+            <div class="experience-card" style="border: 2px solid transparent; background: linear-gradient(#fff,#fff) padding-box, linear-gradient(135deg,#f59e0b,#ef4444) border-box;">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                <h3 class="experience-title" style="margin: 0;"><i class="bi bi-graph-up" style="color: #f59e0b; margin-right: 8px;"></i><strong>Data Science Intern</strong></h3>
+              </div>
+              <p style="color: #f59e0b; font-weight: 600; font-size: 0.9rem; margin-bottom: 4px;">CodSoft</p>
+              <p class="experience-duration" style="color: #6b7280; font-size: 0.85rem;">Feb 2025 – Mar 2025</p>
+              <ul class="experience-highlights" style="font-size: 0.85rem;">
                 <li>Developed predictive models with 85%+ accuracy for business decision-making.</li>
-                <li>Conducted data preprocessing, feature engineering, and statistical analysis on real-world datasets.</li>
-                <li>Created interactive data visualizations using Matplotlib & Seaborn, providing actionable insights.</li>
+                <li>Conducted data preprocessing, feature engineering, and statistical analysis on datasets.</li>
               </ul>
+
             </div>
 
-            <!-- Experience 2 -->
-            <div class="experience-card">
-              <h3 class="experience-title"><strong>Web Development Virtual Intern - InternPe</strong></h3>
-              <p class="experience-duration">February 2025 – March 2025</p>
-              <ul class="experience-highlights">
-                <li>Built responsive web applications, reducing load time by 30% through optimized front-end development.</li>
-                <li>Developed and integrated RESTful APIs, enhancing website functionality and user experience.</li>
-                <li>Improved website performance and user engagement through debugging and UI enhancements.</li>
+            <!-- Experience 6: Web Development Virtual Intern - InternPe -->
+            <div class="experience-card" style="border: 2px solid transparent; background: linear-gradient(#fff,#fff) padding-box, linear-gradient(135deg,#14b8a6,#22c55e) border-box;">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                <h3 class="experience-title" style="margin: 0;"><i class="bi bi-code-slash" style="color: #14b8a6; margin-right: 8px;"></i><strong>Web Development Intern</strong></h3>
+              </div>
+              <p style="color: #14b8a6; font-weight: 600; font-size: 0.9rem; margin-bottom: 4px;">InternPe</p>
+              <p class="experience-duration" style="color: #6b7280; font-size: 0.85rem;">Feb 2025 – Mar 2025</p>
+              <ul class="experience-highlights" style="font-size: 0.85rem;">
+                <li>Built responsive web applications, reducing load time by 30% through optimized development.</li>
+                <li>Developed and integrated RESTful APIs, enhancing website functionality and UX.</li>
               </ul>
-            </div>
 
-            <!-- Experience 3 -->
-            <div class="experience-card">
-              <h3 class="experience-title"><strong>AWS APAC Solutions Architecture Virtual Experience – Forage</strong></h3>
-              <p class="experience-duration">February 2025</p>
-              <ul class="experience-highlights">
-                <li>Designed a scalable hosting architecture using AWS Elastic Beanstalk, improving response times.</li>
-                <li>Provided cost estimation strategies to optimize cloud resource utilization.</li>
-              </ul>
-            </div>
-
-            <!-- Experience 4 -->
-            <div class="experience-card">
-              <h3 class="experience-title"><strong>Foundation of AI Virtual Intern - Edunet Foundation</strong></h3>
-              <p class="experience-duration">May 2025 – June 2025</p>
-              <ul class="experience-highlights">
-                <li>Built and trained a CNN model using TensorFlow/Keras to classify fire-based image data.</li>
-                <li>Evaluated model performance using accuracy, confusion matrix, and classification reports.</li>
-                <li>Documented the entire ML pipeline and presented the project to peers and mentors.</li>
-              </ul>
-            </div>
-
-            <!-- Experience 5 -->
-            <div class="experience-card">
-              <h3 class="experience-title"><strong>Data Analytics Virtual Intern – Edunet Foundation</strong></h3>
-              <p class="experience-duration">May 2025 - June 2025</p>
-              <ul class="experience-highlights">
-                <li>Built an interactive Power BI dashboard to analyze energy consumption across electricity, gas, and water utilities.</li>
-                <li>Cleaned and transformed raw CSV datasets using Excel to ensure accuracy and consistency.</li>
-                <li>Designed custom visualizations, KPIs, and slicers to highlight cost trends, usage patterns, and category-wise insights.</li>
-              </ul>
-            </div>
-
-            <!-- Experience 6 -->
-            <div class="experience-card">
-              <h3 class="experience-title"><strong>Generative AI  Virtual Intern – Prodigy Infotech</strong></h3>
-              <p class="experience-duration">July 2025 - August 2025</p>
-              <ul class="experience-highlights">
-                <li>Completed 5 end-to-end projects on Generative AI using cutting-edge models and tools (GPT-2, Diffusion, pix2pix, VGG19).</li>
-                <li>Worked extensively with Python, TensorFlow, PyTorch, HuggingFace, Matplotlib, Colab, and PIL.</li>
-                <li>Developed a Text Generation system,  Image Generation, Image Captioning System,  Image-to-Image Translation, Neural Style Transfer.</li>
-              </ul>
             </div>
 
           </div>
@@ -1102,122 +1210,401 @@
 
         <!-- Portfolio Container -->
         <div class="container portfolio-container">
+          <!-- ★ Quantum Secure Messaging - Featured Project ★ -->
+          <div class="project-card quantum-project" data-aos="fade-up" style="border: 2px solid transparent; background: linear-gradient(#ffffff, #ffffff) padding-box, linear-gradient(135deg, #00d4ff, #7c3aed, #00d4ff) border-box; position: relative; overflow: hidden;">
+            
+            <!-- Featured Badge -->
+            <div style="position: absolute; top: 12px; right: 12px; background: linear-gradient(135deg, #00d4ff, #7c3aed); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 2px 10px rgba(0, 212, 255, 0.4);">
+              <i class="bi bi-star-fill" style="margin-right: 4px;"></i>Research Paper
+            </div>
 
-          <!-- Project 1 -->
-          <div class="project-card" data-aos="fade-up">
-            <img src="https://imgs.search.brave.com/SlMOALamDPec-wTv1LDNMJuXr9DtLSY6lUrEr5SNtas/rs:fit:0:180:1:0/g:ce/aHR0cHM6Ly93d3cu/ZnV0dXJlLXByb2Nl/c3NpbmcuY29tL2Js/b2cvd3AtY29udGVu/dC91cGxvYWRzLzIw/MjMvMDMvUHJlZGlj/dGluZy1TdG9jay1Q/cmljZXMtYW5kLU1h/cmtldC1TaGlmdHMt/VXNpbmctQUkuanBn" alt="Stock Price Prediction" class="img-fluid w-100 rounded mb-2" style="max-height:120px;object-fit:cover;">
-            <h3 class="project-title text-black"><strong>Stock Price Prediction</strong></h3>
-            <p class="project-description">
-              A deep learning-based system that predicts future stock prices using Long Short-Term Memory (LSTM) networks. 
-              The model leverages historical stock market data to capture temporal dependencies and generate accurate forecasts. 
-              Implemented in Python, it combines data preprocessing, time series modeling, and visualization to aid in investment decision-making.
+            <!-- Project Image with Overlay -->
+            <div style="position: relative; margin: -20px -20px 15px -20px; overflow: hidden;">
+              <img
+                src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=400&fit=crop&q=80"
+                alt="Quantum Secure Messaging"
+                class="img-fluid w-100"
+                style="height: 160px; object-fit: cover; filter: brightness(0.9);">
+              <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 60px; background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);"></div>
+              <div style="position: absolute; bottom: 10px; left: 15px; display: flex; gap: 8px;">
+                <span style="background: rgba(0, 212, 255, 0.9); color: white; padding: 3px 10px; border-radius: 12px; font-size: 0.7rem; font-weight: 500;">QKD</span>
+                <span style="background: rgba(124, 58, 237, 0.9); color: white; padding: 3px 10px; border-radius: 12px; font-size: 0.7rem; font-weight: 500;">BB84</span>
+                <span style="background: rgba(16, 185, 129, 0.9); color: white; padding: 3px 10px; border-radius: 12px; font-size: 0.7rem; font-weight: 500;">PQC</span>
+              </div>
+            </div>
+
+            <h3 class="project-title text-black" style="font-size: 1.4rem; margin-bottom: 12px;">
+              <i class="bi bi-shield-lock-fill" style="color: #7c3aed; margin-right: 8px;"></i>
+              <strong>Quantum-Secured Messaging System</strong>
+            </h3>
+
+            <p class="project-description" style="color: #4b5563; line-height: 1.6; margin-bottom: 18px;">
+              A next-generation secure messaging platform that integrates <strong style="color: #00d4ff;">Quantum Key Distribution (QKD)</strong> with 
+              <strong style="color: #7c3aed;">Post-Quantum Cryptography (PQC)</strong> to enable real-time attack-aware communication. The system uses 
+              BB84-based key exchange and continuously monitors Quantum Bit Error Rate (QBER) to detect 
+              eavesdropping attempts and dynamically control message transmission.
             </p>
-            <ul class="project-highlights">
-              <li>Libraries: Pandas, NumPy, Matplotlib, Scikit-learn, TensorFlow/Keras</li>
-              <li>Features: LSTM-based time series prediction, data normalization, trend visualization</li>
-              <li>Impact: Provides a robust forecasting tool for investors and analysts to anticipate market trends and make data-driven decisions</li>
+
+            <ul class="project-highlights" style="margin-bottom: 15px;">
+              <li style="padding-left: 28px;">
+                <strong style="color: #1f2937;">Tech Stack:</strong> Python, FastAPI, WebSockets, BB84 QKD, Post-Quantum Cryptography
+              </li>
+              <li style="padding-left: 28px;">
+                <strong style="color: #1f2937;">Key Features:</strong> QBER-based attack detection, session-isolated keys, hybrid QKD-PQC security, real-time secure chat
+              </li>
+              <li style="padding-left: 28px;">
+                <strong style="color: #1f2937;">Impact:</strong> Demonstrates application-layer quantum intrusion detection and prevents message transmission during active attacks
+              </li>
             </ul>
-            <a href="https://github.com/Arvindhbabu/Movie-Recommendation-System.git" class="btn btn-primary mt-2" target="_blank" style="width: 100%;">View Project</a>
+
+            <!-- Action Button -->
+            <a href="https://github.com/Arvindhbabu/Quantum-Secure-Messaging"
+               class="btn"
+               target="_blank"
+               rel="noopener"
+               style="width: 100%; background: linear-gradient(135deg, #00d4ff, #7c3aed); color: white; border: none; padding: 10px 20px; border-radius: 8px; font-weight: 600; text-align: center; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);">
+              <i class="bi bi-github" style="margin-right: 6px;"></i>View Code
+            </a>
+          </div>
+          <!-- End Quantum Secure Messaging -->
+
+
+
+          <!-- ★ Project 1 - Stock Price Prediction ★ -->
+          <div class="project-card" data-aos="fade-up" style="border: 2px solid transparent; background: linear-gradient(#ffffff, #ffffff) padding-box, linear-gradient(135deg, #10b981, #3b82f6, #10b981) border-box; position: relative; overflow: hidden;">
+            
+            <!-- Project Image with Overlay -->
+            <div style="position: relative; margin: -20px -20px 15px -20px; overflow: hidden;">
+              <img
+                src="https://imgs.search.brave.com/SlMOALamDPec-wTv1LDNMJuXr9DtLSY6lUrEr5SNtas/rs:fit:0:180:1:0/g:ce/aHR0cHM6Ly93d3cu/ZnV0dXJlLXByb2Nl/c3NpbmcuY29tL2Js/b2cvd3AtY29udGVu/dC91cGxvYWRzLzIw/MjMvMDMvUHJlZGlj/dGluZy1TdG9jay1Q/cmljZXMtYW5kLU1h/cmtldC1TaGlmdHMt/VXNpbmctQUkuanBn"
+                alt="Stock Price Prediction"
+                class="img-fluid w-100"
+                style="height: 160px; object-fit: cover; filter: brightness(0.9);">
+              <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 60px; background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);"></div>
+              <div style="position: absolute; bottom: 10px; left: 15px; display: flex; gap: 8px;">
+                <span style="background: rgba(16, 185, 129, 0.9); color: white; padding: 3px 10px; border-radius: 12px; font-size: 0.7rem; font-weight: 500;">LSTM</span>
+                <span style="background: rgba(59, 130, 246, 0.9); color: white; padding: 3px 10px; border-radius: 12px; font-size: 0.7rem; font-weight: 500;">Deep Learning</span>
+              </div>
+            </div>
+
+            <h3 class="project-title text-black" style="font-size: 1.4rem; margin-bottom: 12px;">
+              <i class="bi bi-graph-up-arrow" style="color: #10b981; margin-right: 8px;"></i>
+              <strong>Stock Price Prediction</strong>
+            </h3>
+
+            <p class="project-description" style="color: #4b5563; line-height: 1.6; margin-bottom: 18px;">
+              A deep learning-based system that predicts future stock prices using <strong style="color: #10b981;">Long Short-Term Memory (LSTM)</strong> networks.
+              The model leverages historical stock market data to capture temporal dependencies and generate accurate forecasts.
+            </p>
+
+            <ul class="project-highlights" style="margin-bottom: 15px;">
+              <li style="padding-left: 28px;">
+                <strong style="color: #1f2937;">Tech Stack:</strong> Pandas, NumPy, Matplotlib, Scikit-learn, TensorFlow/Keras
+              </li>
+              <li style="padding-left: 28px;">
+                <strong style="color: #1f2937;">Key Features:</strong> LSTM-based time series prediction, data normalization, trend visualization
+              </li>
+              <li style="padding-left: 28px;">
+                <strong style="color: #1f2937;">Impact:</strong> Robust forecasting tool for investors to anticipate market trends
+              </li>
+            </ul>
+
+            <a href="https://github.com/Arvindhbabu/Movie-Recommendation-System.git"
+               class="btn"
+               target="_blank"
+               rel="noopener"
+               style="width: 100%; background: linear-gradient(135deg, #10b981, #3b82f6); color: white; border: none; padding: 10px 20px; border-radius: 8px; font-weight: 600; text-align: center; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);">
+              <i class="bi bi-github" style="margin-right: 6px;"></i>View Code
+            </a>
           </div>
 
-          <!-- Project 2 -->
-          <div class="project-card" data-aos="fade-up">
-            <img src="https://imgs.search.brave.com/ti0riDZl1r82loCZdVY7epsT56nRQmO3fVyva2mDcvQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9haW11/bHRpcGh5c2ljcy5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MjQvMDUvbWFjaGlu/ZS1sZWFybmluZy5q/cGc" alt="Heart Disease Prediction" class="img-fluid w-100 rounded mb-2" style="max-height:120px;object-fit:cover;">
-            <h3 class="project-title text-black"><strong>Heart Disease Prediction</strong></h3>
-            <p class="project-description">
-              A robust system that predicts heart disease using diagnostic medical data through advanced classification techniques. The model employs a Random Forest 
-              classifier to identify at-risk patients and integrates SHAP for explainable AI, providing insights into feature importance.
+          <!-- ★ Project 2 - Heart Disease Prediction ★ -->
+          <div class="project-card" data-aos="fade-up" style="border: 2px solid transparent; background: linear-gradient(#ffffff, #ffffff) padding-box, linear-gradient(135deg, #ef4444, #f97316, #ef4444) border-box; position: relative; overflow: hidden;">
+            
+            <!-- Project Image with Overlay -->
+            <div style="position: relative; margin: -20px -20px 15px -20px; overflow: hidden;">
+              <img
+                src="https://imgs.search.brave.com/ti0riDZl1r82loCZdVY7epsT56nRQmO3fVyva2mDcvQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9haW11/bHRpcGh5c2ljcy5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MjQvMDUvbWFjaGlu/ZS1sZWFybmluZy5q/cGc"
+                alt="Heart Disease Prediction"
+                class="img-fluid w-100"
+                style="height: 160px; object-fit: cover; filter: brightness(0.9);">
+              <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 60px; background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);"></div>
+              <div style="position: absolute; bottom: 10px; left: 15px; display: flex; gap: 8px;">
+                <span style="background: rgba(239, 68, 68, 0.9); color: white; padding: 3px 10px; border-radius: 12px; font-size: 0.7rem; font-weight: 500;">Random Forest</span>
+                <span style="background: rgba(249, 115, 22, 0.9); color: white; padding: 3px 10px; border-radius: 12px; font-size: 0.7rem; font-weight: 500;">SHAP</span>
+              </div>
+            </div>
+
+            <h3 class="project-title text-black" style="font-size: 1.4rem; margin-bottom: 12px;">
+              <i class="bi bi-heart-pulse-fill" style="color: #ef4444; margin-right: 8px;"></i>
+              <strong>Heart Disease Prediction</strong>
+            </h3>
+
+            <p class="project-description" style="color: #4b5563; line-height: 1.6; margin-bottom: 18px;">
+              A robust system that predicts heart disease using <strong style="color: #ef4444;">diagnostic medical data</strong> through advanced classification techniques. 
+              The model employs <strong style="color: #f97316;">Random Forest</strong> classifier with SHAP for explainable AI.
             </p>
-            <ul class="project-highlights">
-              <li>Libraries: Pandas, NumPy, Matplotlib, Scikit-learn, SHAP</li>
-              <li>Features: Random Forest classification, SHAP-based explainability, data preprocessing, performance visualization</li>
-              <li>Impact: Empowers healthcare professionals with a reliable diagnostic tool to identify heart disease risks and make informed decisions</li>
+
+            <ul class="project-highlights" style="margin-bottom: 15px;">
+              <li style="padding-left: 28px;">
+                <strong style="color: #1f2937;">Tech Stack:</strong> Pandas, NumPy, Matplotlib, Scikit-learn, SHAP
+              </li>
+              <li style="padding-left: 28px;">
+                <strong style="color: #1f2937;">Key Features:</strong> Random Forest classification, SHAP-based explainability, performance visualization
+              </li>
+              <li style="padding-left: 28px;">
+                <strong style="color: #1f2937;">Impact:</strong> Empowers healthcare professionals with reliable diagnostic tools
+              </li>
             </ul>
-            <a href="https://github.com/Arvindhbabu/Heart-Disease-Prediction.git" class="btn btn-primary mt-2" target="_blank" style="width: 100%;">View Project</a>
+
+            <a href="https://github.com/Arvindhbabu/Heart-Disease-Prediction.git"
+               class="btn"
+               target="_blank"
+               rel="noopener"
+               style="width: 100%; background: linear-gradient(135deg, #ef4444, #f97316); color: white; border: none; padding: 10px 20px; border-radius: 8px; font-weight: 600; text-align: center; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);">
+              <i class="bi bi-github" style="margin-right: 6px;"></i>View Code
+            </a>
           </div>
 
+          <!-- ★ Project 3 - Movie Recommendation System ★ -->
+          <div class="project-card" data-aos="fade-up" style="border: 2px solid transparent; background: linear-gradient(#ffffff, #ffffff) padding-box, linear-gradient(135deg, #8b5cf6, #ec4899, #8b5cf6) border-box; position: relative; overflow: hidden;">
+            
+            <!-- Project Image with Overlay -->
+            <div style="position: relative; margin: -20px -20px 15px -20px; overflow: hidden;">
+              <img
+                src="https://imgs.search.brave.com/8duiyzS4sBM5KG3BPd2QQlHwpZ1AZOW5cq_bbo9413I/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9lZGl0/b3IuYW5hbHl0aWNz/dmlkaHlhLmNvbS91/cGxvYWRzLzc2ODg5/cmVjb21tZW5kZXIt/c3lzdGVtLWZvci1t/b3ZpZS1yZWNvbW1l/bmRhdGlvbi5qcGc"
+                alt="Movie Recommendation System"
+                class="img-fluid w-100"
+                style="height: 160px; object-fit: cover; filter: brightness(0.9);">
+              <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 60px; background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);"></div>
+              <div style="position: absolute; bottom: 10px; left: 15px; display: flex; gap: 8px;">
+                <span style="background: rgba(139, 92, 246, 0.9); color: white; padding: 3px 10px; border-radius: 12px; font-size: 0.7rem; font-weight: 500;">Content-Based</span>
+                <span style="background: rgba(236, 72, 153, 0.9); color: white; padding: 3px 10px; border-radius: 12px; font-size: 0.7rem; font-weight: 500;">Collaborative</span>
+              </div>
+            </div>
 
-          <!-- Project 3 -->
-          <div class="project-card" data-aos="fade-up">
-            <img src="https://imgs.search.brave.com/8duiyzS4sBM5KG3BPd2QQlHwpZ1AZOW5cq_bbo9413I/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9lZGl0/b3IuYW5hbHl0aWNz/dmlkaHlhLmNvbS91/cGxvYWRzLzc2ODg5/cmVjb21tZW5kZXIt/c3lzdGVtLWZvci1t/b3ZpZS1yZWNvbW1l/bmRhdGlvbi5qcGc" alt="Movie Recommendation System" class="img-fluid w-100 rounded mb-2" style="max-height:120px;object-fit:cover;">
-            <h3 class="project-title text-black"><strong>Movie Recommendation System</strong></h3>
-            <p class="project-description">
-              An AI-powered system that recommends movies based on user preferences using collaborative and content-based filtering techniques. 
-              Built with Python and machine learning algorithms, it analyzes user ratings, movie metadata, and behavioral patterns to deliver 
-              personalized recommendations.
+            <h3 class="project-title text-black" style="font-size: 1.4rem; margin-bottom: 12px;">
+              <i class="bi bi-film" style="color: #8b5cf6; margin-right: 8px;"></i>
+              <strong>Movie Recommendation System</strong>
+            </h3>
+
+            <p class="project-description" style="color: #4b5563; line-height: 1.6; margin-bottom: 18px;">
+              An AI-powered system that recommends movies using <strong style="color: #8b5cf6;">collaborative</strong> and <strong style="color: #ec4899;">content-based filtering</strong>.
+              Analyzes user ratings, metadata, and behavioral patterns to deliver personalized recommendations.
             </p>
-            <ul class="project-highlights">
-              <li>Libraries: Pandas, NumPy, Scikit-learn</li>
-              <li>Features: Content-based and collaborative filtering, user profiling, similarity score computation</li>
-              <li>Impact: Enhances user experience by providing accurate and scalable movie recommendations across diverse genres</li>
+
+            <ul class="project-highlights" style="margin-bottom: 15px;">
+              <li style="padding-left: 28px;">
+                <strong style="color: #1f2937;">Tech Stack:</strong> Pandas, NumPy, Scikit-learn
+              </li>
+              <li style="padding-left: 28px;">
+                <strong style="color: #1f2937;">Key Features:</strong> Content-based and collaborative filtering, user profiling, similarity scores
+              </li>
+              <li style="padding-left: 28px;">
+                <strong style="color: #1f2937;">Impact:</strong> Enhances user experience with accurate, scalable movie recommendations
+              </li>
             </ul>
-            <a href="https://github.com/Arvindhbabu/Movie-Recommendation-System.git" class="btn btn-primary mt-2" target="_blank" style="width: 100%;">View Project</a>
+
+            <a href="https://github.com/Arvindhbabu/Movie-Recommendation-System.git"
+               class="btn"
+               target="_blank"
+               rel="noopener"
+               style="width: 100%; background: linear-gradient(135deg, #8b5cf6, #ec4899); color: white; border: none; padding: 10px 20px; border-radius: 8px; font-weight: 600; text-align: center; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);">
+              <i class="bi bi-github" style="margin-right: 6px;"></i>View Code
+            </a>
           </div>
 
-          <!-- Project 4 -->
-          <div class="project-card" data-aos="fade-up">
-            <img src="https://imgs.search.brave.com/jNyGo8C4843WWZJUCT4HwJ2pZeN8LQahtsM4wyUUicI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZWVrc2Zvcmdl/ZWtzLm9yZy93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyMjA5MDYx/NzQzMjcvNC5QTkc" alt="Fake News Detection" class="img-fluid w-100 rounded mb-2" style="max-height:120px;object-fit:cover;">
-            <h3 class="project-title text-black"><strong>Fake News Detection</strong></h3>
-            <p class="project-description">
-              A machine learning-based system that identifies and classifies fake news articles using natural language processing (NLP) techniques. 
-              The model analyzes textual data to distinguish between reliable and deceptive content by leveraging supervised learning algorithms and 
-              vectorization methods.
+          <!-- ★ Project 4 - Fake News Detection ★ -->
+          <div class="project-card" data-aos="fade-up" style="border: 2px solid transparent; background: linear-gradient(#ffffff, #ffffff) padding-box, linear-gradient(135deg, #f59e0b, #eab308, #f59e0b) border-box; position: relative; overflow: hidden;">
+            
+            <!-- Project Image with Overlay -->
+            <div style="position: relative; margin: -20px -20px 15px -20px; overflow: hidden;">
+              <img
+                src="https://imgs.search.brave.com/jNyGo8C4843WWZJUCT4HwJ2pZeN8LQahtsM4wyUUicI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZWVrc2Zvcmdl/ZWtzLm9yZy93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyMjA5MDYx/NzQzMjcvNC5QTkc"
+                alt="Fake News Detection"
+                class="img-fluid w-100"
+                style="height: 160px; object-fit: cover; filter: brightness(0.9);">
+              <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 60px; background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);"></div>
+              <div style="position: absolute; bottom: 10px; left: 15px; display: flex; gap: 8px;">
+                <span style="background: rgba(245, 158, 11, 0.9); color: white; padding: 3px 10px; border-radius: 12px; font-size: 0.7rem; font-weight: 500;">NLP</span>
+                <span style="background: rgba(234, 179, 8, 0.9); color: white; padding: 3px 10px; border-radius: 12px; font-size: 0.7rem; font-weight: 500;">TF-IDF</span>
+              </div>
+            </div>
+
+            <h3 class="project-title text-black" style="font-size: 1.4rem; margin-bottom: 12px;">
+              <i class="bi bi-newspaper" style="color: #f59e0b; margin-right: 8px;"></i>
+              <strong>Fake News Detection</strong>
+            </h3>
+
+            <p class="project-description" style="color: #4b5563; line-height: 1.6; margin-bottom: 18px;">
+              A machine learning system that identifies fake news using <strong style="color: #f59e0b;">Natural Language Processing (NLP)</strong>.
+              Analyzes textual data to distinguish reliable content from deceptive articles using supervised learning.
             </p>
-            <ul class="project-highlights">
-              <li>Libraries: Pandas, NumPy, Scikit-learn, NLTK/TfidfVectorizer</li>
-              <li>Features: Text preprocessing, TF-IDF vectorization, logistic regression/classification model</li>
-              <li>Impact: Enhances information credibility by providing an automated tool to combat misinformation across digital platforms</li>
+
+            <ul class="project-highlights" style="margin-bottom: 15px;">
+              <li style="padding-left: 28px;">
+                <strong style="color: #1f2937;">Tech Stack:</strong> Pandas, NumPy, Scikit-learn, NLTK/TfidfVectorizer
+              </li>
+              <li style="padding-left: 28px;">
+                <strong style="color: #1f2937;">Key Features:</strong> Text preprocessing, TF-IDF vectorization, logistic regression
+              </li>
+              <li style="padding-left: 28px;">
+                <strong style="color: #1f2937;">Impact:</strong> Automated tool to combat misinformation across digital platforms
+              </li>
             </ul>
-            <a href="https://github.com/Arvindhbabu/Fake-News-Detection.git" class="btn btn-primary mt-2" target="_blank" style="width: 100%;">View Project</a>
-          </div>
-          
-          <!-- Project 5 -->
-          <div class="project-card" data-aos="fade-up">
-            <img src="https://imgs.search.brave.com/INjvDnGLeKWlv3jg-t8-lU3I896__gQ9Xmeu0tpaKGY/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTUw/ODc4MDY3MS9waG90/by90b3VjaGluZy1t/ZXRhdmVyc2UuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPTgw/YnA0NE1jM1VBNFFw/NVlrYmxBZUpmalhC/cWJ6clRUa2hQbjYt/b3JPLWM9" alt="ML Models" class="img-fluid w-100 rounded mb-2" style="max-height:120px;object-fit:cover;">
-            <h3 class="project-title text-black"><strong>Predictive Analytics & Machine Learning Models</strong></h3>
-            <p class="project-description">
-               Developed ML models for Titanic survival prediction, movie rating prediction, and sales forecasting, achieving an accuracy of 90%+.
-               Built a fraud detection system using Random Forest & SMOTE, improving fraud detection rate by 20%.
-            </p>
-            <ul class="project-highlights">
-              <li>Technologies Used: Python, Scikit-learn, Random Forest, SMOTE, SVM, KNN</li>
-              <li>Projects Completed: Titanic Survival Prediction, Movie Rating Prediction, Sales Forecasting, Fraud Detection System, Iris Flower Classification</li>
-              <li>Skills Gained: Predictive analytics, Machine learning model development, Feature engineering, Classification techniques, Accuracy optimization</li>
-            </ul>
-            <a href="https://github.com/Arvindhbabu/Credit-Card-Fraud-Detection.git" class="btn btn-primary mt-2" target="_blank" style="width: 100%;">View Project</a>
+
+            <a href="https://github.com/Arvindhbabu/Fake-News-Detection.git"
+               class="btn"
+               target="_blank"
+               rel="noopener"
+               style="width: 100%; background: linear-gradient(135deg, #f59e0b, #eab308); color: white; border: none; padding: 10px 20px; border-radius: 8px; font-weight: 600; text-align: center; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);">
+              <i class="bi bi-github" style="margin-right: 6px;"></i>View Code
+            </a>
           </div>
 
-          <!-- Project 6 -->
-          <div class="project-card" data-aos="fade-up">
-            <img src="https://imgs.search.brave.com/DYOIV66vFCNZSCSxeqHztex445AxeuithEONGOjiJ-c/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/Y29uc3VsdGFuY3ku/ZXUvaWxsdXN0cmF0/aW9ucy9uZXdzL2Rl/dGFpbC8yMDI1LTA0/LTE3LTAzNDIzMzUz/Mi1HZW5lcmF0aXZl/X0FJX2luX1Byb2pl/Y3RfTWFuYWdlbWVu/dF9BX0d1aWRlX2Zv/cl9Qcm9qZWN0X1Rl/YW1zLmpwZw" alt="Gen AI" class="img-fluid w-100 rounded mb-2" style="max-height:120px;object-fit:cover;">
-            <h3 class="project-title text-black"><strong>Generative AI Projects</strong></h3>
-            <p class="project-description">
-                Completed 5 end-to-end projects on Generative AI using cutting-edge models and tools (GPT-2, Diffusion, pix2pix, VGG19).
-                Developed a Text Generation system,  Image Generation, Image Captioning System,  Image-to-Image Translation, Neural Style Transfer.
+          <!-- ★ Project 5 - Predictive Analytics & ML Models ★ -->
+          <div class="project-card" data-aos="fade-up" style="border: 2px solid transparent; background: linear-gradient(#ffffff, #ffffff) padding-box, linear-gradient(135deg, #06b6d4, #0891b2, #06b6d4) border-box; position: relative; overflow: hidden;">
+            
+            <!-- Project Image with Overlay -->
+            <div style="position: relative; margin: -20px -20px 15px -20px; overflow: hidden;">
+              <img
+                src="https://imgs.search.brave.com/INjvDnGLeKWlv3jg-t8-lU3I896__gQ9Xmeu0tpaKGY/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTUw/ODc4MDY3MS9waG90/by90b3VjaGluZy1t/ZXRhdmVyc2UuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPTgw/YnA0NE1jM1VBNFFw/NVlrYmxBZUpmalhC/cWJ6clRUa2hQbjYt/b3JPLWM9"
+                alt="ML Models"
+                class="img-fluid w-100"
+                style="height: 160px; object-fit: cover; filter: brightness(0.9);">
+              <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 60px; background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);"></div>
+              <div style="position: absolute; bottom: 10px; left: 15px; display: flex; gap: 8px;">
+                <span style="background: rgba(6, 182, 212, 0.9); color: white; padding: 3px 10px; border-radius: 12px; font-size: 0.7rem; font-weight: 500;">Scikit-learn</span>
+                <span style="background: rgba(8, 145, 178, 0.9); color: white; padding: 3px 10px; border-radius: 12px; font-size: 0.7rem; font-weight: 500;">SMOTE</span>
+              </div>
+            </div>
+
+            <h3 class="project-title text-black" style="font-size: 1.4rem; margin-bottom: 12px;">
+              <i class="bi bi-cpu-fill" style="color: #06b6d4; margin-right: 8px;"></i>
+              <strong>Predictive Analytics & ML Models</strong>
+            </h3>
+
+            <p class="project-description" style="color: #4b5563; line-height: 1.6; margin-bottom: 18px;">
+              Developed ML models for <strong style="color: #06b6d4;">Titanic survival prediction</strong>, movie rating prediction, and sales forecasting with 90%+ accuracy.
+              Built a fraud detection system using <strong style="color: #0891b2;">Random Forest & SMOTE</strong>.
             </p>
-            <ul class="project-highlights">
-              <li>Technologies Used: Python, TensorFlow, PyTorch, HuggingFace, Matplotlib, Colab, and PIL.</li>
-              <li>Projects Completed: Text Generation system,  Image Generation, Image Captioning System,  Image-to-Image Translation, Neural Style Transfer.</li>
-              <li>Skills Gained: Generative Adversarial Networks (GANs), Diffusion Models (DDPMs), Transformers (GPT-2 architecture), CNN–RNN Encoder–Decoder architecture</li>
+
+            <ul class="project-highlights" style="margin-bottom: 15px;">
+              <li style="padding-left: 28px;">
+                <strong style="color: #1f2937;">Tech Stack:</strong> Python, Scikit-learn, Random Forest, SMOTE, SVM, KNN
+              </li>
+              <li style="padding-left: 28px;">
+                <strong style="color: #1f2937;">Projects:</strong> Titanic, Movie Rating, Sales Forecasting, Fraud Detection, Iris Classification
+              </li>
+              <li style="padding-left: 28px;">
+                <strong style="color: #1f2937;">Impact:</strong> Predictive analytics with feature engineering and accuracy optimization
+              </li>
             </ul>
-            <a href="https://github.com/Arvindhbabu/Stable_Diffusion_Image_Generation.git" class="btn btn-primary mt-2" target="_blank" style="width: 100%;">View Project</a>
+
+            <a href="https://github.com/Arvindhbabu/Credit-Card-Fraud-Detection.git"
+               class="btn"
+               target="_blank"
+               rel="noopener"
+               style="width: 100%; background: linear-gradient(135deg, #06b6d4, #0891b2); color: white; border: none; padding: 10px 20px; border-radius: 8px; font-weight: 600; text-align: center; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);">
+              <i class="bi bi-github" style="margin-right: 6px;"></i>View Code
+            </a>
           </div>
 
-          <!-- Project 7 -->
-          <div class="project-card" data-aos="fade-up">
-            <img src="https://imgs.search.brave.com/lS1ZhNm4dN0MUH4hkz_b_DKdS51sliwTwKhaeI2Xac8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9lbGVt/ZW50cy1yZXNpemVk/LmVudmF0b3VzZXJj/b250ZW50LmNvbS9l/bGVtZW50cy1jb3Zl/ci1pbWFnZXMvNWM1/NDkwYTctMjI5Mi00/N2RlLTlmMjUtMDc5/MzgzYWM1YjBjP3c9/MzE2JmNmX2ZpdD1z/Y2FsZS1kb3duJnE9/OTQmZm9ybWF0PWpw/ZWcmcz01Nzc2ODVj/MTgyMjAwNjZjMzli/Yzk0OTI1YTUzMTgy/OGM4YmI5N2M5OTcw/NTUyZmE1YWM2MmM3/MDhkZjFkYzE3" alt="Web Development Projects" class="img-fluid w-100 rounded mb-2" style="max-height:120px;object-fit:cover;">
-            <h3 class="project-title text-black"><strong>Web Development Projects</strong></h3>
-            <p class="project-description">
-               Developed a Simple Calculator using HTML, CSS, and JavaScript, implementing basic arithmetic operations.Built a 
-               fully functional E-Commerce Website, featuring product listings, a shopping cart, and responsive design.
-               Created a To-Do List App, enabling task management with add, delete, and update functionalities.
+          <!-- ★ Project 6 - Generative AI Projects ★ -->
+          <div class="project-card" data-aos="fade-up" style="border: 2px solid transparent; background: linear-gradient(#ffffff, #ffffff) padding-box, linear-gradient(135deg, #a855f7, #6366f1, #a855f7) border-box; position: relative; overflow: hidden;">
+            
+            <!-- Project Image with Overlay -->
+            <div style="position: relative; margin: -20px -20px 15px -20px; overflow: hidden;">
+              <img
+                src="https://imgs.search.brave.com/DYOIV66vFCNZSCSxeqHztex445AxeuithEONGOjiJ-c/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/Y29uc3VsdGFuY3ku/ZXUvaWxsdXN0cmF0/aW9ucy9uZXdzL2Rl/dGFpbC8yMDI1LTA0/LTE3LTAzNDIzMzUz/Mi1HZW5lcmF0aXZl/X0FJX2luX1Byb2pl/Y3RfTWFuYWdlbWVu/dF9BX0d1aWRlX2Zv/cl9Qcm9qZWN0X1Rl/YW1zLmpwZw"
+                alt="Gen AI"
+                class="img-fluid w-100"
+                style="height: 160px; object-fit: cover; filter: brightness(0.9);">
+              <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 60px; background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);"></div>
+              <div style="position: absolute; bottom: 10px; left: 15px; display: flex; gap: 8px;">
+                <span style="background: rgba(168, 85, 247, 0.9); color: white; padding: 3px 10px; border-radius: 12px; font-size: 0.7rem; font-weight: 500;">GPT-2</span>
+                <span style="background: rgba(99, 102, 241, 0.9); color: white; padding: 3px 10px; border-radius: 12px; font-size: 0.7rem; font-weight: 500;">Diffusion</span>
+                <span style="background: rgba(139, 92, 246, 0.9); color: white; padding: 3px 10px; border-radius: 12px; font-size: 0.7rem; font-weight: 500;">GANs</span>
+              </div>
+            </div>
+
+            <h3 class="project-title text-black" style="font-size: 1.4rem; margin-bottom: 12px;">
+              <i class="bi bi-stars" style="color: #a855f7; margin-right: 8px;"></i>
+              <strong>Generative AI Projects</strong>
+            </h3>
+
+            <p class="project-description" style="color: #4b5563; line-height: 1.6; margin-bottom: 18px;">
+              Completed 5 end-to-end projects on <strong style="color: #a855f7;">Generative AI</strong> using cutting-edge models (GPT-2, Diffusion, pix2pix, VGG19).
+              Developed Text Generation, Image Generation, Image Captioning, and <strong style="color: #6366f1;">Neural Style Transfer</strong>.
             </p>
-            <ul class="project-highlights">
-              <li>Technologies Used: HTML, CSS, JavaScript</li>
-              <li>Projects Completed: Simple Calculator, ECommerce Website, ToDo List App, Connect Four Game</li>
-              <li>Skills Gained: Front-end development, DOM manipulation, Responsive design</li>
+
+            <ul class="project-highlights" style="margin-bottom: 15px;">
+              <li style="padding-left: 28px;">
+                <strong style="color: #1f2937;">Tech Stack:</strong> Python, TensorFlow, PyTorch, HuggingFace, Matplotlib, PIL
+              </li>
+              <li style="padding-left: 28px;">
+                <strong style="color: #1f2937;">Projects:</strong> Text Gen, Image Gen, Image Captioning, Image-to-Image, Neural Style Transfer
+              </li>
+              <li style="padding-left: 28px;">
+                <strong style="color: #1f2937;">Skills:</strong> GANs, Diffusion Models, Transformers, CNN–RNN architectures
+              </li>
             </ul>
-            <a href="https://github.com/Arvindhbabu/Internpe.git" class="btn btn-primary mt-2" target="_blank" style="width: 100%;">View Project</a>
+
+            <a href="https://github.com/Arvindhbabu/Stable_Diffusion_Image_Generation.git"
+               class="btn"
+               target="_blank"
+               rel="noopener"
+               style="width: 100%; background: linear-gradient(135deg, #a855f7, #6366f1); color: white; border: none; padding: 10px 20px; border-radius: 8px; font-weight: 600; text-align: center; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);">
+              <i class="bi bi-github" style="margin-right: 6px;"></i>View Code
+            </a>
+          </div>
+
+          <!-- ★ Project 7 - Web Development Projects ★ -->
+          <div class="project-card" data-aos="fade-up" style="border: 2px solid transparent; background: linear-gradient(#ffffff, #ffffff) padding-box, linear-gradient(135deg, #14b8a6, #22c55e, #14b8a6) border-box; position: relative; overflow: hidden;">
+            
+            <!-- Project Image with Overlay -->
+            <div style="position: relative; margin: -20px -20px 15px -20px; overflow: hidden;">
+              <img
+                src="https://imgs.search.brave.com/lS1ZhNm4dN0MUH4hkz_b_DKdS51sliwTwKhaeI2Xac8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9lbGVt/ZW50cy1yZXNpemVk/LmVudmF0b3VzZXJj/b250ZW50LmNvbS9l/bGVtZW50cy1jb3Zl/ci1pbWFnZXMvNWM1/NDkwYTctMjI5Mi00/N2RlLTlmMjUtMDc5/MzgzYWM1YjBjP3c9/MzE2JmNmX2ZpdD1z/Y2FsZS1kb3duJnE9/OTQmZm9ybWF0PWpw/ZWcmcz01Nzc2ODVj/MTgyMjAwNjZjMzli/Yzk0OTI1YTUzMTgy/OGM4YmI5N2M5OTcw/NTUyZmE1YWM2MmM3/MDhkZjFkYzE3"
+                alt="Web Development Projects"
+                class="img-fluid w-100"
+                style="height: 160px; object-fit: cover; filter: brightness(0.9);">
+              <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 60px; background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);"></div>
+              <div style="position: absolute; bottom: 10px; left: 15px; display: flex; gap: 8px;">
+                <span style="background: rgba(20, 184, 166, 0.9); color: white; padding: 3px 10px; border-radius: 12px; font-size: 0.7rem; font-weight: 500;">HTML/CSS</span>
+                <span style="background: rgba(34, 197, 94, 0.9); color: white; padding: 3px 10px; border-radius: 12px; font-size: 0.7rem; font-weight: 500;">JavaScript</span>
+              </div>
+            </div>
+
+            <h3 class="project-title text-black" style="font-size: 1.4rem; margin-bottom: 12px;">
+              <i class="bi bi-code-slash" style="color: #14b8a6; margin-right: 8px;"></i>
+              <strong>Web Development Projects</strong>
+            </h3>
+
+            <p class="project-description" style="color: #4b5563; line-height: 1.6; margin-bottom: 18px;">
+              Developed a <strong style="color: #14b8a6;">Simple Calculator</strong>, fully functional <strong style="color: #22c55e;">E-Commerce Website</strong> with product listings and shopping cart,
+              and a To-Do List App with add, delete, and update functionalities.
+            </p>
+
+            <ul class="project-highlights" style="margin-bottom: 15px;">
+              <li style="padding-left: 28px;">
+                <strong style="color: #1f2937;">Tech Stack:</strong> HTML, CSS, JavaScript
+              </li>
+              <li style="padding-left: 28px;">
+                <strong style="color: #1f2937;">Projects:</strong> Simple Calculator, E-Commerce Website, ToDo List App, Connect Four Game
+              </li>
+              <li style="padding-left: 28px;">
+                <strong style="color: #1f2937;">Skills:</strong> Front-end development, DOM manipulation, Responsive design
+              </li>
+            </ul>
+
+            <a href="https://github.com/Arvindhbabu/Internpe.git"
+               class="btn"
+               target="_blank"
+               rel="noopener"
+               style="width: 100%; background: linear-gradient(135deg, #14b8a6, #22c55e); color: white; border: none; padding: 10px 20px; border-radius: 8px; font-weight: 600; text-align: center; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(20, 184, 166, 0.3);">
+              <i class="bi bi-github" style="margin-right: 6px;"></i>View Code
+            </a>
           </div>
 
         </div><!-- End Portfolio Container -->
@@ -1337,8 +1724,8 @@
                 <p>Provided By AWS Educate</p>
                 <a href="assets/img/masonry-portfolio/Machine Learning Foundation.png"
                   data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="https://drive.google.com/file/d/1q05VQqlUhTlGKV23JwcjejUMKxLqWEZm/view"
-                  title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <a href="https://drive.google.com/file/d/1q05VQqlUhTlGKV23JwcjejUMKxLqWEZm/view" title="More Details"
+                  class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
@@ -1347,8 +1734,8 @@
               <div class="portfolio-info">
                 <h4>Data Mining</h4>
                 <p>Provided By NPTEL</p>
-                <a href="assets/img/masonry-portfolio/Data Mining-1.png"
-                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="assets/img/masonry-portfolio/Data Mining-1.png" data-gallery="portfolio-gallery-app"
+                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <a href="https://drive.google.com/file/d/1R0ph9MkjSwfdOC8J2H4yT-3LEAvwPhpk/view?usp=drive_link"
                   title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
@@ -1371,8 +1758,8 @@
               <div class="portfolio-info">
                 <h4>Foundations of AI</h4>
                 <p>Provided By Edunet Foundation (Microsoft)</p>
-                <a href="assets/img/masonry-portfolio/Edunet 1 certifiate-1.png"
-                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="assets/img/masonry-portfolio/Edunet 1 certifiate-1.png" data-gallery="portfolio-gallery-app"
+                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <a href="https://drive.google.com/file/d/1vMzUofRb3mt4bwTM8eylaO7g5V19SiHN/view?usp=drive_link"
                   title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
@@ -1383,10 +1770,10 @@
               <div class="portfolio-info">
                 <h4>Artificial Intelligence and Data Analytics</h4>
                 <p>Provided By Edunet Foundation (AICTE) </p>
-                <a href="assets/img/masonry-portfolio/Edunet 2 Certificate-1.png"
-                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="https://drive.google.com/file/d/1q05VQqlUhTlGKV23JwcjejUMKxLqWEZm/view"
-                  title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <a href="assets/img/masonry-portfolio/Edunet 2 Certificate-1.png" data-gallery="portfolio-gallery-app"
+                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="https://drive.google.com/file/d/1q05VQqlUhTlGKV23JwcjejUMKxLqWEZm/view" title="More Details"
+                  class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
@@ -1405,8 +1792,7 @@
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/Computer Vision Certificate.png"
-                class="img-fluid" alt="">
+              <img src="assets/img/masonry-portfolio/Computer Vision Certificate.png" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Computer Vision</h4>
                 <p>Provided By Kaggle</p>
@@ -1431,7 +1817,8 @@
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/Solution Architect Certificate - AWS,Forage-1.png" class="img-fluid" alt="">
+              <img src="assets/img/masonry-portfolio/Solution Architect Certificate - AWS,Forage-1.png"
+                class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Solutions Architecture Job Simulation</h4>
                 <p>Provided By Forage/AWS</p>
@@ -1444,7 +1831,8 @@
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/Data Engineering and Big Data Certificate.png" class="img-fluid" alt="">
+              <img src="assets/img/masonry-portfolio/Data Engineering and Big Data Certificate.png" class="img-fluid"
+                alt="">
               <div class="portfolio-info">
                 <h4>Data Engineering and Big Data Certification</h4>
                 <p>Provided By Guvi</p>
@@ -1470,8 +1858,7 @@
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/Codsoft Certificate-1.png" class="img-fluid"
-                alt="">
+              <img src="assets/img/masonry-portfolio/Codsoft Certificate-1.png" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Data Science Intern</h4>
                 <p>Provided By Codsoft</p>
@@ -1519,8 +1906,8 @@
                 <a href="assets/img/masonry-portfolio/Understanding Market Risk_page-0001.jpg"
                   data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
                     class="bi bi-zoom-in"></i></a>
-                <a href="https://drive.google.com/file/d/1kTW8JGbIh9v4wFRHM6xD65UlKfubEP4b/view"
-                  title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <a href="https://drive.google.com/file/d/1kTW8JGbIh9v4wFRHM6xD65UlKfubEP4b/view" title="More Details"
+                  class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
@@ -1543,24 +1930,24 @@
               <div class="portfolio-info">
                 <h4>Introduction to C</h4>
                 <p>Provided By Sololearn</p>
-                <a href="assets/img/masonry-portfolio/Introduction to C.jpg"
-                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
-                <a href="https://drive.google.com/file/d/1g6drEfENzRaWEttlIkn-YPN0tFMOzOh6/view"
-                  title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <a href="assets/img/masonry-portfolio/Introduction to C.jpg" data-gallery="portfolio-gallery-branding"
+                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="https://drive.google.com/file/d/1g6drEfENzRaWEttlIkn-YPN0tFMOzOh6/view" title="More Details"
+                  class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/SkilQuest - Data Science Foundation-1.png" class="img-fluid" alt="">
+              <img src="assets/img/masonry-portfolio/SkilQuest - Data Science Foundation-1.png" class="img-fluid"
+                alt="">
               <div class="portfolio-info">
                 <h4>SkilQuest - Data Science Foundation</h4>
                 <p>Provided By Simplilearn</p>
-                <a href="assets/img/masonry-portfolio/SkilQuest - Data Science Foundation-1.png" data-gallery="portfolio-gallery-app"
-                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="https://drive.google.com/file/d/14ekICl4TjPmkg6TdO29H5nlQuij4q8V6/view"
-                  title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <a href="assets/img/masonry-portfolio/SkilQuest - Data Science Foundation-1.png"
+                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="https://drive.google.com/file/d/14ekICl4TjPmkg6TdO29H5nlQuij4q8V6/view" title="More Details"
+                  class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
@@ -1582,17 +1969,16 @@
               <div class="portfolio-info">
                 <h4>Excel Macro and VBA</h4>
                 <p>Provided By Simplilearn</p>
-                <a href="assets/img/masonry-portfolio/Excel Macros and VBA_page-0001.jpg" data-gallery="portfolio-gallery-app"
-                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="https://drive.google.com/file/d/1jSi13LnIiXEl7b9J4mjq5l33vkXgL8vk/view"
-                  title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <a href="assets/img/masonry-portfolio/Excel Macros and VBA_page-0001.jpg"
+                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="https://drive.google.com/file/d/1jSi13LnIiXEl7b9J4mjq5l33vkXgL8vk/view" title="More Details"
+                  class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/THE AGNIRVA SPACE INTERNSHIP.png" class="img-fluid"
-                alt="">
+              <img src="assets/img/masonry-portfolio/THE AGNIRVA SPACE INTERNSHIP.png" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Agnirva Space Intern</h4>
                 <p>Provided By Agnirva</p>
@@ -1608,7 +1994,7 @@
 
         </div>
 
-        </section><!-- /Services Section -->
+      </section><!-- /Services Section -->
 
       <!-- Contact Section -->
       <section id="contact" class="contact section">
@@ -1731,47 +2117,47 @@
         </div>
       </footer>
 
-    </main>
+  </main>
 
-    <footer id="footer" class="footer position-relative light-background">
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <h3 class="sitename"></h3>
+      <p></p>
+      <div class="social-links d-flex justify-content-center">
+      </div>
       <div class="container">
-        <h3 class="sitename"></h3>
-        <p></p>
-        <div class="social-links d-flex justify-content-center">
+        <div class="copyright">
+          <span>Copyright © <strong>Arvindh babu</strong> All Rights Reserved</span>
         </div>
-        <div class="container">
-          <div class="copyright">
-            <span>Copyright © <strong>Arvindh babu</strong> All Rights Reserved</span>
-          </div>
-          <div class="credits">
-            <!-- You can add other credits here -->
-          </div>
+        <div class="credits">
+          <!-- You can add other credits here -->
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <!-- Scroll Top -->
-    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-        class="bi bi-arrow-up-short"></i></a>
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
-    <!-- Preloader -->
-    <div id="preloader"></div>
+  <!-- Preloader -->
+  <div id="preloader"></div>
 
-    <!-- Vendor JS Files -->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/typed.js/typed.umd.js"></script>
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <!-- Vendor JS Files -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-    <!-- Main JS File -->
-    <script src="assets/js/main.js"></script>
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
 
 </body>
 
