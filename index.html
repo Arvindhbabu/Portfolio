@@ -4,13 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Arvindh babu V Portfolio</title>
+  <title>Arvindh Babu V Portfolio</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="" rel="icon">
-  <link href="" rel="apple-touch-icon">
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/favicon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -59,26 +59,31 @@
 
   </header>
 
+  <!-- Theme Toggle Button -->
+  <button class="theme-toggle" id="theme-toggle" title="Toggle Dark/Light Theme" aria-label="Toggle theme">
+    <span class="toggle-icon" id="toggle-icon">
+      <i class="bi bi-moon-stars-fill"></i>
+    </span>
+  </button>
+
   <main class="main">
 
     <!-- Hero Section -->
     <section id="hero" class="hero section light-background">
 
-      <img src="assets\img\Doc2.jpg" alt="">
-
       <div class="container" data-aos="zoom-out">
-        <div class="row justify-content-center">
-          <div class="col-lg-9">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
             <h2>Arvindh Babu V</h2>
             <p> <span class="typed"
                 data-typed-items="Aspiring Data Scientist,AI Enthusiast, Tech Enthusiast"></span><span
                 class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
             <div class="social-links">
               <!-- Social Links -->
-              <a href="mailto:arvindhbabu23@gmail.com" target="_blank"><i class="bi bi-envelope flex-shrink-0"></i></a>
-              <a href="https://www.instagram.com/Arvindh.official" target="_blank"><i class="bi bi-instagram"></i></a>
-              <a href="https://github.com/Arvindhbabu" target="_blank"><i class="bi bi-github"></i></a>
-              <a href="https://www.linkedin.com/in/arvindhbabuv23" target="_blank"><i class="bi bi-linkedin"></i></a>
+              <a href="mailto:arvindhbabu23@gmail.com" target="_blank" rel="noopener" title="Email"><i class="bi bi-envelope flex-shrink-0"></i></a>
+              <a href="https://www.instagram.com/Arvindh.official" target="_blank" rel="noopener" title="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="https://github.com/Arvindhbabu" target="_blank" rel="noopener" title="GitHub"><i class="bi bi-github"></i></a>
+              <a href="https://www.linkedin.com/in/arvindhbabuv23" target="_blank" rel="noopener" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
             </div>
             <div class="d-flex justify-content-start align-items-center mt-4" style="min-height: 80px;">
               <a href="https://drive.google.com/file/d/101YMEux244yjcMOMfveFgpMcUXy5mb1K/view?usp=sharing"
@@ -98,6 +103,9 @@
           </div>
         </div>
       </div>
+
+      <div class="hero-img-col" data-aos="fade-left" data-aos-delay="200">
+        <img src="assets/img/Image.jpg" alt="Arvindh Babu V" class="hero-portrait">
       </div>
 
     </section><!-- /Hero Section -->
@@ -223,10 +231,7 @@
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4">
-            <img src="assets/img/Photo.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-8 content">
+          <div class="col-lg-12 content">
             <h2>AI-DS STUDENT</h2>
             <p class="fst-italic py-3">
               "It's not who I am underneath, but what I do that defines me."
@@ -276,7 +281,7 @@
           <!-- LeetCode Card -->
           <div class="col-lg-6 col-md-6">
             <div style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-radius: 16px; padding: 25px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); border: 2px solid transparent; background-clip: padding-box; position: relative;">
-              <div style="position: absolute; inset: 0; border-radius: 16px; padding: 2px; background: linear-gradient(135deg, #ffa116, #ff6b00); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); mask-composite: exclude; pointer-events: none;"></div>
+              <div style="position: absolute; inset: 0; border-radius: 16px; padding: 2px; background: linear-gradient(135deg, #ffa116, #ff6b00); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none;"></div>
               <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode" style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
                 <h3 style="color: #ffa116; margin: 0; font-size: 1.5rem; font-weight: 700;">LeetCode</h3>
@@ -295,7 +300,7 @@
           <!-- HackerRank Card -->
           <div class="col-lg-6 col-md-6">
             <div style="background: linear-gradient(135deg, #1a1a2e 0%, #0d1f2d 100%); border-radius: 16px; padding: 25px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); border: 2px solid transparent; background-clip: padding-box; position: relative; height: 100%;">
-              <div style="position: absolute; inset: 0; border-radius: 16px; padding: 2px; background: linear-gradient(135deg, #00ea64, #00c853); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); mask-composite: exclude; pointer-events: none;"></div>
+              <div style="position: absolute; inset: 0; border-radius: 16px; padding: 2px; background: linear-gradient(135deg, #00ea64, #00c853); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none;"></div>
               <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/HackerRank_Icon-1000px.png" alt="HackerRank" style="width: 40px; height: 40px;">
                 <h3 style="color: #00ea64; margin: 0; font-size: 1.5rem; font-weight: 700;">HackerRank</h3>
@@ -346,7 +351,7 @@
             <div class="progress">
               <span class="skill"><span>Python</span> <i class="val">100%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
                 </div>
               </div>
             </div><!-- End Skills Item -->
@@ -354,7 +359,7 @@
             <div class="progress">
               <span class="skill"><span>Java</span> <i class="val">90%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
                 </div>
               </div>
             </div><!-- End Skills Item -->
@@ -362,7 +367,7 @@
             <div class="progress">
               <span class="skill"><span>C++</span> <i class="val">80%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
                 </div>
               </div>
             </div><!-- End Skills Item -->
@@ -374,7 +379,7 @@
             <div class="progress">
               <span class="skill"><span>C</span> <i class="val">75%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
                 </div>
               </div>
             </div><!-- End Skills Item -->
@@ -382,7 +387,7 @@
             <div class="progress">
               <span class="skill"><span>SQL</span> <i class="val">95%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
                 </div>
               </div>
             </div><!-- End Skills Item -->
@@ -390,7 +395,7 @@
             <div class="progress">
               <span class="skill"><span>R</span> <i class="val">60%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
                 </div>
               </div>
             </div><!-- End Skills Item -->
@@ -417,7 +422,7 @@
               <div class="progress">
                 <span class="skill"><span>Data Structures and Algorithms (DSA)</span> <i class="val">100%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="100" aria-valuemin="0"
                     aria-valuemax="100"></div>
                 </div>
               </div><!-- End Skills Item -->
@@ -425,7 +430,7 @@
               <div class="progress">
                 <span class="skill"><span>Object-Oriented Programming (OOP)</span> <i class="val">90%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -433,7 +438,7 @@
               <div class="progress">
                 <span class="skill"><span>Natural Language Processing (NLP)</span> <i class="val">85%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -445,7 +450,7 @@
               <div class="progress">
                 <span class="skill"><span>Database Management System (DBMS)</span> <i class="val">80%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -453,7 +458,7 @@
               <div class="progress">
                 <span class="skill"><span>Operating Systems (OS)</span> <i class="val">75%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -461,7 +466,7 @@
               <div class="progress">
                 <span class="skill"><span>Design And Analysis Of Algorithms (DAA)</span> <i class="val">70%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -486,7 +491,7 @@
               <div class="progress">
                 <span class="skill"><span>Data Analysis</span> <i class="val">100%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="100" aria-valuemin="0"
                     aria-valuemax="100"></div>
                 </div>
               </div><!-- End Skills Item -->
@@ -494,7 +499,7 @@
               <div class="progress">
                 <span class="skill"><span>Machine Learning</span> <i class="val">90%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -502,7 +507,7 @@
               <div class="progress">
                 <span class="skill"><span>Deep Learning</span> <i class="val">80%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -514,7 +519,7 @@
               <div class="progress">
                 <span class="skill"><span>Generative AI</span> <i class="val">75%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -522,7 +527,7 @@
               <div class="progress">
                 <span class="skill"><span>Data visualization</span> <i class="val">90%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -530,7 +535,7 @@
               <div class="progress">
                 <span class="skill"><span>Big Data Analysis</span> <i class="val">70%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -556,7 +561,7 @@
               <div class="progress">
                 <span class="skill"><span>VS Code / JetBrains IDEs</span> <i class="val">100%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="100" aria-valuemin="0"
                     aria-valuemax="100"></div>
                 </div>
               </div><!-- End Skills Item -->
@@ -564,7 +569,7 @@
               <div class="progress">
                 <span class="skill"><span>Jupyter Notebook / Google Colab</span> <i class="val">90%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -572,7 +577,7 @@
               <div class="progress">
                 <span class="skill"><span>Power BI / Tableau</span> <i class="val">75%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -584,7 +589,7 @@
               <div class="progress">
                 <span class="skill"><span>Git & Github</span> <i class="val">80%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -592,7 +597,7 @@
               <div class="progress">
                 <span class="skill"><span>MYSQL</span> <i class="val">90%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -600,7 +605,7 @@
               <div class="progress">
                 <span class="skill"><span>NLTK</span> <i class="val">70%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -625,7 +630,7 @@
               <div class="progress">
                 <span class="skill"><span>Pandas</span> <i class="val">100%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="100" aria-valuemin="0"
                     aria-valuemax="100"></div>
                 </div>
               </div><!-- End Skills Item -->
@@ -633,7 +638,7 @@
               <div class="progress">
                 <span class="skill"><span>Numpy</span> <i class="val">90%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -641,7 +646,7 @@
               <div class="progress">
                 <span class="skill"><span>Matplotlib & Seaborn</span> <i class="val">75%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -653,7 +658,7 @@
               <div class="progress">
                 <span class="skill"><span>PyTorch</span> <i class="val">80%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -661,7 +666,7 @@
               <div class="progress">
                 <span class="skill"><span>Tensorflow</span> <i class="val">90%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -669,7 +674,7 @@
               <div class="progress">
                 <span class="skill"><span>Scikit-learn</span> <i class="val">70%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -694,7 +699,7 @@
               <div class="progress">
                 <span class="skill"><span>MS Azure</span> <i class="val">100%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="100" aria-valuemin="0"
                     aria-valuemax="100"></div>
                 </div>
               </div><!-- End Skills Item -->
@@ -702,7 +707,7 @@
               <div class="progress">
                 <span class="skill"><span>Google Cloud</span> <i class="val">95%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -710,7 +715,7 @@
               <div class="progress">
                 <span class="skill"><span>AWS</span> <i class="val">85%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -722,7 +727,7 @@
               <div class="progress">
                 <span class="skill"><span>IBM Cloud</span> <i class="val">90%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -730,7 +735,7 @@
               <div class="progress">
                 <span class="skill"><span>Hadoop</span> <i class="val">75%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -738,7 +743,7 @@
               <div class="progress">
                 <span class="skill"><span>Spark</span> <i class="val">70%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -763,7 +768,7 @@
               <div class="progress">
                 <span class="skill"><span>Core Python</span> <i class="val">100%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="100" aria-valuemin="0"
                     aria-valuemax="100"></div>
                 </div>
               </div><!-- End Skills Item -->
@@ -771,7 +776,7 @@
               <div class="progress">
                 <span class="skill"><span>Django</span> <i class="val">85%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -779,7 +784,7 @@
               <div class="progress">
                 <span class="skill"><span>Flask</span> <i class="val">85%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -791,7 +796,7 @@
               <div class="progress">
                 <span class="skill"><span>Web Scraping (BeautifulSoup)</span> <i class="val">75%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -799,7 +804,7 @@
               <div class="progress">
                 <span class="skill"><span>Python for Data Science</span> <i class="val">95%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -807,7 +812,7 @@
               <div class="progress">
                 <span class="skill"><span>Automation & Scripting</span> <i class="val">70%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -832,7 +837,7 @@
               <div class="progress">
                 <span class="skill"><span>HTML</span> <i class="val">100%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="100" aria-valuemin="0"
                     aria-valuemax="100"></div>
                 </div>
               </div><!-- End Skills Item -->
@@ -840,7 +845,7 @@
               <div class="progress">
                 <span class="skill"><span>CSS</span> <i class="val">90%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -848,7 +853,7 @@
               <div class="progress">
                 <span class="skill"><span>JavaScript</span> <i class="val">75%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -860,7 +865,7 @@
               <div class="progress">
                 <span class="skill"><span>Flask (Python)</span> <i class="val">80%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -868,7 +873,7 @@
               <div class="progress">
                 <span class="skill"><span>React.js</span> <i class="val">90%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -876,7 +881,7 @@
               <div class="progress">
                 <span class="skill"><span>Node.js</span> <i class="val">55%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -901,7 +906,7 @@
               <div class="progress">
                 <span class="skill"><span>Linear Algebra</span> <i class="val">100%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="100" aria-valuemin="0"
                     aria-valuemax="100"></div>
                 </div>
               </div><!-- End Skills Item -->
@@ -909,7 +914,7 @@
               <div class="progress">
                 <span class="skill"><span>Discrete Mathematics</span> <i class="val">90%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -917,7 +922,7 @@
               <div class="progress">
                 <span class="skill"><span>Statistics</span> <i class="val">85%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -929,7 +934,7 @@
               <div class="progress">
                 <span class="skill"><span>Probability</span> <i class="val">80%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -937,7 +942,7 @@
               <div class="progress">
                 <span class="skill"><span>Calculus</span> <i class="val">75%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -945,7 +950,7 @@
               <div class="progress">
                 <span class="skill"><span>Partial Differentials</span> <i class="val">70%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -971,7 +976,7 @@
               <div class="progress">
                 <span class="skill"><span>Communication Skills</span> <i class="val">100%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="100" aria-valuemin="0"
                     aria-valuemax="100"></div>
                 </div>
               </div><!-- End Skills Item -->
@@ -979,7 +984,7 @@
               <div class="progress">
                 <span class="skill"><span>Problem-Solving</span> <i class="val">90%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -987,7 +992,7 @@
               <div class="progress">
                 <span class="skill"><span>Critical Thinking</span> <i class="val">85%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -999,7 +1004,7 @@
               <div class="progress">
                 <span class="skill"><span>Team Collaboration</span> <i class="val">80%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -1007,7 +1012,7 @@
               <div class="progress">
                 <span class="skill"><span>Adaptability & Curiosity</span> <i class="val">75%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -1015,7 +1020,7 @@
               <div class="progress">
                 <span class="skill"><span>Time Management</span> <i class="val">75%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" role="progressbar" aria-label="Skill proficiency" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
               </div><!-- End Skills Item -->
@@ -1258,12 +1263,12 @@
             </ul>
 
             <!-- Action Button -->
-            <a href="https://github.com/Arvindhbabu/Quantum-Secure-Messaging"
+            <a href="https://www.linkedin.com/posts/arvindhbabuv23_quantumcomputing-cybersecurity-postquantumcryptography-activity-7419188152550043648-YNgX?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEX5dOEBfvbP2FtPMDPzUmbZfezV831oB6k"
                class="btn"
                target="_blank"
                rel="noopener"
                style="width: 100%; background: linear-gradient(135deg, #00d4ff, #7c3aed); color: white; border: none; padding: 10px 20px; border-radius: 8px; font-weight: 600; text-align: center; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);">
-              <i class="bi bi-github" style="margin-right: 6px;"></i>View Code
+              <i class="bi bi-linkedin" style="margin-right: 6px;"></i>View Demo
             </a>
           </div>
           <!-- End Quantum Secure Messaging -->
@@ -1309,12 +1314,12 @@
               </li>
             </ul>
 
-            <a href="https://github.com/Arvindhbabu/Stock-Price-Prediction.git"
+            <a href="https://www.linkedin.com/posts/arvindhbabuv23_deeplearning-lstm-stockprediction-activity-7354764544910503936-XaEW?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEX5dOEBfvbP2FtPMDPzUmbZfezV831oB6k"
                class="btn"
                target="_blank"
                rel="noopener"
                style="width: 100%; background: linear-gradient(135deg, #10b981, #3b82f6); color: white; border: none; padding: 10px 20px; border-radius: 8px; font-weight: 600; text-align: center; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);">
-              <i class="bi bi-github" style="margin-right: 6px;"></i>View Code
+              <i class="bi bi-linkedin" style="margin-right: 6px;"></i>View Demo
             </a>
           </div>
 
@@ -1357,12 +1362,12 @@
               </li>
             </ul>
 
-            <a href="https://github.com/Arvindhbabu/Heart-Disease-Prediction.git"
+            <a href="https://www.linkedin.com/posts/arvindhbabuv23_datascience-machinelearning-explainableai-activity-7326612665819156481-niuB?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEX5dOEBfvbP2FtPMDPzUmbZfezV831oB6k"
                class="btn"
                target="_blank"
                rel="noopener"
                style="width: 100%; background: linear-gradient(135deg, #ef4444, #f97316); color: white; border: none; padding: 10px 20px; border-radius: 8px; font-weight: 600; text-align: center; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);">
-              <i class="bi bi-github" style="margin-right: 6px;"></i>View Code
+              <i class="bi bi-linkedin" style="margin-right: 6px;"></i>View Demo
             </a>
           </div>
 
@@ -1405,12 +1410,12 @@
               </li>
             </ul>
 
-            <a href="https://github.com/Arvindhbabu/Movie-Recommendation-System.git"
+            <a href="https://www.linkedin.com/posts/arvindhbabuv23_python-machinelearning-datascience-activity-7318512503741652994-eK8F?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEX5dOEBfvbP2FtPMDPzUmbZfezV831oB6k"
                class="btn"
                target="_blank"
                rel="noopener"
                style="width: 100%; background: linear-gradient(135deg, #8b5cf6, #ec4899); color: white; border: none; padding: 10px 20px; border-radius: 8px; font-weight: 600; text-align: center; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);">
-              <i class="bi bi-github" style="margin-right: 6px;"></i>View Code
+              <i class="bi bi-linkedin" style="margin-right: 6px;"></i>View Demo
             </a>
           </div>
 
@@ -1453,12 +1458,12 @@
               </li>
             </ul>
 
-            <a href="https://github.com/Arvindhbabu/Fake-News-Detection.git"
+            <a href="https://www.linkedin.com/posts/arvindhbabuv23_machinelearning-fakenewsdetection-nlp-activity-7322971880473120770-g-rF?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEX5dOEBfvbP2FtPMDPzUmbZfezV831oB6k"
                class="btn"
                target="_blank"
                rel="noopener"
                style="width: 100%; background: linear-gradient(135deg, #f59e0b, #eab308); color: white; border: none; padding: 10px 20px; border-radius: 8px; font-weight: 600; text-align: center; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);">
-              <i class="bi bi-github" style="margin-right: 6px;"></i>View Code
+              <i class="bi bi-linkedin" style="margin-right: 6px;"></i>View Demo
             </a>
           </div>
 
@@ -1501,12 +1506,12 @@
               </li>
             </ul>
 
-            <a href="https://github.com/Arvindhbabu/Credit-Card-Fraud-Detection.git"
+            <a href="https://www.linkedin.com/posts/arvindhbabuv23_datascience-machinelearning-frauddetection-activity-7297124130934464512-hFgr?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEX5dOEBfvbP2FtPMDPzUmbZfezV831oB6k"
                class="btn"
                target="_blank"
                rel="noopener"
                style="width: 100%; background: linear-gradient(135deg, #06b6d4, #0891b2); color: white; border: none; padding: 10px 20px; border-radius: 8px; font-weight: 600; text-align: center; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);">
-              <i class="bi bi-github" style="margin-right: 6px;"></i>View Code
+              <i class="bi bi-linkedin" style="margin-right: 6px;"></i>View Demo
             </a>
           </div>
 
@@ -1550,12 +1555,12 @@
               </li>
             </ul>
 
-            <a href="https://github.com/Arvindhbabu/Stable_Diffusion_Image_Generation.git"
+            <a href="https://www.linkedin.com/posts/arvindhbabuv23_ai-gans-pix2pix-activity-7348228330145402882-B-GU?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEX5dOEBfvbP2FtPMDPzUmbZfezV831oB6k"
                class="btn"
                target="_blank"
                rel="noopener"
                style="width: 100%; background: linear-gradient(135deg, #a855f7, #6366f1); color: white; border: none; padding: 10px 20px; border-radius: 8px; font-weight: 600; text-align: center; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);">
-              <i class="bi bi-github" style="margin-right: 6px;"></i>View Code
+              <i class="bi bi-linkedin" style="margin-right: 6px;"></i>View Demo
             </a>
           </div>
 
@@ -1598,12 +1603,12 @@
               </li>
             </ul>
 
-            <a href="https://github.com/Arvindhbabu/Internpe.git"
+            <a href="https://www.linkedin.com/posts/arvindhbabuv23_webdevelopment-internpe-internship-activity-7298567367666585602-hCVI?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEX5dOEBfvbP2FtPMDPzUmbZfezV831oB6k"
                class="btn"
                target="_blank"
                rel="noopener"
                style="width: 100%; background: linear-gradient(135deg, #14b8a6, #22c55e); color: white; border: none; padding: 10px 20px; border-radius: 8px; font-weight: 600; text-align: center; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(20, 184, 166, 0.3);">
-              <i class="bi bi-github" style="margin-right: 6px;"></i>View Code
+              <i class="bi bi-linkedin" style="margin-right: 6px;"></i>View Demo
             </a>
           </div>
 
@@ -1711,7 +1716,7 @@
                 <h4>IBM Data Science</h4>
                 <p>Provided By Coursera</p>
                 <a href="assets/img/masonry-portfolio/IBM DATA SCIENCE CERTIFICATE-1.png"
-                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  data-gallery="portfolio-gallery-app" class="glightbox preview-link" title="Preview"><i class="bi bi-zoom-in"></i></a>
                 <a href="https://drive.google.com/file/d/1IClyDpMfc_h4I0VcOm8m8P73X4-9AjXv/view?usp=sharing"
                   title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
@@ -1723,7 +1728,7 @@
                 <h4>Certified AI Foundations Associate</h4>
                 <p>Provided By Oracle</p>
                 <a href="assets/img/masonry-portfolio/Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate-1.png"
-                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  data-gallery="portfolio-gallery-app" class="glightbox preview-link" title="Preview"><i class="bi bi-zoom-in"></i></a>
                 <a href="https://drive.google.com/file/d/1glP5JBvURUpcjkzSWcvX5IYb9LbLTuT4/view?usp=sharing" title="More Details"
                   class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
@@ -1735,7 +1740,7 @@
                 <h4>AWS Machine Learning</h4>
                 <p>Provided By AWS Educate</p>
                 <a href="assets/img/masonry-portfolio/Machine Learning Foundation.png"
-                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  data-gallery="portfolio-gallery-app" class="glightbox preview-link" title="Preview"><i class="bi bi-zoom-in"></i></a>
                 <a href="https://drive.google.com/file/d/1q05VQqlUhTlGKV23JwcjejUMKxLqWEZm/view" title="More Details"
                   class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
@@ -1747,7 +1752,7 @@
                 <h4>Data Mining</h4>
                 <p>Provided By NPTEL</p>
                 <a href="assets/img/masonry-portfolio/Data Mining-1.png" data-gallery="portfolio-gallery-app"
-                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  class="glightbox preview-link" title="Preview"><i class="bi bi-zoom-in"></i></a>
                 <a href="https://drive.google.com/file/d/1R0ph9MkjSwfdOC8J2H4yT-3LEAvwPhpk/view?usp=drive_link"
                   title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
@@ -1759,7 +1764,7 @@
                 <h4>Introduction to the Threat Landscape</h4>
                 <p>Provided By Fortinet</p>
                 <a href="assets/img/masonry-portfolio/Introduction to the Threat Landscape.png"
-                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  data-gallery="portfolio-gallery-app" class="glightbox preview-link" title="Preview"><i class="bi bi-zoom-in"></i></a>
                 <a href="https://drive.google.com/file/d/1zNjWvbWw0ChGa5WA8zAdI3BAhTMCqUvs/view?usp=sharing"
                   title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
@@ -1771,7 +1776,7 @@
                 <h4>Foundations of AI</h4>
                 <p>Provided By Edunet Foundation (Microsoft)</p>
                 <a href="assets/img/masonry-portfolio/Edunet 1 certifiate-1.png" data-gallery="portfolio-gallery-app"
-                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  class="glightbox preview-link" title="Preview"><i class="bi bi-zoom-in"></i></a>
                 <a href="https://drive.google.com/file/d/1vMzUofRb3mt4bwTM8eylaO7g5V19SiHN/view?usp=drive_link"
                   title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
@@ -1783,7 +1788,7 @@
                 <h4>Artificial Intelligence and Data Analytics</h4>
                 <p>Provided By Edunet Foundation (AICTE) </p>
                 <a href="assets/img/masonry-portfolio/Edunet 2 Certificate-1.png" data-gallery="portfolio-gallery-app"
-                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  class="glightbox preview-link" title="Preview"><i class="bi bi-zoom-in"></i></a>
                 <a href="https://drive.google.com/file/d/1q05VQqlUhTlGKV23JwcjejUMKxLqWEZm/view" title="More Details"
                   class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
@@ -1796,7 +1801,7 @@
                 <h4>NLP with Python</h4>
                 <p>Provided By Linkedin Learning</p>
                 <a href="assets/img/masonry-portfolio/NLP with Python for Machine Learning Essential Training-1.png"
-                  data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
+                  data-gallery="portfolio-gallery-product" class="glightbox preview-link" title="Preview"><i
                     class="bi bi-zoom-in"></i></a>
                 <a href="https://drive.google.com/file/d/1fBeXQubR7a1FE_7udCt84jIT5ZNg8cTX/view?usp=sharing"
                   title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
@@ -1809,7 +1814,7 @@
                 <h4>Computer Vision</h4>
                 <p>Provided By Kaggle</p>
                 <a href="assets/img/masonry-portfolio/Computer Vision Certificate.png"
-                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link" title="Preview"><i
                     class="bi bi-zoom-in"></i></a>
                 <a href="https://drive.google.com/file/d/1vpD0yLR8OCNF_5f5ACxfeqJD8L1KCnje/view?usp=sharing"
                   title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
@@ -1822,7 +1827,7 @@
                 <h4>Microsoft Azure AI Essentials</h4>
                 <p>Provided By Linkedin Learning</p>
                 <a href="assets/img/masonry-portfolio/Microsoft Azure AI Essentials.png"
-                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  data-gallery="portfolio-gallery-app" class="glightbox preview-link" title="Preview"><i class="bi bi-zoom-in"></i></a>
                 <a href="https://drive.google.com/file/d/1DDlFrbii6yJ_ZY0Xtj45T5o2jgAK2dmP/view?usp=sharing"
                   title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
@@ -1835,7 +1840,7 @@
                 <h4>Solutions Architecture Job Simulation</h4>
                 <p>Provided By Forage/AWS</p>
                 <a href="assets/img/masonry-portfolio/Solution Architect Certificate - AWS,Forage-1.png"
-                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link" title="Preview"><i
                     class="bi bi-zoom-in"></i></a>
                 <a href="https://drive.google.com/file/d/1SuE9U4Jhs_f-tyQ4fS77Hdkm5DUXSmy-/view?usp=sharing"
                   title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
@@ -1849,7 +1854,7 @@
                 <h4>Data Engineering and Big Data Certification</h4>
                 <p>Provided By Guvi</p>
                 <a href="assets/img/masonry-portfolio/Data Engineering and Big Data Certificate.png"
-                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link" title="Preview"><i
                     class="bi bi-zoom-in"></i></a>
                 <a href="https://drive.google.com/file/d/1cGjc4yKHUIlUr4Il0b5u2JJOQugWMZbb/view?usp=drive_link"
                   title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
@@ -1862,7 +1867,7 @@
                 <h4>Generative AI Intern</h4>
                 <p>Provided By Prodigy Infotect</p>
                 <a href="assets/img/masonry-portfolio/Prodigy Infotect Gen AI.png"
-                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link" title="Preview"><i
                     class="bi bi-zoom-in"></i></a>
                 <a href="https://drive.google.com/file/d/1TXjdX0MnuuIimUQISzuVZmoZBBRSBDFh/view?usp=drive_link"
                   title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
@@ -1875,7 +1880,7 @@
                 <h4>Data Science Intern</h4>
                 <p>Provided By Codsoft</p>
                 <a href="assets/img/masonry-portfolio/Codsoft Certificate-1.png"
-                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link" title="Preview"><i
                     class="bi bi-zoom-in"></i></a>
                 <a href="https://drive.google.com/file/d/1kQhXrabPyCjO0ZjQ4s7xG0Lt0aBcGkUg/view?usp=sharing"
                   title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
@@ -1889,7 +1894,7 @@
                 <h4>Introduction to cloud computing</h4>
                 <p>Provided By Infosys Springboard</p>
                 <a href="assets/img/masonry-portfolio/Introduction to cloud computing-1.png"
-                  data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
+                  data-gallery="portfolio-gallery-product" class="glightbox preview-link" title="Preview"><i
                     class="bi bi-zoom-in"></i></a>
                 <a href="https://drive.google.com/file/d/18ZhWGEOsvAxDcEGQXT4EWJUtRFndmw67/view?usp=sharing"
                   title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
@@ -1903,7 +1908,7 @@
                 <h4>Fundamentals of digital marketing</h4>
                 <p>Provided By Google</p>
                 <a href="assets/img/masonry-portfolio/Fundamentals of digital marketing _ Google-1.png"
-                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link" title="Preview"><i
                     class="bi bi-zoom-in"></i></a>
                 <a href="https://drive.google.com/file/d/1MPR73mvVX5T51_xoqecq7CYl1R9WqHlU/view?usp=sharing"
                   title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
@@ -1916,7 +1921,7 @@
                 <h4>Understanding Market Risk</h4>
                 <p>Provided By TCSion</p>
                 <a href="assets/img/masonry-portfolio/Understanding Market Risk_page-0001.jpg"
-                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link" title="Preview"><i
                     class="bi bi-zoom-in"></i></a>
                 <a href="https://drive.google.com/file/d/1kTW8JGbIh9v4wFRHM6xD65UlKfubEP4b/view" title="More Details"
                   class="details-link"><i class="bi bi-link-45deg"></i></a>
@@ -1929,7 +1934,7 @@
                 <h4>Intro to Cybersecurity</h4>
                 <p>Provided By Open Learn</p>
                 <a href="assets/img/masonry-portfolio/Intro to cyber security-1.png"
-                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link" title="Preview"><i
                     class="bi bi-zoom-in"></i></a>
                 <a href="https://drive.google.com/file/d/1EOHg11k82VnGXyllkRvaSWXSkV98dsmU/view?usp=sharing"
                   title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
@@ -1943,7 +1948,7 @@
                 <h4>Introduction to C</h4>
                 <p>Provided By Sololearn</p>
                 <a href="assets/img/masonry-portfolio/Introduction to C.jpg" data-gallery="portfolio-gallery-branding"
-                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  class="glightbox preview-link" title="Preview"><i class="bi bi-zoom-in"></i></a>
                 <a href="https://drive.google.com/file/d/1g6drEfENzRaWEttlIkn-YPN0tFMOzOh6/view" title="More Details"
                   class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
@@ -1957,7 +1962,7 @@
                 <h4>SkilQuest - Data Science Foundation</h4>
                 <p>Provided By Simplilearn</p>
                 <a href="assets/img/masonry-portfolio/SkilQuest - Data Science Foundation-1.png"
-                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  data-gallery="portfolio-gallery-app" class="glightbox preview-link" title="Preview"><i class="bi bi-zoom-in"></i></a>
                 <a href="https://drive.google.com/file/d/14ekICl4TjPmkg6TdO29H5nlQuij4q8V6/view" title="More Details"
                   class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
@@ -1970,7 +1975,7 @@
                 <h4>Digital productivity</h4>
                 <p>Provided By NIIT Foundation</p>
                 <a href="assets/img/masonry-portfolio/Digital productivity.png" data-gallery="portfolio-gallery-app"
-                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  class="glightbox preview-link" title="Preview"><i class="bi bi-zoom-in"></i></a>
                 <a href="https://drive.google.com/file/d/15nvzolOc24yJpWXX7WUykZ2FHV8jG0nk/view?usp=sharing"
                   title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
@@ -1982,7 +1987,7 @@
                 <h4>Excel Macro and VBA</h4>
                 <p>Provided By Simplilearn</p>
                 <a href="assets/img/masonry-portfolio/Excel Macros and VBA_page-0001.jpg"
-                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  data-gallery="portfolio-gallery-app" class="glightbox preview-link" title="Preview"><i class="bi bi-zoom-in"></i></a>
                 <a href="https://drive.google.com/file/d/1jSi13LnIiXEl7b9J4mjq5l33vkXgL8vk/view" title="More Details"
                   class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
@@ -1995,7 +2000,7 @@
                 <h4>Agnirva Space Intern</h4>
                 <p>Provided By Agnirva</p>
                 <a href="assets/img/masonry-portfolio/THE AGNIRVA SPACE INTERNSHIP.png"
-                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link" title="Preview"><i
                     class="bi bi-zoom-in"></i></a>
                 <a href="https://drive.google.com/file/d/1U5jahVB7qyaNb8Al2dsvEj0h23di1hg5/view?usp=sharing"
                   title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
@@ -2024,13 +2029,13 @@
 
                 <!-- Address -->
                 <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                  <a href="https://maps.app.goo.gl/bhgdvCw3PQRtPsZi7" target="_blank"
-                    style="text-decoration: none; color: inherit;">
+                  <a href="https://maps.app.goo.gl/bhgdvCw3PQRtPsZi7" target="_blank" rel="noopener"
+                    style="text-decoration: none; color: inherit;" title="View on Maps">
                     <i class="bi bi-house-door flex-shrink-0"></i>
                   </a>
                   <div>
                     <h3>Address</h3>
-                    <a href="https://maps.app.goo.gl/bhgdvCw3PQRtPsZi7" target="_blank"
+                    <a href="https://maps.app.goo.gl/bhgdvCw3PQRtPsZi7" target="_blank" rel="noopener"
                       style="text-decoration: none; color: inherit;">
                       Tiruchirappalli, TamilNadu, India.
                     </a>
@@ -2039,7 +2044,7 @@
 
                 <!-- Phone -->
                 <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                  <a href="tel:+919384751199" target="_blank" style="text-decoration: none; color: inherit;">
+                  <a href="tel:+919384751199" target="_blank" style="text-decoration: none; color: inherit;" title="Call">
                     <i class="bi bi-telephone flex-shrink-0"></i>
                   </a>
                   <div>
@@ -2050,8 +2055,8 @@
 
                 <!-- Email -->
                 <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                  <a href="mailto:arvindhbabu23@gmail.com" target="_blank"
-                    style="text-decoration: none; color: inherit;">
+                  <a href="mailto:arvindhbabu23@gmail.com" target="_blank" rel="noopener"
+                    style="text-decoration: none; color: inherit;" title="Email">
                     <i class="bi bi-envelope flex-shrink-0"></i>
                   </a>
                   <div>
@@ -2063,13 +2068,13 @@
 
                 <!-- LinkedIn -->
                 <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
-                  <a href="https://www.linkedin.com/in/arvindhbabuv23" target="_blank"
-                    style="text-decoration: none; color: inherit;">
+                  <a href="https://www.linkedin.com/in/arvindhbabuv23" target="_blank" rel="noopener"
+                    style="text-decoration: none; color: inherit;" title="LinkedIn">
                     <i class="bi bi-linkedin flex-shrink-0"></i>
                   </a>
                   <div>
                     <h3>LinkedIn</h3>
-                    <a href="https://www.linkedin.com/in/arvindhbabuv23" target="_blank"
+                    <a href="https://www.linkedin.com/in/arvindhbabuv23" target="_blank" rel="noopener"
                       style="text-decoration: none; color: inherit;">
                       Arvindhbabuv
                     </a>
@@ -2078,38 +2083,38 @@
 
                 <!-- GitHub -->
                 <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="600">
-                  <a href="https://github.com/Arvindhbabu" target="_blank"
-                    style="text-decoration: none; color: inherit;">
+                  <a href="https://github.com/Arvindhbabu" target="_blank" rel="noopener"
+                    style="text-decoration: none; color: inherit;" title="GitHub">
                     <i class="bi bi-github flex-shrink-0"></i>
                   </a>
                   <div>
                     <h3>GitHub</h3>
-                    <a href="https://github.com/Arvindhbabu" target="_blank"
+                    <a href="https://github.com/Arvindhbabu" target="_blank" rel="noopener"
                       style="text-decoration: none; color: inherit;">Arvindhbabu</a>
                   </div>
                 </div>
 
                 <!-- Instagram -->
                 <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="700">
-                  <a href="https://www.instagram.com/Arvindh.official" target="_blank"
-                    style="text-decoration: none; color: inherit;">
+                  <a href="https://www.instagram.com/Arvindh.official" target="_blank" rel="noopener"
+                    style="text-decoration: none; color: inherit;" title="Instagram">
                     <i class="bi bi-instagram flex-shrink-0"></i>
                   </a>
                   <div>
                     <h3>Instagram</h3>
-                    <a href="https://www.instagram.com/Arvindh.official" target="_blank"
+                    <a href="https://www.instagram.com/Arvindh.official" target="_blank" rel="noopener"
                       style="text-decoration: none; color: inherit;">Arvindh.official</a>
                   </div>
                 </div>
 
                 <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="700">
-                  <a href="https://www.facebook.com/profile.php?id=61554568063173" target="_blank"
-                    style="text-decoration: none; color: inherit;">
+                  <a href="https://www.facebook.com/profile.php?id=61554568063173" target="_blank" rel="noopener"
+                    style="text-decoration: none; color: inherit;" title="Facebook">
                     <i class="bi bi-facebook flex-shrink-0"></i>
                   </a>
                   <div>
                     <h3>Facebook</h3>
-                    <a href="https://www.facebook.com/profile.php?id=61554568063173" target="_blank"
+                    <a href="https://www.facebook.com/profile.php?id=61554568063173" target="_blank" rel="noopener"
                       style="text-decoration: none; color: inherit;">Arvindh babu</a>
                   </div>
                 </div>
@@ -2139,7 +2144,7 @@
       </div>
       <div class="container">
         <div class="copyright">
-          <span>Copyright © <strong>Arvindh babu</strong> All Rights Reserved</span>
+          <span>Copyright © <strong>Arvindh Babu V</strong> All Rights Reserved</span>
         </div>
         <div class="credits">
           <!-- You can add other credits here -->
@@ -2149,7 +2154,7 @@
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" title="Scroll to top"><i
       class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
@@ -2170,6 +2175,64 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Theme Toggle Script -->
+  <script>
+    (function() {
+      const html = document.documentElement;
+      const toggleBtn = document.getElementById('theme-toggle');
+      const toggleIcon = document.getElementById('toggle-icon');
+
+      // Restore saved theme on load
+      const savedTheme = localStorage.getItem('portfolio-theme') || 'light';
+      if (savedTheme === 'dark') {
+        html.setAttribute('data-theme', 'dark');
+        toggleIcon.innerHTML = '<i class="bi bi-sun-fill"></i>';
+        fixInlineBackgrounds('dark');
+      }
+
+      toggleBtn.addEventListener('click', function() {
+        const isDark = html.getAttribute('data-theme') === 'dark';
+
+        // Animate icon
+        toggleIcon.classList.add('rotating');
+
+        setTimeout(function() {
+          if (isDark) {
+            html.removeAttribute('data-theme');
+            toggleIcon.innerHTML = '<i class="bi bi-moon-stars-fill"></i>';
+            localStorage.setItem('portfolio-theme', 'light');
+            fixInlineBackgrounds('light');
+          } else {
+            html.setAttribute('data-theme', 'dark');
+            toggleIcon.innerHTML = '<i class="bi bi-sun-fill"></i>';
+            localStorage.setItem('portfolio-theme', 'dark');
+            fixInlineBackgrounds('dark');
+          }
+          toggleIcon.classList.remove('rotating');
+        }, 250);
+      });
+
+      // Override inline background styles on cards
+      function fixInlineBackgrounds(theme) {
+        var cards = document.querySelectorAll('.experience-card, .project-card');
+        cards.forEach(function(card) {
+          var style = card.getAttribute('style');
+          if (!style) return;
+          if (theme === 'dark') {
+            card.setAttribute('style',
+              style.replace(/linear-gradient\(#fff\s*,\s*#fff\)/g, 'linear-gradient(#161b22, #161b22)')
+                   .replace(/linear-gradient\(#ffffff\s*,\s*#ffffff\)/g, 'linear-gradient(#161b22, #161b22)')
+            );
+          } else {
+            card.setAttribute('style',
+              style.replace(/linear-gradient\(#161b22\s*,\s*#161b22\)/g, 'linear-gradient(#fff, #fff)')
+            );
+          }
+        });
+      }
+    })();
+  </script>
 
 </body>
 

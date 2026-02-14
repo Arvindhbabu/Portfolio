@@ -12,13 +12,16 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  --default-font:
+    "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Poppins", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
+:root {
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #272829; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #45505b; /* Color for headings, subheadings and title throughout the website */
@@ -29,7 +32,7 @@
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #45505b;  /* The default color of the main navmenu links */
+  --nav-color: #45505b; /* The default color of the main navmenu links */
   --nav-hover-color: #0563bb; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
@@ -158,18 +161,19 @@ h6 {
 @media (max-width: 1199px) {
   .header {
     background-color: var(--background-color);
-    border-right: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    border-right: 1px solid
+      color-mix(in srgb, var(--default-color), transparent 90%);
     width: 300px;
     left: -100%;
   }
 }
 
-@media (min-width: 1200px) and (max-width: 1600px) {
-  .header~main {
+@media (min-width: 1200px) {
+  .header ~ main {
     margin-left: 160px;
   }
 
-  .header~main .hero {
+  .header ~ main .hero {
     margin-left: -160px;
     width: 100vw;
   }
@@ -245,7 +249,6 @@ h6 {
 }
 
 @media (min-width: 992px) {
-
   .navmenu a,
   .navmenu a:focus {
     max-width: 56px;
@@ -260,19 +263,19 @@ h6 {
 .navmenu a:hover,
 .navmenu .active,
 .navmenu .active:focus,
-.navmenu li:hover>a {
+.navmenu li:hover > a {
   color: var(--contrast-color);
   background: var(--nav-hover-color);
 }
 
 .navmenu a:hover,
-.navmenu li:hover>a {
+.navmenu li:hover > a {
   max-width: 100%;
   color: var(--contrast-color);
 }
 
 .navmenu a:hover span,
-.navmenu li:hover>a span {
+.navmenu li:hover > a span {
   display: block;
 }
 
@@ -330,7 +333,8 @@ h6 {
 
 .footer .copyright {
   padding-top: 25px;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .footer .credits {
@@ -443,11 +447,11 @@ h6 {
   font-weight: 400;
 }
 
-.page-title .breadcrumbs ol li+li {
+.page-title .breadcrumbs ol li + li {
   padding-left: 10px;
 }
 
-.page-title .breadcrumbs ol li+li::before {
+.page-title .breadcrumbs ol li + li::before {
   content: "/";
   display: inline-block;
   padding-right: 10px;
@@ -523,29 +527,11 @@ section,
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.hero img {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-}
-
-.hero:before {
-  content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 30%);
-  position: absolute;
-  inset: 0;
-  z-index: 2;
+  overflow: hidden;
 }
 
 .hero .container {
-  position: relative;
-  z-index: 3;
+  position: static;
 }
 
 .hero h2 {
@@ -581,13 +567,92 @@ section,
   color: var(--accent-color);
 }
 
-@media (max-width: 768px) {
+/* Hero Portrait Image - fills right side of viewport */
+.hero-img-col {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 38%;
+  padding: 0;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.hero-portrait {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+  display: block;
+}
+
+/* Center text vertically in left half */
+.hero .col-lg-6:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 160px;
+  padding-right: 40px;
+  position: relative;
+  z-index: 3;
+}
+
+@media (max-width: 991px) {
+  .hero {
+    padding-top: 0;
+    min-height: auto;
+    flex-direction: column;
+  }
+
+  .hero .row {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-img-col {
+    position: relative !important;
+    width: 100%;
+    height: 350px;
+    margin-bottom: 30px;
+  }
+
+  .hero .col-lg-6:first-child {
+    padding-left: 15px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+
+  .hero .social-links {
+    justify-content: center;
+    display: flex;
+    gap: 5px;
+  }
+
+  .hero .d-flex.justify-content-start {
+    justify-content: center !important;
+  }
+
   .hero h2 {
     font-size: 32px;
   }
 
   .hero p {
     font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .hero-img-col {
+    height: 280px;
   }
 }
 
@@ -637,8 +702,6 @@ section,
   position: relative;
   z-index: 1;
 }
-
-
 
 .stats .stats-item {
   margin-top: 10px;
@@ -1072,7 +1135,7 @@ section,
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
-.contact .info-item+.info-item {
+.contact .info-item + .info-item {
   margin-top: 40px;
 }
 
@@ -1112,31 +1175,35 @@ section,
   height: 100%;
 }
 
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email],
+.contact .php-email-form input[type="text"],
+.contact .php-email-form input[type="email"],
 .contact .php-email-form textarea {
   font-size: 14px;
   padding: 10px 15px;
   box-shadow: none;
   border-radius: 0;
   color: var(--default-color);
-  background-color: color-mix(in srgb, var(--background-color), transparent 50%);
+  background-color: color-mix(
+    in srgb,
+    var(--background-color),
+    transparent 50%
+  );
   border-color: color-mix(in srgb, var(--default-color), transparent 80%);
 }
 
-.contact .php-email-form input[type=text]:focus,
-.contact .php-email-form input[type=email]:focus,
+.contact .php-email-form input[type="text"]:focus,
+.contact .php-email-form input[type="email"]:focus,
 .contact .php-email-form textarea:focus {
   border-color: var(--accent-color);
 }
 
-.contact .php-email-form input[type=text]::placeholder,
-.contact .php-email-form input[type=email]::placeholder,
+.contact .php-email-form input[type="text"]::placeholder,
+.contact .php-email-form input[type="email"]::placeholder,
 .contact .php-email-form textarea::placeholder {
   color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .php-email-form button[type="submit"] {
   color: var(--contrast-color);
   background: var(--accent-color);
   border: 0;
@@ -1145,7 +1212,7 @@ section,
   border-radius: 50px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form button[type="submit"]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 25%);
 }
 
@@ -1186,7 +1253,6 @@ section,
 }
 
 @media (max-width: 575px) {
-
   .portfolio-details .swiper-button-prev,
   .portfolio-details .swiper-button-next {
     display: none;
@@ -1332,14 +1398,15 @@ section,
   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
 }
 
-.service-details .service-box+.service-box {
+.service-details .service-box + .service-box {
   margin-top: 30px;
 }
 
 .service-details .service-box h4 {
   font-size: 20px;
   font-weight: 700;
-  border-bottom: 2px solid color-mix(in srgb, var(--default-color), transparent 92%);
+  border-bottom: 2px solid
+    color-mix(in srgb, var(--default-color), transparent 92%);
   padding-bottom: 15px;
   margin-bottom: 15px;
 }
@@ -1384,7 +1451,8 @@ section,
   align-items: center;
   padding: 10px 0;
   transition: 0.3s;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .service-details .download-catalog a:first-child {
@@ -1458,4 +1526,351 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+/*--------------------------------------------------------------
+# Dark Theme — Synthwave '84
+--------------------------------------------------------------*/
+[data-theme="dark"] {
+  --background-color: #1a1025;
+  --default-color: #e0d4f5;
+  --heading-color: #ff7edb;
+  --accent-color: #f92aad;
+  --surface-color: #241734;
+  --contrast-color: #ffffff;
+
+  --nav-color: #b6a1d0;
+  --nav-hover-color: #f92aad;
+  --nav-mobile-background-color: #1a1025;
+  --nav-dropdown-background-color: #241734;
+  --nav-dropdown-color: #b6a1d0;
+  --nav-dropdown-hover-color: #f92aad;
+}
+
+[data-theme="dark"] .light-background {
+  --background-color: #1a1025;
+  --surface-color: #241734;
+}
+
+[data-theme="dark"] body {
+  background: linear-gradient(135deg, #1a1025 0%, #261a37 50%, #1a1025 100%);
+}
+
+/* Dark theme: global transition for smooth switching */
+body,
+body *:not(script):not(style) {
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+/* Dark theme: Header sidebar */
+[data-theme="dark"] .header {
+  border-right-color: rgba(249, 42, 173, 0.2);
+}
+
+@media (max-width: 1199px) {
+  [data-theme="dark"] .header {
+    background-color: #1a1025;
+  }
+}
+
+/* Dark theme: Navmenu backgrounds */
+[data-theme="dark"] .navmenu a,
+[data-theme="dark"] .navmenu a:focus {
+  background: rgba(249, 42, 173, 0.08);
+}
+
+/* Dark theme: Section backgrounds */
+[data-theme="dark"] section,
+[data-theme="dark"] .section {
+  background: linear-gradient(180deg, #1a1025 0%, #241734 100%);
+}
+
+/* Dark theme: Section title underlines */
+[data-theme="dark"] .section-title h2:before {
+  background: rgba(255, 126, 219, 0.25);
+}
+
+[data-theme="dark"] .section-title h2::after {
+  background: linear-gradient(90deg, #f92aad, #72f1b8);
+}
+
+/* Dark theme: Footer */
+[data-theme="dark"] .footer {
+  background: linear-gradient(180deg, #241734 0%, #1a1025 100%);
+}
+
+[data-theme="dark"] .footer .copyright {
+  border-top-color: rgba(249, 42, 173, 0.2);
+}
+
+/* Dark theme: Preloader */
+[data-theme="dark"] #preloader {
+  background: #1a1025;
+}
+
+[data-theme="dark"] #preloader:before {
+  border-color: #f92aad transparent #72f1b8 transparent;
+}
+
+/* Dark theme: Skills progress bar */
+[data-theme="dark"] .skills .progress-bar-wrap {
+  background: rgba(255, 126, 219, 0.1);
+}
+
+[data-theme="dark"] .skills .progress-bar {
+  background: linear-gradient(90deg, #f92aad, #72f1b8);
+}
+
+/* Dark theme: Hero section */
+[data-theme="dark"] .hero .social-links a {
+  color: #b6a1d0;
+}
+
+[data-theme="dark"] .hero .social-links a:hover {
+  color: #72f1b8;
+}
+
+[data-theme="dark"] .hero h2 {
+  color: #ff7edb;
+}
+
+[data-theme="dark"] .hero p span {
+  border-bottom-color: #f92aad;
+}
+
+/* Dark theme: Resume button */
+[data-theme="dark"] .btn-resume {
+  background: linear-gradient(135deg, #7b2d8e 0%, #2d1f6e 100%);
+  box-shadow: 0 4px 15px rgba(114, 241, 184, 0.3);
+  border: 1px solid rgba(114, 241, 184, 0.4);
+  color: #72f1b8;
+}
+
+[data-theme="dark"] .btn-resume:hover {
+  background: linear-gradient(135deg, #9b3dae 0%, #3d2f8e 100%);
+  box-shadow: 0 6px 20px rgba(114, 241, 184, 0.5);
+  color: #ffffff;
+}
+
+/* Dark theme: Experience cards */
+[data-theme="dark"] .experience-card {
+  background: linear-gradient(135deg, #241734 0%, #2d1f42 100%) !important;
+  box-shadow: 0 4px 20px rgba(249, 42, 173, 0.15);
+}
+
+[data-theme="dark"] .experience-title {
+  color: #ff7edb !important;
+}
+
+[data-theme="dark"] .experience-duration {
+  color: #72f1b8 !important;
+}
+
+[data-theme="dark"] .experience-highlights {
+  color: #e0d4f5 !important;
+}
+
+[data-theme="dark"] .experience-highlights li::before {
+  color: #f92aad !important;
+}
+
+/* Dark theme: Project cards */
+[data-theme="dark"] .project-card {
+  background: linear-gradient(135deg, #241734 0%, #2d1f42 100%) !important;
+  box-shadow: 0 4px 20px rgba(249, 42, 173, 0.15);
+}
+
+[data-theme="dark"] .project-title {
+  color: #ff7edb !important;
+}
+
+[data-theme="dark"] .project-description {
+  color: #e0d4f5 !important;
+}
+
+[data-theme="dark"] .project-highlights {
+  color: #e0d4f5 !important;
+}
+
+[data-theme="dark"] .project-highlights li::before {
+  color: #72f1b8 !important;
+}
+
+/* Dark theme: Subtitle text */
+[data-theme="dark"] .subtitle {
+  color: #b6a1d0 !important;
+}
+
+/* Dark theme: Form inputs */
+[data-theme="dark"] .contact .php-email-form input[type="text"],
+[data-theme="dark"] .contact .php-email-form input[type="email"],
+[data-theme="dark"] .contact .php-email-form textarea {
+  background-color: #241734;
+  border-color: rgba(249, 42, 173, 0.3);
+  color: #e0d4f5;
+}
+
+[data-theme="dark"] .contact .php-email-form input:focus,
+[data-theme="dark"] .contact .php-email-form textarea:focus {
+  border-color: #f92aad;
+  box-shadow: 0 0 10px rgba(249, 42, 173, 0.3);
+}
+
+/* Dark theme: Services / Certificates */
+[data-theme="dark"] .services .service-item {
+  background: linear-gradient(135deg, #241734 0%, #2d1f42 100%);
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(249, 42, 173, 0.15);
+}
+
+/* Dark theme: Portfolio info overlay */
+[data-theme="dark"] .portfolio .portfolio-item .portfolio-info {
+  background: rgba(26, 16, 37, 0.92);
+}
+
+/* Dark theme: override inline styles on experience cards */
+[data-theme="dark"] .experience-card[style*="linear-gradient(#fff"] {
+  background:
+    linear-gradient(135deg, #241734, #2d1f42) padding-box,
+    linear-gradient(135deg, #f92aad, #72f1b8) border-box !important;
+}
+
+/* Dark theme: override inline styles on project cards */
+[data-theme="dark"] .project-card[style*="linear-gradient(#ffffff"] {
+  background:
+    linear-gradient(135deg, #241734, #2d1f42) padding-box,
+    linear-gradient(135deg, #f92aad, #72f1b8) border-box !important;
+}
+
+/* Dark theme: inline color overrides via specificity */
+[data-theme="dark"] .experience-card h3[style*="color: #000"],
+[data-theme="dark"] .experience-card strong {
+  color: #ff7edb !important;
+}
+
+[data-theme="dark"] .experience-card p[style*="color: #6b7280"] {
+  color: #b6a1d0 !important;
+}
+
+[data-theme="dark"] .project-card h3.text-black,
+[data-theme="dark"] h3.text-black {
+  color: #ff7edb !important;
+}
+
+[data-theme="dark"] .project-card p[style*="color: #4b5563"],
+[data-theme="dark"] p[style*="color: #4b5563"] {
+  color: #e0d4f5 !important;
+}
+
+[data-theme="dark"] [style*="color: #1f2937"] {
+  color: #e0d4f5 !important;
+}
+
+[data-theme="dark"] .info-wrap {
+  background: #241734;
+  border-radius: 12px;
+  border: 1px solid rgba(249, 42, 173, 0.15);
+}
+
+/* Dark theme: Scroll top button */
+[data-theme="dark"] .scroll-top {
+  background: linear-gradient(135deg, #f92aad, #72f1b8);
+}
+
+/* Dark theme: About section list icons */
+[data-theme="dark"] .about .content ul i {
+  color: #72f1b8;
+}
+
+/* Dark theme: Links glow */
+[data-theme="dark"] a {
+  color: #f92aad;
+}
+
+[data-theme="dark"] a:hover {
+  color: #72f1b8;
+  text-shadow: 0 0 8px rgba(114, 241, 184, 0.4);
+}
+
+/*--------------------------------------------------------------
+# Theme Toggle Button
+--------------------------------------------------------------*/
+.theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 99998;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  overflow: hidden;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1) rotate(15deg);
+  box-shadow: 0 6px 30px rgba(102, 126, 234, 0.6);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+.theme-toggle .toggle-icon {
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle .toggle-icon.rotating {
+  animation: toggleSpin 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes toggleSpin {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(180deg) scale(0.5);
+    opacity: 0.3;
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    opacity: 1;
+  }
+}
+
+[data-theme="dark"] .theme-toggle {
+  background: linear-gradient(135deg, #f92aad 0%, #72f1b8 100%);
+  box-shadow: 0 4px 20px rgba(249, 42, 173, 0.4);
+}
+
+[data-theme="dark"] .theme-toggle:hover {
+  box-shadow: 0 6px 30px rgba(249, 42, 173, 0.6);
+}
+
+/* Mobile adjustments for toggle */
+@media (max-width: 1199px) {
+  .theme-toggle {
+    bottom: 15px;
+    left: 15px;
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }
 }
