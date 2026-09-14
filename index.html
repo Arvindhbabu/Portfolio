@@ -470,22 +470,50 @@
 
         <div class="project-grid">
 
-          <article class="project-card featured-project" data-aos="fade-up">
+          <article class="project-card flagship-project" data-aos="fade-up">
             <div class="project-visual visual-deepfake">
               <div class="visual-grid"></div>
-              <i class="bi bi-camera-video-fill visual-icon"></i>
+              <i class="bi bi-camera-video-fill visual-icon" aria-hidden="true"></i>
               <span class="project-number">01</span>
-              <div class="visual-tags"><span>ViT</span><span>PyTorch</span><span>Grad-CAM</span></div>
+              <div class="visual-tags"><span>ViT-B/16</span><span>PyTorch</span><span>Grad-CAM</span><span>OpenCV</span></div>
             </div>
             <div class="project-body">
-              <div class="project-label">COMPUTER VISION</div>
-              <h3>Deepfake Detection</h3>
+              <div class="project-label">COMPUTER VISION · EXPLAINABLE AI</div>
+              <h3>DeepVision AI — Explainable Deepfake Detection</h3>
               <p>
-                An AI-based system for detecting manipulated videos using Vision Transformers with temporal
-                feature processing to analyse inconsistencies across video frames.
+                An explainable deepfake detection framework using Vision Transformers, temporal modeling, and Grad-CAM to analyze facial video sequences and provide interpretable predictions.
               </p>
-              <div class="project-detail"><strong>Stack</strong><span>Python · PyTorch · ViT · OpenCV · MTCNN</span></div>
-              <div class="project-detail"><strong>Focus</strong><span>Face alignment · Temporal analysis · Explainable AI</span></div>
+
+              <div class="project-tags" aria-label="Technology badges">
+                <span>Python</span>
+                <span>PyTorch</span>
+                <span>Computer Vision</span>
+                <span>Vision Transformers</span>
+                <span>Temporal Modeling</span>
+                <span>Grad-CAM</span>
+                <span>OpenCV</span>
+                <span>Machine Learning</span>
+              </div>
+
+              <div class="project-highlights-header">
+                <strong>Project Highlights &amp; Engineering Validation</strong>
+              </div>
+              <ul class="project-highlights">
+                <li>ViT-B/16 based spatial feature extraction for facial frame analysis.</li>
+                <li>Temporal mean pooling for sequence-level classification.</li>
+                <li>Alternate EfficientNet-B2 + BiLSTM architecture for comparative modeling.</li>
+                <li>Facial frame preprocessing and sequence construction pipeline.</li>
+                <li>Grad-CAM based visual explainability.</li>
+                <li>Config-driven training, evaluation, and checkpoint management.</li>
+                <li>Automated unit testing and CPU-compatible smoke-test validation.</li>
+                <li>FF++ and Celeb-DF v2 benchmark evaluation remains under evaluation.</li>
+              </ul>
+
+              <div class="project-actions">
+                <a class="btn-project-github" href="https://github.com/Arvindhbabu/DeepVision-Deepfake-Detection" target="_blank" rel="noopener noreferrer" aria-label="View DeepVision AI project on GitHub">
+                  View on GitHub <i class="bi bi-github" aria-hidden="true"></i>
+                </a>
+              </div>
             </div>
           </article>
 

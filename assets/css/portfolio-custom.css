@@ -904,6 +904,14 @@ a {
   grid-column: span 1;
 }
 
+.flagship-project {
+  grid-column: 1 / -1;
+}
+
+.flagship-project .project-body p {
+  min-height: auto;
+}
+
 .project-visual {
   height: 190px;
   position: relative;
@@ -1080,6 +1088,79 @@ a {
 .project-note i {
   color: var(--p-accent);
   margin-right: 4px;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.project-tags span {
+  padding: 4px 9px;
+  color: var(--p-accent);
+  background: var(--p-accent-soft);
+  border-radius: 6px;
+  font-size: .68rem;
+  font-weight: 600;
+  border: 1px solid color-mix(in srgb, var(--p-accent) 18%, transparent);
+}
+
+.project-highlights-header {
+  margin-top: 14px;
+  margin-bottom: 8px;
+  padding-top: 12px;
+  border-top: 1px solid var(--p-border);
+  color: var(--p-text);
+  font-size: .76rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+
+.project-highlights {
+  margin: 0 0 16px;
+  padding-left: 18px;
+  color: var(--p-muted);
+  font-size: .78rem;
+  line-height: 1.6;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px 20px;
+}
+
+.project-highlights li {
+  margin-bottom: 4px;
+}
+
+.project-actions {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--p-border);
+}
+
+.btn-project-github {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  border-radius: 9px;
+  background: var(--p-surface-2);
+  color: var(--p-text);
+  font-size: .80rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid var(--p-border);
+  transition: all .2s ease;
+}
+
+.btn-project-github:hover,
+.btn-project-github:focus-visible {
+  background: var(--p-accent);
+  color: #ffffff;
+  border-color: var(--p-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px color-mix(in srgb, var(--p-accent) 35%, transparent);
 }
 
 .cert-grid {
@@ -1348,6 +1429,7 @@ a {
   .contact-panel { grid-template-columns: 1fr; }
   .about-main { grid-column: auto; }
   .project-body p { min-height: auto; }
+  .project-highlights { grid-template-columns: 1fr; }
   .timeline::before { display: none; }
   .timeline-item { padding-left: 0; }
   .timeline-marker { display: none; }
