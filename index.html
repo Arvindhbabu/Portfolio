@@ -463,8 +463,8 @@
           <span class="section-kicker">05 / SELECTED WORK</span>
           <h2>Projects that show how I build.</h2>
           <p>
-            A curated selection of work from machine learning, deep learning, cybersecurity and application development.
-            Project claims are intentionally limited to what is supported by the current portfolio source.
+            A curated selection of my strongest work across AI systems, software engineering, computer vision,
+            analytics, cybersecurity and machine learning.
           </p>
         </div>
 
@@ -481,34 +481,21 @@
               <div class="project-label">COMPUTER VISION · EXPLAINABLE AI</div>
               <h3>DeepVision AI — Explainable Deepfake Detection</h3>
               <p>
-                An explainable deepfake detection framework using Vision Transformers, temporal modeling, and Grad-CAM to analyze facial video sequences and provide interpretable predictions.
+                An explainable deepfake detection framework using Vision Transformers, temporal modeling, and Grad-CAM
+                to analyze facial video sequences and provide interpretable predictions.
               </p>
-
               <div class="project-tags" aria-label="Technology badges">
-                <span>Python</span>
-                <span>PyTorch</span>
-                <span>Computer Vision</span>
-                <span>Vision Transformers</span>
-                <span>Temporal Modeling</span>
-                <span>Grad-CAM</span>
-                <span>OpenCV</span>
-                <span>Machine Learning</span>
+                <span>Python</span><span>PyTorch</span><span>Computer Vision</span><span>Vision Transformers</span>
+                <span>Temporal Modeling</span><span>Grad-CAM</span><span>OpenCV</span><span>Machine Learning</span>
               </div>
-
-              <div class="project-highlights-header">
-                <strong>Project Highlights &amp; Engineering Validation</strong>
-              </div>
+              <div class="project-highlights-header"><strong>Project Highlights &amp; Engineering Validation</strong></div>
               <ul class="project-highlights">
-                <li>ViT-B/16 based spatial feature extraction for facial frame analysis.</li>
-                <li>Temporal mean pooling for sequence-level classification.</li>
-                <li>Alternate EfficientNet-B2 + BiLSTM architecture for comparative modeling.</li>
-                <li>Facial frame preprocessing and sequence construction pipeline.</li>
-                <li>Grad-CAM based visual explainability.</li>
-                <li>Config-driven training, evaluation, and checkpoint management.</li>
-                <li>Automated unit testing and CPU-compatible smoke-test validation.</li>
+                <li>ViT-B/16 spatial feature extraction with temporal mean pooling for sequence-level classification.</li>
+                <li>Alternate EfficientNet-B2 + BiLSTM architecture for comparative spatio-temporal modeling.</li>
+                <li>Facial frame preprocessing, sequence construction, configuration-driven training and evaluation.</li>
+                <li>Grad-CAM visual explainability with automated unit tests and CPU-compatible smoke validation.</li>
                 <li>FF++ and Celeb-DF v2 benchmark evaluation remains under evaluation.</li>
               </ul>
-
               <div class="project-actions">
                 <a class="btn-project-github" href="https://github.com/Arvindhbabu/DeepVision-Deepfake-Detection" target="_blank" rel="noopener noreferrer" aria-label="View DeepVision AI project on GitHub">
                   View on GitHub <i class="bi bi-github" aria-hidden="true"></i>
@@ -518,127 +505,226 @@
           </article>
 
           <article class="project-card featured-project" data-aos="fade-up" data-aos-delay="80">
-            <div class="project-visual visual-quantum">
-              <div class="quantum-lines"></div>
-              <i class="bi bi-shield-lock-fill visual-icon"></i>
+            <div class="project-visual visual-caregrid">
+              <div class="caregrid-nodes"></div>
+              <i class="bi bi-hospital-fill visual-icon"></i>
               <span class="project-number">02</span>
-              <div class="visual-tags"><span>QKD</span><span>PQC</span><span>WebSockets</span></div>
+              <div class="visual-tags"><span>FastAPI</span><span>Next.js</span><span>PostgreSQL</span><span>Docker</span></div>
             </div>
             <div class="project-body">
-              <div class="project-label">CYBERSECURITY / RESEARCH</div>
-              <h3>Quantum-Secured Messaging System</h3>
+              <div class="project-label">FULL-STACK · HEALTHCARE TECHNOLOGY</div>
+              <h3>CareGrid — Integrated Hospital Management &amp; Clinical Operations Platform</h3>
               <p>
-                A secure messaging platform combining Quantum Key Distribution and Post-Quantum Cryptography
-                with real-time communication and attack-aware security mechanisms.
+                A modular healthcare operations platform connecting clinical care, emergency operations, diagnostics,
+                pharmacy, billing, administration, analytics and AI-assisted workflows through shared data flows.
               </p>
-              <div class="project-detail"><strong>Stack</strong><span>Python · FastAPI · WebSockets · BB84 · PQC</span></div>
-              <div class="project-detail"><strong>Focus</strong><span>QBER-based detection · Hybrid security · Secure chat</span></div>
+              <div class="project-tags" aria-label="Technology badges">
+                <span>Next.js</span><span>TypeScript</span><span>FastAPI</span><span>Python</span><span>PostgreSQL</span><span>Redis</span><span>Docker</span>
+              </div>
+              <div class="project-highlights-header"><strong>Project Highlights</strong></div>
+              <ul class="project-highlights">
+                <li>Unified patient, clinical, operational and administrative workflow architecture.</li>
+                <li>Backend services with FastAPI, PostgreSQL persistence and Redis runtime infrastructure.</li>
+                <li>Authentication, role-based access control and modular API-oriented design.</li>
+                <li>Healthcare workflow coverage spanning appointments, triage, diagnostics, pharmacy and billing.</li>
+              </ul>
+              <div class="project-actions">
+                <a class="btn-project-github" href="https://github.com/Arvindhbabu/CareGrid-Healthcare-Platform" target="_blank" rel="noopener noreferrer" aria-label="View CareGrid project on GitHub">
+                  View on GitHub <i class="bi bi-github" aria-hidden="true"></i>
+                </a>
+              </div>
             </div>
           </article>
 
           <article class="project-card featured-project" data-aos="fade-up" data-aos-delay="160">
-            <div class="project-visual visual-ml">
-              <div class="chart-bars"><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="project-visual visual-omnis">
+              <div class="omnis-core"></div>
               <i class="bi bi-cpu-fill visual-icon"></i>
               <span class="project-number">03</span>
-              <div class="visual-tags"><span>Scikit-learn</span><span>SMOTE</span><span>ML</span></div>
+              <div class="visual-tags"><span>FastAPI</span><span>PostgreSQL</span><span>Redis</span><span>AI Systems</span></div>
             </div>
             <div class="project-body">
-              <div class="project-label">MACHINE LEARNING</div>
-              <h3>Predictive Analytics & ML Models</h3>
+              <div class="project-label">AI SYSTEMS · BACKEND ARCHITECTURE</div>
+              <h3>OMNIS — Omni-Modal Neural Intelligence System</h3>
               <p>
-                A collection of machine learning applications covering classification, prediction, forecasting
-                and fraud-detection workflows using supervised learning techniques.
+                A modular AI systems platform designed around persistent state, knowledge retrieval, tool usage,
+                agent orchestration and extensible cognitive runtime services.
               </p>
-              <div class="project-detail"><strong>Stack</strong><span>Python · Scikit-learn · Random Forest · SMOTE · SVM · KNN</span></div>
-              <div class="project-detail"><strong>Work</strong><span>Titanic · Movie rating · Sales forecasting · Fraud detection · Iris</span></div>
+              <div class="project-tags" aria-label="Technology badges">
+                <span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>Redis</span><span>SQLAlchemy</span><span>Docker</span><span>Pytest</span>
+              </div>
+              <div class="project-highlights-header"><strong>Project Highlights</strong></div>
+              <ul class="project-highlights">
+                <li>Layered API, service, repository and database architecture with dependency injection.</li>
+                <li>Versioned REST APIs, health/readiness endpoints and persistent metadata services.</li>
+                <li>PostgreSQL with async SQLAlchemy, Alembic migrations and Redis runtime infrastructure.</li>
+                <li>Engineering foundations include testing, linting, formatting, type checking and Docker infrastructure.</li>
+              </ul>
+              <div class="project-actions">
+                <a class="btn-project-github" href="https://github.com/Arvindhbabu/OMNIS-Cognitive-OS" target="_blank" rel="noopener noreferrer" aria-label="View OMNIS project on GitHub">
+                  View on GitHub <i class="bi bi-github" aria-hidden="true"></i>
+                </a>
+              </div>
             </div>
           </article>
 
-          <article class="project-card" data-aos="fade-up">
-            <div class="project-visual visual-stock">
-              <div class="stock-line"></div>
-              <i class="bi bi-graph-up-arrow visual-icon"></i>
+          <article class="project-card featured-project" data-aos="fade-up" data-aos-delay="240">
+            <div class="project-visual visual-leettracker">
+              <div class="tracker-bars"><span></span><span></span><span></span><span></span><span></span></div>
+              <i class="bi bi-bar-chart-fill visual-icon"></i>
               <span class="project-number">04</span>
-              <div class="visual-tags"><span>LSTM</span><span>Time Series</span></div>
+              <div class="visual-tags"><span>FastAPI</span><span>PostgreSQL</span><span>Analytics</span></div>
             </div>
             <div class="project-body">
-              <div class="project-label">DEEP LEARNING</div>
-              <h3>Stock Price Prediction</h3>
-              <p>Experimental time-series forecasting using an LSTM network and historical market data.</p>
-              <div class="project-detail"><strong>Stack</strong><span>Pandas · NumPy · TensorFlow/Keras · Scikit-learn</span></div>
-              <div class="project-detail"><strong>Focus</strong><span>Normalization · Temporal patterns · Trend visualization</span></div>
+              <div class="project-label">DATA ANALYTICS · FULL-STACK</div>
+              <h3>LeetTracker — Student Coding Analytics Platform</h3>
+              <p>
+                A full-stack class analytics platform that synchronizes LeetCode statistics, preserves historical
+                snapshots, calculates progress growth and presents coding analytics through an interactive dashboard.
+              </p>
+              <div class="project-tags" aria-label="Technology badges">
+                <span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>REST APIs</span><span>Analytics</span>
+              </div>
+              <div class="project-highlights-header"><strong>Project Highlights</strong></div>
+              <ul class="project-highlights">
+                <li>Automated synchronization of student problem-solving statistics and tracking status.</li>
+                <li>Historical snapshots for cumulative progress and daily Easy, Medium and Hard growth analysis.</li>
+                <li>Leaderboard and ranking workflows based on total solved problems and growth metrics.</li>
+                <li>Modular backend separating routes, synchronization, analytics and persistence concerns.</li>
+              </ul>
+              <div class="project-actions">
+                <a class="btn-project-github" href="https://github.com/Arvindhbabu/LeetTracker-Student-Analytics" target="_blank" rel="noopener noreferrer" aria-label="View LeetTracker project on GitHub">
+                  View on GitHub <i class="bi bi-github" aria-hidden="true"></i>
+                </a>
+              </div>
             </div>
           </article>
 
-          <article class="project-card" data-aos="fade-up" data-aos-delay="80">
-            <div class="project-visual visual-health">
-              <i class="bi bi-heart-pulse-fill visual-icon"></i>
+          <article class="project-card featured-project" data-aos="fade-up" data-aos-delay="320">
+            <div class="project-visual visual-quantum">
+              <div class="quantum-lines"></div>
+              <i class="bi bi-shield-lock-fill visual-icon"></i>
               <span class="project-number">05</span>
-              <div class="visual-tags"><span>Random Forest</span><span>SHAP</span></div>
+              <div class="visual-tags"><span>QKD</span><span>PQC</span><span>WebSockets</span><span>QBER</span></div>
             </div>
             <div class="project-body">
-              <div class="project-label">EXPLAINABLE ML</div>
-              <h3>Heart Disease Prediction</h3>
-              <p>A machine learning classification project using diagnostic data with SHAP-based explainability.</p>
-              <div class="project-detail"><strong>Stack</strong><span>Pandas · NumPy · Scikit-learn · SHAP</span></div>
-              <div class="project-note"><i class="bi bi-info-circle"></i> Educational project — not a clinical diagnostic tool.</div>
+              <div class="project-label">CYBERSECURITY · APPLIED RESEARCH</div>
+              <h3>Quantum-Secured Messaging System</h3>
+              <p>
+                A research prototype for quantum-era secure communication using simulated BB84-based QKD,
+                QBER-driven security decisions, hybrid QKD–PQC key processing and real-time messaging.
+              </p>
+              <div class="project-tags" aria-label="Technology badges">
+                <span>Python</span><span>FastAPI</span><span>WebSockets</span><span>BB84 QKD</span>
+                <span>Post-Quantum Cryptography</span><span>QBER</span><span>AES-256-GCM</span>
+              </div>
+              <div class="project-highlights-header"><strong>Project Highlights</strong></div>
+              <ul class="project-highlights">
+                <li>Simulated BB84 quantum key distribution with QBER-based security analysis.</li>
+                <li>Intercept-resend attack model integrated into the security evaluation workflow.</li>
+                <li>Hybrid QKD–PQC key processing with AES-256-GCM application-layer encryption.</li>
+                <li>WebSocket-based real-time messaging with detect-before-communicate control flow.</li>
+              </ul>
+              <div class="project-actions">
+                <a class="btn-project-github" href="https://github.com/Arvindhbabu/Quantum-Secure-Messaging" target="_blank" rel="noopener noreferrer" aria-label="View Quantum Secure Messaging project on GitHub">
+                  View on GitHub <i class="bi bi-github" aria-hidden="true"></i>
+                </a>
+              </div>
             </div>
           </article>
 
-          <article class="project-card" data-aos="fade-up" data-aos-delay="160">
-            <div class="project-visual visual-nlp">
-              <i class="bi bi-newspaper visual-icon"></i>
+          <article class="project-card featured-project" data-aos="fade-up" data-aos-delay="400">
+            <div class="project-visual visual-career">
+              <div class="career-nodes"></div>
+              <i class="bi bi-briefcase-fill visual-icon"></i>
               <span class="project-number">06</span>
-              <div class="visual-tags"><span>NLP</span><span>TF-IDF</span></div>
+              <div class="visual-tags"><span>NLP</span><span>Semantic Search</span><span>FastAPI</span></div>
             </div>
             <div class="project-body">
-              <div class="project-label">NATURAL LANGUAGE PROCESSING</div>
-              <h3>Fake News Detection</h3>
-              <p>A text classification system using NLP preprocessing and TF-IDF features to distinguish between labelled news categories.</p>
-              <div class="project-detail"><strong>Stack</strong><span>Python · Pandas · Scikit-learn · NLTK · TF-IDF</span></div>
+              <div class="project-label">APPLIED AI · NLP · CAREER INTELLIGENCE</div>
+              <h3>Resume Career Intelligence</h3>
+              <p>
+                A full-stack AI career intelligence platform for resume analysis, semantic job matching,
+                ATS-oriented analysis, skill intelligence, career planning and interview preparation.
+              </p>
+              <div class="project-tags" aria-label="Technology badges">
+                <span>Python</span><span>FastAPI</span><span>NLP</span><span>scikit-learn</span><span>Sentence Transformers</span><span>FAISS</span><span>PostgreSQL</span>
+              </div>
+              <div class="project-highlights-header"><strong>Project Highlights</strong></div>
+              <ul class="project-highlights">
+                <li>PDF/DOCX resume ingestion with structured extraction of skills, experience and projects.</li>
+                <li>Semantic job matching using structured and embedding-based signals rather than keyword-only matching.</li>
+                <li>Hierarchical skill intelligence and explainable analysis of strengths, gaps and evidence.</li>
+                <li>Modular backend architecture for resume, matching, analysis and career-intelligence workflows.</li>
+              </ul>
+              <div class="project-actions">
+                <a class="btn-project-github" href="https://github.com/Arvindhbabu/Resume-Career-Intelligence" target="_blank" rel="noopener noreferrer" aria-label="View Resume Career Intelligence project on GitHub">
+                  View on GitHub <i class="bi bi-github" aria-hidden="true"></i>
+                </a>
+              </div>
             </div>
           </article>
 
-          <article class="project-card" data-aos="fade-up">
-            <div class="project-visual visual-recommendation">
-              <i class="bi bi-film visual-icon"></i>
+          <article class="project-card featured-project" data-aos="fade-up" data-aos-delay="480">
+            <div class="project-visual visual-analytics">
+              <div class="analytics-bars"><span></span><span></span><span></span><span></span><span></span></div>
+              <i class="bi bi-graph-up-arrow visual-icon"></i>
               <span class="project-number">07</span>
-              <div class="visual-tags"><span>Recommendation</span><span>Similarity</span></div>
+              <div class="visual-tags"><span>SQL</span><span>Power BI</span><span>DAX</span><span>Python</span></div>
             </div>
             <div class="project-body">
-              <div class="project-label">RECOMMENDER SYSTEM</div>
-              <h3>Movie Recommendation System</h3>
-              <p>A recommendation project combining content-based and collaborative filtering concepts for personalised movie suggestions.</p>
-              <div class="project-detail"><strong>Stack</strong><span>Pandas · NumPy · Scikit-learn</span></div>
+              <div class="project-label">BUSINESS ANALYTICS · DATA ENGINEERING</div>
+              <h3>Energy Consumption &amp; Business Performance Analytics</h3>
+              <p>
+                An analytics engineering and business intelligence case study evaluating utility consumption,
+                operating expenditure, price-volume effects and building performance across a commercial portfolio.
+              </p>
+              <div class="project-tags" aria-label="Technology badges">
+                <span>Python</span><span>SQL</span><span>SQLite</span><span>Pandas</span><span>Power BI</span><span>DAX</span><span>Data Validation</span>
+              </div>
+              <div class="project-highlights-header"><strong>Project Highlights</strong></div>
+              <ul class="project-highlights">
+                <li>Structured fact and dimension modeling for building, calendar and utility-rate data.</li>
+                <li>SQL analytics using CTEs, window functions, ranking and trend analysis.</li>
+                <li>Price-versus-volume variance decomposition for utility expenditure analysis.</li>
+                <li>Power BI and DAX reporting supported by automated data-quality and reconciliation checks.</li>
+              </ul>
+              <div class="project-actions">
+                <a class="btn-project-github" href="https://github.com/Arvindhbabu/Energy-Business-Performance-Analytics" target="_blank" rel="noopener noreferrer" aria-label="View Energy Business Performance Analytics project on GitHub">
+                  View on GitHub <i class="bi bi-github" aria-hidden="true"></i>
+                </a>
+              </div>
             </div>
           </article>
 
-          <article class="project-card" data-aos="fade-up" data-aos-delay="80">
-            <div class="project-visual visual-genai">
-              <i class="bi bi-stars visual-icon"></i>
+          <article class="project-card" data-aos="fade-up" data-aos-delay="560">
+            <div class="project-visual visual-spacey">
+              <div class="spacey-orbit"></div>
+              <i class="bi bi-rocket-takeoff-fill visual-icon"></i>
               <span class="project-number">08</span>
-              <div class="visual-tags"><span>GPT-2</span><span>Diffusion</span><span>GANs</span></div>
+              <div class="visual-tags"><span>Streamlit</span><span>Scikit-learn</span><span>Plotly</span></div>
             </div>
             <div class="project-body">
-              <div class="project-label">GENERATIVE AI</div>
-              <h3>Generative AI Projects</h3>
-              <p>A set of five end-to-end experiments covering text generation, image generation, image captioning, image-to-image work and neural style transfer.</p>
-              <div class="project-detail"><strong>Stack</strong><span>Python · TensorFlow · PyTorch · Hugging Face · PIL</span></div>
-            </div>
-          </article>
-
-          <article class="project-card" data-aos="fade-up" data-aos-delay="160">
-            <div class="project-visual visual-web">
-              <i class="bi bi-code-slash visual-icon"></i>
-              <span class="project-number">09</span>
-              <div class="visual-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-            </div>
-            <div class="project-body">
-              <div class="project-label">WEB DEVELOPMENT</div>
-              <h3>Web Development Projects</h3>
-              <p>A collection of front-end projects including a calculator, e-commerce interface, to-do application and Connect Four game.</p>
-              <div class="project-detail"><strong>Stack</strong><span>HTML · CSS · JavaScript</span></div>
+              <div class="project-label">MACHINE LEARNING · INTERACTIVE ANALYTICS</div>
+              <h3>SpaceY Launch Prediction Dashboard</h3>
+              <p>
+                An interactive Streamlit dashboard that predicts booster landing success from historical launch data
+                while providing orbit-level trends and launch-site visualizations.
+              </p>
+              <div class="project-tags" aria-label="Technology badges">
+                <span>Python</span><span>Scikit-learn</span><span>Streamlit</span><span>Plotly</span><span>Folium</span><span>Pandas</span>
+              </div>
+              <div class="project-highlights-header"><strong>Project Highlights</strong></div>
+              <ul class="project-highlights">
+                <li>Logistic regression pipeline with categorical encoding and model serialization.</li>
+                <li>Interactive launch simulation inputs for payload, orbit, booster and launch site.</li>
+                <li>Plotly trend visualizations and Folium-based launch-site mapping.</li>
+              </ul>
+              <div class="project-actions">
+                <a class="btn-project-github" href="https://github.com/Arvindhbabu/Space-Y-Launch-Prediction-Capstone-Project-" target="_blank" rel="noopener noreferrer" aria-label="View SpaceY Launch Prediction Dashboard project on GitHub">
+                  View on GitHub <i class="bi bi-github" aria-hidden="true"></i>
+                </a>
+              </div>
             </div>
           </article>
 
