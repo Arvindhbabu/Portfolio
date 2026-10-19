@@ -29,17 +29,12 @@ Modular cognitive AI operating system focused on memory, reasoning, retrieval, a
 ### Quantum Secure Messaging
 Web-based quantum-secured messaging system integrating QKD, intrusion detection, and post-quantum cryptography.
 
-## 🛠️ Technical Interests
+## 🛠️ Technical Skills
 
-- Python
-- Data Science
-- Data Analytics
-- Machine Learning
-- Artificial Intelligence
-- Computer Vision
-- Natural Language Processing
-- Backend Development
-- Full-Stack Development
+- **Programming & Development:** Python, SQL, Java, DSA, OOP, Operating Systems, Computer Networks, Git/GitHub
+- **Machine Learning & AI:** Machine Learning, Deep Learning, Computer Vision, NLP, Generative AI, LLMs, RAG
+- **Data Engineering & Analytics:** Data Mining, EDA, Pandas, NumPy, Matplotlib, Scikit-learn, Power BI, DAX, Excel
+- **ML Systems & Deployment:** ETL Pipelines, Data Preprocessing, Feature Engineering, Model Evaluation, REST APIs
 
 ## 📊 What I Build
 
